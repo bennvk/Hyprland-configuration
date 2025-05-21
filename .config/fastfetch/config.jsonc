@@ -1,0 +1,22 @@
+{
+  "modules": [
+    "os",
+    "host",
+    "kernel",
+    "uptime",
+    "packages",
+    "shell",
+    "de",
+    "wm",
+    "terminal",
+    "cpu",
+    "gpu",
+    "memory",
+    "disk",
+    "localip",
+    "battery",
+    "poweradapter",
+    "break"
+  ]
+}
+
