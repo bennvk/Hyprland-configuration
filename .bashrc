@@ -13,8 +13,6 @@ alias mega-status='mega-sync'
 alias powermode-status='cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
 alias powermode-powersave='sudo cpupower frequency-set -g powersave'
 alias powermode-performance='sudo cpupower frequency-set -g performance'
-alias kbfr='hyprctl keyword input:kb_layout fr'
-alias kbus='hyprctl keyword input:kb_layout us'
 
 echo; command -v fastfetch >/dev/null && fastfetch;
 
