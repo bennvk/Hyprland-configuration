@@ -6,6 +6,7 @@
   "modules-left": [
     "custom/os_button",
     "hyprland/workspaces",
+    "custom/spacer",
     "custom/musicplayer"
 ],
 
@@ -143,6 +144,12 @@
         "",
         ""
       ]
+    }
+},
+
+"custom/spacer": {
+  "format": " |  ",
+  "tooltip": false
 }
-}
+
 }
