@@ -1,17 +1,19 @@
-// -*- mode: jsonc -*-
+// Modules layout //
+
 {
   "style": "~/.config/waybar/style.css",
   "spacing": 4,
   "modules-left": [
     "custom/os_button",
     "hyprland/workspaces",
-    "custom/musicplayer",
-  ],
+    "custom/musicplayer"
+],
 
-  "modules-center": [
+"modules-center": [
     "hyprland/window"
-  ],
-  "modules-right": [
+],
+
+"modules-right": [
     "pulseaudio",
     "cpu",
     "custom/mem",
@@ -19,11 +21,11 @@
     "battery",
     "clock",
     "custom/power"
-  ],
+],
 
+  // Modules configuration //
 
-  //     Modules configuration
-  "hyprland/workspaces": {
+"hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
     "warp-on-scroll": false,
@@ -45,11 +47,11 @@
 },
 
 "custom/musicplayer": {
-  "format": "{}",
-  "interval": 2,
-  "exec": "~/.config/waybar/musicplayer.sh",
-  "return-type": "json",
-  "on-click": "playerctl play-pause"
+    "format": "{}",
+    "interval": 2,
+    "exec": "~/.config/waybar/musicplayer.sh",
+    "return-type": "json",
+    "on-click": "playerctl play-pause"
 },
 
 "custom/power": {
@@ -58,88 +60,89 @@
     "tooltip": false
 },
 
-  "hyprland/mode": {
-      "format": "<span style=\"italic\">{}</span>"
-    },
-    "hyprland/window": {
-      "format": "{class}",
-      "max-lenght": 10
-    },
-    "custom/os_button": {
-      "format": "🪐",
-      "on-click": "bash ~/.config/fuzzel/wallpapers-menu/wallpapers-menu.sh",
-      "tooltip": false
-    },
+"hyprland/mode": {
+    "format": "<span style=\"italic\">{}</span>"
+},
 
-    "clock": {
-      "format": "{:%R}",
-      // "timezone": "America/New_York",
-      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
-      "format-alt": "{:%Y-%m-%d}"
-    },
-    "cpu": {
-      "format": "{usage}% ",
-      "tooltip": false
-    },
-    "custom/mem": {
-      "format": "{} ",
-      "interval": 3,
-      "exec": "free -m | awk '/Mem:/ {printf \"%dMi\", $3}'",
-      "tooltip": false
-    },
-    "battery": {
-      "states": {
-        // "good": 95,
-        "warning": 30,
-        "critical": 15
-      },
-      "format": "{capacity}% {icon}",
-      "format-full": "{capacity}% {icon}",
-      "format-charging": "{capacity}% ",
-      "format-plugged": "{capacity}% ",
-      "format-alt": "{time} {icon}",
-      // "format-good": "", // An empty format will hide the module
-      // "format-full": "",
-      "format-icons": [
-        "",
-        "",
-        "",
-        "",
-        ""
+"hyprland/window": {
+    "format": "{class}",
+    "max-lenght": 10
+},
+
+"custom/os_button": {
+    "format": "🪐",
+    "on-click": "bash ~/.config/fuzzel/wallpapers-menu/wallpapers-menu.sh",
+    "tooltip": false
+},
+
+"clock": {
+    "format": "{:%R}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
+    "format-alt": "{:%Y-%m-%d}"
+},
+
+"cpu": {
+    "format": "{usage}% ",
+    "tooltip": false
+},
+
+"custom/mem": {
+    "format": "{} ",
+    "interval": 3,
+    "exec": "free -m | awk '/Mem:/ {printf \"%dMi\", $3}'",
+    "tooltip": false
+},
+
+"battery": {
+    "states": {
+    "warning": 30,
+    "critical": 15
+},
+    "format": "{capacity}% {icon}",
+    "format-full": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{time} {icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+},
+    
+"battery#bat2": {
+    "bat": "BAT2"
+},
+
+"network": {
+    "on-click": "bash ~/.config/fuzzel/wifi-menu/wifi-menu.sh",
+    "format-wifi": "{essid} ",
+    "format-ethernet": "Ethernet ",
+    "tooltip-format": "Connected to {essid}",
+    "format-disconnected": "Disconnected ⚠",
+},
+
+"pulseaudio": {
+    "format": "{icon}",
+    "format-bluetooth": "{icon}",
+    "format-bluetooth-muted": "{icon}",
+    "format-muted": "",
+    "format-source": "",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
       ]
-    },
-    "battery#bat2": {
-      "bat": "BAT2"
-    },
-    "network": {
-      "on-click": "bash ~/.config/fuzzel/wifi-menu/wifi-menu.sh",
-      // "interface": "wlp2*",
-      "format-wifi": "{essid} ",
-      "format-ethernet": "Ethernet ",
-      "tooltip-format": "Connected to {essid}",
-      "format-disconnected": "Disconnected ⚠",
-    },
-    "pulseaudio": {
-      // "scroll-step": 1, // %, can be a float
-      "format": "{icon}",
-      "format-bluetooth": "{icon}",
-      "format-bluetooth-muted": "{icon}",
-      "format-muted": "",
-      "format-source": "",
-      "format-source-muted": "",
-      "format-icons": {
-        "headphone": "",
-        "hands-free": "",
-        "headset": "",
-        "phone": "",
-        "portable": "",
-        "car": "",
-        "default": [
-          "",
-          "",
-          ""
-        ]
-      },
-      "on-click": "pavucontrol"
-    },
-  }
+}
+}
+}
