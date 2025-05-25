@@ -30,6 +30,7 @@ nvidia
 nvidia-settings 
 nvidia-dkms
 libva
+rofi-wayland
 sddm
 libva-nvidia-driver
 cpupower
