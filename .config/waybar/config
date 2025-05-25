@@ -5,7 +5,9 @@
   "modules-left": [
     "custom/os_button",
     "hyprland/workspaces",
+    "custom/musicplayer",
   ],
+
   "modules-center": [
     "hyprland/window"
   ],
@@ -18,6 +20,8 @@
     "clock",
     "custom/power"
   ],
+
+
   //     Modules configuration
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -28,22 +32,32 @@
       "active": "",
       "focused": "",
       "default": ""
-    },
+},
+
     "persistent-workspaces": {
       "1": [],
       "2": [],
       "3": [],
       "4": [],
       "5": [],
-      "6": [],
+      "6": []
     }
-    
-  },
-    "custom/power": {
-      "format": "",
-      "on-click": "bash ~/.config/fuzzel/power-menu/power-menu.sh",
-      "tooltip": false
-    },
+},
+
+"custom/musicplayer": {
+  "format": "{}",
+  "interval": 2,
+  "exec": "~/.config/waybar/musicplayer.sh",
+  "return-type": "json",
+  "on-click": "playerctl play-pause"
+},
+
+"custom/power": {
+    "format": "",
+    "on-click": "bash ~/.config/fuzzel/power-menu/power-menu.sh",
+    "tooltip": false
+},
+
   "hyprland/mode": {
       "format": "<span style=\"italic\">{}</span>"
     },
