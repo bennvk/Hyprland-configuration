@@ -33,6 +33,7 @@ libva
 sddm
 libva-nvidia-driver
 cpupower
+playerctl
 python
 python-pywalfox
 slurp
