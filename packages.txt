@@ -2,6 +2,7 @@ bitwarden
 blueman
 brightnessctl
 cups
+discord
 downgrade
 fastfetch
 firefox
