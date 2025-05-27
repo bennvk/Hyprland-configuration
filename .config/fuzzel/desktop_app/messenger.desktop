@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Messenger (Web)
+Exec=env QT_QPA_PLATFORM=wayland chromium --ozone-platform-hint=auto https://www.messenger.com
+Icon=facebook-messenger
+Type=Application
+Categories=Network;Chat;
+StartupWMClass=chromium
