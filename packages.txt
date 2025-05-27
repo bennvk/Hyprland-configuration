@@ -1,4 +1,5 @@
 bitwarden
+papirus-icon-theme
 blueman
 brightnessctl
 cups
