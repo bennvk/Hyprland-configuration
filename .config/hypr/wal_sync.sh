@@ -11,13 +11,16 @@ COLORS_JSON="$HOME/.cache/wal/colors.json"
 
 wal -i "$WALLPAPER_PATH" -n -q
 
-#####Hyprpaper#####
+##### Fond d'écran avec SWWW #####
 
-cat > ~/.config/hypr/hyprpaper.conf <<EOF
-preload = $WALLPAPER_PATH
-wallpaper = eDP-1,$WALLPAPER_PATH
-wallpaper = DP-1,$WALLPAPER_PATH
-EOF
+monitors=$(hyprctl monitors -j | jq -r '.[].name' | paste -sd "," -)
+
+swww img "$WALLPAPER_PATH" \
+  --outputs "$monitors" \
+  --transition-type grow \
+  --transition-pos 0.5,0.5 \
+  --transition-duration 1 \
+  --transition-fps 60
 
 ##### Kitty #####
 
@@ -29,10 +32,6 @@ EOF
 
 ~/.config/starship/theme.sh
 
+##### Firefox (Pywalfox) #####
+
 pywalfox update
-hyprctl reload
-pkill hyprpaper && hyprpaper &
-
-##### Discord #####
-
-wal -i $WALLPAPER_PATH

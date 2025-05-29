@@ -4,7 +4,7 @@ All my configuration files for Hyprland Wayland on EndeavourOS
 ### Desktop Environment
 
 - Window Manage - [Hyprland](https://wiki.hyprland.org/)
-- Wallpapers - [Hyprpaper](https://wiki.hyprland.org/Hypr-Ecosystem/hyprpaper/)
+- Wallpapers - [Swww](https://github.com/LGFae/swww)
 - Bar - [Waybar](https://wiki.archlinux.org/title/Waybar)
 - Menu launcher - [Fuzzel](https://archlinux.org/packages/extra/x86_64/fuzzel/)
 - Shell - [Bash](https://wiki.archlinux.org/title/Bash)

@@ -14,7 +14,7 @@ git
 ghostwriter
 grim
 hyprland
-hyprpaper
+swww
 inotify-tools
 iptables-nft
 iwd
