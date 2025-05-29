@@ -7,5 +7,5 @@ selected=$(find "$WALL_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -inam
 
 if [ -n "$selected" ]; then
     filepath="$WALL_DIR/$selected"
-    ~/.config/hypr/wal_sync.sh "$filepath"
+    hyprctl dispatch exec "~/.config/hypr/wal_sync.sh \"$filepath\""
 fi
