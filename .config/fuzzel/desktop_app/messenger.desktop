@@ -1,3 +1,4 @@
+#!/usr/bin/env xdg-open
 [Desktop Entry]
 Name=Messenger (Web)
 Exec=env QT_QPA_PLATFORM=wayland chromium --ozone-platform-hint=auto https://www.messenger.com
