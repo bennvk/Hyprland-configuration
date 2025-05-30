@@ -82,7 +82,6 @@ kernel-install-for-dracut
 keyd
 kimageformats
 kitty
-kwayland-integration
 less
 lib32-gnutls
 lib32-libcurl-compat
@@ -175,7 +174,6 @@ sysfsutils
 systemd-sysvcompat
 texinfo
 tldr
-ttf-bitstream-vera
 ttf-dejavu
 ttf-font-awesome
 ttf-liberation
@@ -201,12 +199,7 @@ xf86-input-libinput
 xfsprogs
 xl2tpd
 xorg-server
-xorg-xdpyinfo
 xorg-xinit
-xorg-xinput
-xorg-xkill
 xorg-xrandr
-xsettingsd
-xterm
 yay
 zip
