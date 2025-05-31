@@ -9,6 +9,8 @@ b43-fwcutter
 base
 base-devel
 bash-completion
+minecraft-launcher
+jdk-openjdk
 bind
 bitwarden
 blueman
