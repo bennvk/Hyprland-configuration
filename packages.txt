@@ -9,7 +9,7 @@ b43-fwcutter
 base
 base-devel
 bash-completion
-minecraft-launcher
+prismlauncher
 jdk-openjdk
 bind
 bitwarden
