@@ -17,5 +17,5 @@ if [[ "$STATE" == "temp" ]]; then
     echo "CPU ${TEMP}°C "
 else
     USAGE=$(grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {printf "%.0f", usage}')
-    echo "${USAGE}% "
+    echo "CPU ${USAGE}% "
 fi
