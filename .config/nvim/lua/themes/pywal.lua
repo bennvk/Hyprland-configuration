@@ -42,7 +42,7 @@ function M.setup()
   set("highlight CursorLineNr guifg=" .. colors.color2 .. " gui=bold")
   set("highlight LineNr guifg=" .. colors.color8)
   set("highlight MatchParen guibg=" .. colors.color0 .. " guifg=" .. colors.color4 .. " gui=bold")
-  set("highlight Visual guibg=" .. colors.color0)
+  set("highlight Visual guibg=" .. colors.color4 .. " guifg=" .. colors.foreground)
 
   -- Text/Syntax
   set("highlight Comment guifg=" .. colors.color8 .. " gui=italic")

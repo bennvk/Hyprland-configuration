@@ -1,5 +1,7 @@
 vim.opt.number = true
 
+vim.o.mouse = "a"
+
 vim.o.expandtab = true
 vim.o.shiftwidth = 2
 vim.o.tabstop = 2
