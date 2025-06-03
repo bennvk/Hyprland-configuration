@@ -16,8 +16,8 @@
 
 "modules-right": [
     "pulseaudio",
-    "cpu",
-    "custom/mem",
+    "custom/cpu",
+    "custom/gpuNmemory",
     "network",
     "battery",
     "clock",
@@ -88,15 +88,18 @@
     }
 },
 
-"cpu": {
-    "format": "{usage}% ",
+"custom/cpu": {
+    "exec": "~/.config/waybar/cpu_toggle.sh",
+    "on-click": "~/.config/waybar/cpu_toggle.sh toggle",
+    "interval": 5,
+    "format": "{}",
     "tooltip": false
 },
 
-"custom/mem": {
-    "format": "{} ",
-    "interval": 3,
-    "exec": "free -m | awk '/Mem:/ {printf \"%dMi\", $3}'",
+"custom/gpuNmemory": {
+    "exec": "~/.config/waybar/gpu_toggle.sh",
+    "on-click": "~/.config/waybar/gpu_toggle.sh toggle",
+    "interval": 5,
     "tooltip": false
 },
 

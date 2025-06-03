@@ -53,8 +53,8 @@ button:hover {
 
 #clock,
 #battery,
-#cpu,
 #memory,
+#cpu
 #disk,
 #temperature,
 #backlight,
@@ -110,12 +110,6 @@ button:hover {
   background-color: @color5;
 }
 
-#custom-power:hover{
-  transition: ease 0.2s all;
-  color: @color5;
-  background-color: @background;
-}
-
 #clock {
     margin-right: 4px;
     margin-top: 3px;
@@ -152,6 +146,10 @@ label:focus {
     background-color: #000000;
 }
 
+#custom-cpu {
+    padding: 0 10px;
+    background-color: transparent;
+}
 
 #custom-mem {
     background-color: transparent;
