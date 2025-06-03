@@ -18,6 +18,11 @@ if [[ "$STATE" == "temp" ]]; then
 else
     USED=$(nvidia-smi --query-gpu=memory.used --format=csv,noheader,nounits | awk '{print $1}')
     TOTAL=$(nvidia-smi --query-gpu=memory.total --format=csv,noheader,nounits | awk '{print $1}')
-    PERCENT=$(( USED * 100 / TOTAL ))
-    echo "RAM  ${PERCENT}% "
+    PERCENT_GPU=$(( USED * 100 / TOTAL ))
+
+    used_ram=$(free -m | awk '/^Mem:/ {printf "%.2f", $3/1024}')
+    total_ram=$(free -m | awk '/^Mem:/ {printf "%.2f", $2/1024}')
+    percent_ram=$(free | awk '/^Mem:/ {printf "%d", $3/$2 * 100}')
+
+    echo "RAM ${percent_ram}%  "
 fi

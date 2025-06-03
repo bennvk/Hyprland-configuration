@@ -13,7 +13,7 @@ if [[ "$1" == "toggle" ]]; then
 fi
 
 if [[ "$STATE" == "temp" ]]; then
-    TEMP=$(sensors | grep -m1 'Package id 0' | awk '{print $4}' | sed 's/+//;s/°C//')
+    TEMP=$(sensors 2>/dev/null | grep -m1 'Package id 0' | awk '{print $4}' | sed 's/+//;s/°C//')
     echo "CPU ${TEMP}°C "
 else
     USAGE=$(grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {printf "%.0f", usage}')
