@@ -20,6 +20,7 @@ breeze-gtk
 brightnessctl
 btrfs-progs
 cantarell-fonts
+ttf-cascadia-code
 chromium
 cpupower
 cryptsetup
