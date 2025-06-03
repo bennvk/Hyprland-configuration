@@ -16,6 +16,8 @@ if [[ "$STATE" == "temp" ]]; then
     TEMP=$(nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits)
     echo "GPU ${TEMP}°C "
 else
-    MEM=$(nvidia-smi --query-gpu=memory.used --format=csv,noheader,nounits)
-    echo "${MEM}MiB "
+    USED=$(nvidia-smi --query-gpu=memory.used --format=csv,noheader,nounits | awk '{print $1}')
+    TOTAL=$(nvidia-smi --query-gpu=memory.total --format=csv,noheader,nounits | awk '{print $1}')
+    PERCENT=$(( USED * 100 / TOTAL ))
+    echo "RAM  ${PERCENT}% "
 fi
