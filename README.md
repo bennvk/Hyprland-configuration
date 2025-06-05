@@ -6,7 +6,7 @@ All my configuration files for Hyprland Wayland on EndeavourOS
 - Window Manage - [Hyprland](https://wiki.hyprland.org/)
 - Wallpapers - [Swww](https://github.com/LGFae/swww)
 - Bar - [Waybar](https://wiki.archlinux.org/title/Waybar)
-- Menu launcher - [Fuzzel](https://archlinux.org/packages/extra/x86_64/fuzzel/)
+- Menu launcher - [Rofi Wayland](https://github.com/in0ni/rofi-wayland)
 - Shell - [Bash](https://wiki.archlinux.org/title/Bash)
 - Terminal - [Kitty](https://wiki.archlinux.org/title/Kitty)
 
