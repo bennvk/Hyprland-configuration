@@ -133,7 +133,7 @@
 "clock": {
     "format": "{:%R}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
-    "format-alt": "{:%Y-%m-%d}"
+    "format-alt": "{:%Y-%d-%m}"
 },
 
 "custom/power": {
