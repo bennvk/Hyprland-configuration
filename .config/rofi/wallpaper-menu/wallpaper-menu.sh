@@ -17,6 +17,5 @@ if [ -n "$selected" ]; then
     --transition-pos 0.5,0.5 \
     --transition-duration 1 \
     --transition-fps 60
-    wal -i "$selected"
-    ~/.config/wal/wal-sync.sh
+    bash ~/.config/wal/wal-sync.sh "$selected"
 fi
