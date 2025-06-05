@@ -1,0 +1,89 @@
+/*****----- Configuration -----*****/
+configuration {
+    show-icons:                 true;
+    drun-display-format:        "{name}";
+}
+
+/*****----- Global Properties -----*****/
+@import                          "shared/colors.rasi"
+@import                          "shared/fonts.rasi"
+
+* {
+    background-color:           @background;
+    foreground-color:           @foreground;
+    normal-background:          @background;
+    normal-foreground:          @foreground;
+}
+
+/*****----- Main Window -----*****/
+window {
+    location:                    northeast;
+    anchor:                      northeast;
+    width:                       400px;
+    x-offset:                    -10px;
+    y-offset:                    10px;
+    margin:                      0px;
+    padding:                     0px;
+    enabled:                     true;
+    border:                      0px solid;
+    border-radius:               10px;
+    border-color:                @border-color;
+    cursor:                      "default";
+    background-color:            @background-color;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     30px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @border-color;
+    background-color:            transparent;
+    children:                    [ "message", "listview" ];
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       4;
+    layout:                      vertical;
+    spacing:                     2px;
+    fixed-height:                true;
+    background-color:            transparent;
+    text-color:                  @foreground-color;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     5px 10px;
+    border:                      0px solid;
+    border-radius:               10px;
+    background-color:            transparent;
+    text-color:                  @foreground-color;
+    cursor:                      pointer;
+}
+element normal.normal {
+    background-color:            @normal-background;
+    text-color:                  @normal-foreground;
+}
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        24px;
+    cursor:                      inherit;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}

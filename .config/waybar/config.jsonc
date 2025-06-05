@@ -28,7 +28,7 @@
 
 "custom/os_button": {
     "format": "🪐",
-    "on-click": "bash ~/.config/fuzzel/wallpapers-menu/wallpapers-menu.sh",
+    "on-click": "",
     "tooltip": false
 },
 
@@ -104,7 +104,6 @@
 },
 
 "network": {
-    "on-click": "bash ~/.config/fuzzel/wifi-menu/wifi-menu.sh",
     "format-wifi": "{essid} ",
     "format-ethernet": "Ethernet ",
     "tooltip-format": "Connected to {essid}",
@@ -138,7 +137,7 @@
 
 "custom/power": {
     "format": "",
-    "on-click": "bash ~/.config/fuzzel/power-menu/power-menu.sh",
+    "on-click": "bash ~/.config/rofi/power-menu/power-menu.sh",
     "tooltip": false
 },
 

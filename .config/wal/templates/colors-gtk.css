@@ -1,0 +1,8 @@
+/* ~/.config/wal/templates/colors-gtk.css */
+
+@define-color bg_color {{background}};
+@define-color fg_color {{foreground}};
+@define-color base_color {{color0}};
+@define-color text_color {{color7}};
+@define-color selected_bg_color {{color2}};
+@define-color selected_fg_color {{color15}};

@@ -37,4 +37,3 @@ else
     
     echo "CPU ${USAGE}% "
 fi
-
