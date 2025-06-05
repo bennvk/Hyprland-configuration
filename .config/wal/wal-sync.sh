@@ -38,4 +38,4 @@ ln -sf ~/.cache/wal/colors-rofi-dark.rasi ~/.config/rofi/colors.rasi
 
 ##### Firefox (Pywalfox) #####
 
-pywalfox update
+/usr/bin/pywalfox update

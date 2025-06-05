@@ -28,7 +28,7 @@
 
 "custom/os_button": {
     "format": "🪐",
-    "on-click": "",
+    "on-click": "bash ~/.config/rofi/wallpaper-menu/wallpaper-menu.sh",
     "tooltip": false
 },
 

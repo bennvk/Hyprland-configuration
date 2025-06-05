@@ -11,10 +11,7 @@ C6=$(jq -r '.colors.color6' < "$colors_file")
 C7=$(jq -r '.colors.color7' < "$colors_file")
 
 cat > "$output_file" <<EOF
-format = """
-   \$username\
-\$directory\
-\$line_break\$character"""
+format = "  \$username\$directory\$line_break\$character"
 
 [username]
 style_user = "bold $C4"
@@ -27,6 +24,6 @@ truncate_to_repo = false
 truncation_length = 3
 
 [character]
-success_symbol = "[   ❯](bold $C7)"
-error_symbol = "[   ❯](bold red)"
+success_symbol = "[  ❯](bold $C7)"
+error_symbol = "[  ❯](bold red)"
 EOF
