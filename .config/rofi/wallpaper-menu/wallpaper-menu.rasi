@@ -1,6 +1,11 @@
 @import                          "../shared/colors.rasi"
 @import                          "../shared/fonts.rasi"
 
+configuration {
+    show-icons: true;
+    icon-theme: "Papirus";
+}
+
 * {
     background-color:           @background;
     foreground-color:           @foreground;
@@ -48,7 +53,7 @@ entry {
 }
 
 listview {
-    lines:                      25;
+    lines:                      19;
     layout:                     vertical;
     fixed-height:               true;
     background-color:           transparent;
@@ -57,7 +62,7 @@ listview {
 
 element {
     enabled:                     true;
-    spacing:                     8px;
+    spacing:                     10px;
     padding:                     5px 10px;
     border:                      0px solid;
     border-radius:               10px;
@@ -72,7 +77,7 @@ element normal.normal {
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
-    size:                        24px;
+    size:                        36px;
     cursor:                      inherit;
 }
 element-text {

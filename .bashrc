@@ -4,6 +4,8 @@
 
 PS1='[\u@\h \W]\$ '
 
+export PATH="$PATH:/home/benn/.local/bin"
+
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias c='clear'
@@ -15,8 +17,5 @@ alias powermode-powersave='sudo cpupower frequency-set -g powersave'
 alias powermode-performance='sudo cpupower frequency-set -g performance'
 
 echo; command -v fastfetch >/dev/null && fastfetch;
-
-# Created by `pipx` on 2025-05-10 14:31:55
-export PATH="$PATH:/home/benn/.local/bin"
 
 eval "$(starship init bash)"

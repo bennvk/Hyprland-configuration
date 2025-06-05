@@ -4,9 +4,15 @@ wallpaper_dir="$HOME/Images/Wallpapers"
 
 choices=$(find "$wallpaper_dir" -type f \( -iname '*.jpg' -o -iname '*.png' -o -iname '*.jpeg' -o -iname '*.webp' \) | sort)
 
-names=$(basename -a $choices)
+list=""
+while IFS= read -r file; do
+    name=$(basename "$file")
+    list+="${name}\x00icon\x1f${file}\n"
+done <<< "$choices"
 
-selected_name=$(printf "%s\n" "$names" | rofi -dmenu -theme ~/.config/rofi/wallpaper-menu/wallpaper-menu.rasi -p "Choisir un fond d'écran")
+selected_line=$(printf "$list" | rofi -dmenu -theme ~/.config/rofi/wallpaper-menu/wallpaper-menu.rasi -p "Choisir un fond d'écran")
+
+selected_name=$(printf "%s" "$selected_line" | cut -d $'\x00' -f1)
 
 selected=$(printf "%s\n" "$choices" | grep "/$selected_name$")
 
