@@ -16,22 +16,21 @@ case "$chosen" in
   *Arrêt\ planifié*)
     delay=$(rofi -dmenu -theme ~/.config/rofi/power-menu/power-menu2.rasi)
 
+    if ! [[ "$delay" =~ ^[0-9]+$ ]]; then
+      exit 1
+    fi
+
     unit=$(printf " Secondes\n Minutes\n Heures\n Annuler" | rofi -dmenu -theme ~/.config/rofi/power-menu/power-menu3.rasi)
+
+    unit=$(echo "$unit" | awk '{print $2}')
 
     case "$unit" in
       Secondes) total_seconds=$((delay)) ;;
       Minutes) total_seconds=$((delay * 60)) ;;
       Heures) total_seconds=$((delay * 3600)) ;;
       Annuler|*) exit 1 ;;
-      *)
-        exit 1
-        ;;
     esac
 
-    shutdown -h +$((total_seconds / 60))
-    notify-send "Arrêt programmé" "Dans $delay $unit"
-    ;;
-  *Annuler*) 
-    exit 0 
+    sleep "$total_seconds" && systemctl poweroff
     ;;
 esac
