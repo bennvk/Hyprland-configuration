@@ -7,13 +7,7 @@ configuration {
 /*****----- Global Properties -----*****/
 @import                          "shared/colors.rasi"
 @import                          "shared/fonts.rasi"
-
-* {
-    background-color:           @background;
-    foreground-color:           @foreground;
-    normal-background:          @background;
-    normal-foreground:          @foreground;
-}
+@import                          "shared/main_theme.rasi"
 
 /*****----- Main Window -----*****/
 window {
@@ -42,14 +36,14 @@ mainbox {
     border-radius:               0px;
     border-color:                @border-color;
     background-color:            transparent;
-    children:                    [ "message", "listview" ];
+    children:                    [ "message", "inputbar", "listview" ];
 }
 
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       4;
+    lines:                       0;
     layout:                      vertical;
     spacing:                     2px;
     fixed-height:                true;
@@ -58,32 +52,30 @@ listview {
     cursor:                      "default";
 }
 
-/*****----- Elements -----*****/
-element {
+/*****----- Input bar -----*****/
+inputbar {
     enabled:                     true;
-    spacing:                     10px;
-    padding:                     5px 10px;
-    border:                      0px solid;
+    spacing:                     5px;
+    margin:                      5px 10px;
+    padding:                     8px 10px;
     border-radius:               10px;
-    background-color:            transparent;
+    border-width:                1px;
+    border-color:                @border-color;
+    background-color:            @background-color;
     text-color:                  @foreground-color;
-    cursor:                      pointer;
+    children:                    [ "textbox-prompt-colon", "entry" ];
 }
-element normal.normal {
-    background-color:            @normal-background;
-    text-color:                  @normal-foreground;
+
+textbox-prompt-colon {
+    enabled:                     false;
 }
-element-icon {
-    background-color:            transparent;
-    text-color:                  inherit;
-    size:                        24px;
-    cursor:                      inherit;
-}
-element-text {
-    background-color:            transparent;
-    text-color:                  inherit;
-    highlight:                   inherit;
-    cursor:                      inherit;
-    vertical-align:              0.5;
-    horizontal-align:            0.0;
+
+entry {
+    enabled:                     true;
+    padding:                     5px 10px;
+    border-radius:               5px;
+    placeholder:                 "Choisir la durée avant arrêt...";
+    background-color:            @background-color;
+    text-color:                  @foreground-color;
+    cursor:                      text;
 }

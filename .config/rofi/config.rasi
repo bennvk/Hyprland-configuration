@@ -15,8 +15,8 @@ configuration {
 @import                          "shared/fonts.rasi"
 
 * {
-    background-color:           @background;
-    foreground-color:           @foreground;
+    background-color:            @background;
+    foreground-color:            @foreground;
     normal-background:           @background;
     normal-foreground:           @foreground;
 }
@@ -160,13 +160,13 @@ element-icon {
 element-text {
     background-color:            transparent;
     text-color:                  inherit;
-    highlight:                   inherit;
+    highlight:                   bold;
     cursor:                      inherit;
     vertical-align:              0.5;
     horizontal-align:            0.0;
 }
 
-/*****----- Mode Switcher -----*****/
+/*****----- Mode Switcher (drun, run, file, window) -----*****/
 mode-switcher{
     enabled:                     true;
     spacing:                     10px;
