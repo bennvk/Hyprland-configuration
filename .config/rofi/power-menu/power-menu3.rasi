@@ -43,7 +43,7 @@ mainbox {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       4;
+    lines:                       2;
     layout:                      vertical;
     spacing:                     2px;
     fixed-height:                true;

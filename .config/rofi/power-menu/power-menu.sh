@@ -14,23 +14,32 @@ case "$chosen" in
     hyprctl dispatch exit 
     ;;
   *Arrêt\ planifié*)
-    delay=$(rofi -dmenu -theme ~/.config/rofi/power-menu/power-menu2.rasi)
+    input=$(rofi -dmenu -theme ~/.config/rofi/power-menu/power-menu2.rasi -p "Durée (ex: 10m, 5 minutes, 1h)")
 
-    if ! [[ "$delay" =~ ^[0-9]+$ ]]; then
-      exit 1
-    fi
+    [ -z "$input" ] && exit 1
 
-    unit=$(printf " Secondes\n Minutes\n Heures\n Annuler" | rofi -dmenu -theme ~/.config/rofi/power-menu/power-menu3.rasi)
+    value=$(echo "$input" | grep -oE '^[0-9]+')
 
-    unit=$(echo "$unit" | awk '{print $2}')
+    unit=$(echo "$input" | grep -oEi '[a-z]+$' | tr '[:upper:]' '[:lower:]')
 
     case "$unit" in
-      Secondes) total_seconds=$((delay)) ;;
-      Minutes) total_seconds=$((delay * 60)) ;;
-      Heures) total_seconds=$((delay * 3600)) ;;
-      Annuler|*) exit 1 ;;
+      s|sec|secs|seconde|secondes) label="secondes" ; multiplier=1 ;;
+      m|min|mins|minute|minutes)   label="minutes"  ; multiplier=60 ;;
+      h|hr|heure|heures)           label="heures"   ; multiplier=3600 ;;
+    *)
+      exit 1
+      ;;
     esac
 
+    human="${value} ${label}"
+
+    confirmation=$(printf "✅ Valider\n❌ Annuler" | \
+      rofi -dmenu -theme ~/.config/rofi/power-menu/power-menu3.rasi -mesg "⏱️ Durée choisie : $human")
+
+    [[ "$confirmation" == *"Annuler"* ]] && exit 0
+    [[ "$confirmation" == *"Valider"* ]] || exit 1
+
+    total_seconds=$((value * multiplier))
     sleep "$total_seconds" && systemctl poweroff
     ;;
 esac
