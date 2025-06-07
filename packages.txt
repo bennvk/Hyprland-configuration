@@ -57,6 +57,7 @@ firefox
 firefox-i18n-fr
 firejail
 firewalld
+foot
 fuzzel
 fwupd
 galculator
