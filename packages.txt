@@ -74,6 +74,7 @@ hwdetect
 hwinfo
 hyprland
 hyprpaper
+imagemagick
 inetutils
 inotify-tools
 intel-ucode
