@@ -1,0 +1,33 @@
+* {
+    background-color: #0c100c;
+    color: #aaa3a0;
+}
+
+.thunar .sidebar {
+    background-color: #3F403A;
+    color: #aaa3a0;
+}
+
+.thunar .sidebar:selected {
+    background-color: #5F4725;
+    color: #aaa3a0;
+    border: 1px solid #aaa3a0;
+    box-shadow: inset 0 0 3px #aaa3a0;
+}
+
+.thunar .view {
+    background-color: #0c100c;
+    color: #aaa3a0;
+}
+
+.thunar .view:selected {
+    background-color: #48433C;
+    color: #aaa3a0;
+}
+
+.thunar .header,
+.thunar .toolbar,
+.thunar .menubar {
+    background-color: #3F403A;
+    color: #aaa3a0;
+}
