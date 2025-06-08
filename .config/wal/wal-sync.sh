@@ -60,7 +60,7 @@ if [ -f "$colors_file" ]; then
 }
 
 .thunar .view:selected {
-    background-color: $color2;
+    background-color: $color0;
     color: $color15;
 }
 
@@ -71,16 +71,11 @@ if [ -f "$colors_file" ]; then
     color: $foreground;
 }
 EOF
-
-    echo "gtk.css généré avec succès."
-else
-    echo "Erreur : fichier $colors_file introuvable."
 fi
-
 
 ##### Starship prompt #####
 
-~/.config/starship/theme.sh
+bash ~/.config/starship/theme.sh
 
 ##### Rofi #####
 
