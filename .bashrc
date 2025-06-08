@@ -19,3 +19,5 @@ alias powermode-performance='sudo cpupower frequency-set -g performance'
 echo; command -v fastfetch >/dev/null && fastfetch;
 
 eval "$(starship init bash)"
+
+[ -f "$HOME/.cache/wal/colors.sh" ] && source "$HOME/.cache/wal/colors.sh"

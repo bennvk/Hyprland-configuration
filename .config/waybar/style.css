@@ -132,7 +132,6 @@ button:hover {
     }
 }
 
-/* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
     color: #f53c3c;
     animation-name: blink;
@@ -149,12 +148,14 @@ label:focus {
 #custom-cpu {
     padding: 0 10px;
     background-color: transparent;
+    color: @background;
 }
 
-#custom-mem {
+#custom-gpuNmemory {
     background-color: transparent;
     margin-right:6px;
     margin-left:6px;
+    color: @backgroun;
 }
 
 #disk {
