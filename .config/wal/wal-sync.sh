@@ -25,14 +25,14 @@ output_gtk_css="$HOME/.config/gtk-3.0/gtk.css"
 if [ -f "$colors_file" ]; then
     readarray -t colors < "$colors_file"
 
-    background=${colors[0]}   # #0c080a
-    foreground=${colors[15]}  # #ba9a97 (texte)
-    color0=${colors[2]}       # #54211D (sidebar bg)
-    color2=${colors[4]}       # #542926 (view selection bg)
-    color4=${colors[6]}       # #70322D (non utilisé ici, mais c’est ok)
-    color7=${colors[9]}       # #ba9a97 (texte clair)
-    color9=${colors[11]}      # #70322D (sidebar sélection bg)
-    color15=${colors[15]}     # #ba9a97 (texte)
+    background=${colors[0]}
+    foreground=${colors[15]}  #texte
+    color0=${colors[2]}       #sidebar bg
+    color2=${colors[4]}       #view selection bg
+    color4=${colors[6]}
+    color7=${colors[9]}       #texte clair
+    color9=${colors[11]}      #sidebar sélection bg
+    color15=${colors[15]}     #texte
 
     mkdir -p "$(dirname "$output_gtk_css")"
 

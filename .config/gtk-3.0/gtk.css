@@ -1,33 +1,33 @@
 * {
-    background-color: #0c100c;
-    color: #aaa3a0;
+    background-color: #070D0F;
+    color: #a7b5bf;
 }
 
 .thunar .sidebar {
-    background-color: #3F403A;
-    color: #aaa3a0;
+    background-color: #35576E;
+    color: #a7b5bf;
 }
 
 .thunar .sidebar:selected {
-    background-color: #5F4725;
-    color: #aaa3a0;
-    border: 1px solid #aaa3a0;
-    box-shadow: inset 0 0 3px #aaa3a0;
+    background-color: #3B627B;
+    color: #a7b5bf;
+    border: 1px solid #a7b5bf;
+    box-shadow: inset 0 0 3px #a7b5bf;
 }
 
 .thunar .view {
-    background-color: #0c100c;
-    color: #aaa3a0;
+    background-color: #070D0F;
+    color: #a7b5bf;
 }
 
 .thunar .view:selected {
-    background-color: #48433C;
-    color: #aaa3a0;
+    background-color: #486474;
+    color: #a7b5bf;
 }
 
 .thunar .header,
 .thunar .toolbar,
 .thunar .menubar {
-    background-color: #3F403A;
-    color: #aaa3a0;
+    background-color: #35576E;
+    color: #a7b5bf;
 }
