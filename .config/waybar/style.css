@@ -4,6 +4,7 @@
     font-family: Mononoki, "Font Awesome 6 Free", "Font Awesome 6 Brands";
     font-size: 13px;
     font-weight: bold;
+    color: #ffffff;
     background-color: transparent;
 }
 
@@ -25,31 +26,13 @@ button {
     border-radius: 100%;
 }
 
-button:hover {
-    background: inherit;
-}
-
-#pulseaudio:hover {
-}
-
 #window{
   font-size: 9px;
 }
 
 #workspaces button {
-    color: @background;
     padding: 0px 4px;
-    color: #ffffff;
     font-weight: 100;
-}
-
-#workspaces button.active {
-  color: @color6;
-}
-
-
-#workspaces button.urgent {
-    color: @color1;
 }
 
 #clock,
