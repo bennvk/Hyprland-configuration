@@ -10,7 +10,7 @@ case "$chosen" in
   *Redémarrer*) 
     systemctl reboot 
     ;;
-  *Verouiller*)
+  *Verrouiller*)
     hyprlock --config ~/.config/hyprlock/hyprlock.conf
     ;;
   *Se\ déconnecter*) 
