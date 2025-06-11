@@ -9,7 +9,7 @@ All my configuration files for Hyprland Wayland on EndeavourOS
 - Menu launcher - [Rofi Wayland](https://github.com/in0ni/rofi-wayland)
 - Shell - [Bash](https://wiki.archlinux.org/title/Bash)
 - Terminal - [Kitty](https://wiki.archlinux.org/title/Kitty)
-- Lock Screen - [Hyprlock]([https://wiki.archlinux.org/title/Bash](https://archlinux.org/packages/extra/x86_64/hyprlock/))
+- Lock Screen - [Hyprlock](https://archlinux.org/packages/extra/x86_64/hyprlock/)
 
 ### Themes
 
