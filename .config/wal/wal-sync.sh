@@ -77,6 +77,14 @@ fi
 
 bash ~/.config/starship/theme.sh
 
+##### Hyprlock #####
+
+exten="${WALLPAPER_PATH##*.}"
+target="/home/benn/.config/hyprlock/wp_hyprlock.$exten"
+
+cp "$WALLPAPER_PATH" "$target"
+ln -sf "$target" "/home/benn/.config/hyprlock/wp_hyprlock"
+
 ##### Rofi #####
 
 ln -sf ~/.cache/wal/colors-rofi-dark.rasi ~/.config/rofi/colors.rasi

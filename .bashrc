@@ -5,6 +5,7 @@
 PS1='[\u@\h \W]\$ '
 
 export PATH="$PATH:/home/benn/.local/bin"
+export LANG=fr_FR.UTF-8
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -15,6 +16,7 @@ alias mega-status='mega-sync'
 alias powermode-status='cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
 alias powermode-powersave='sudo cpupower frequency-set -g powersave'
 alias powermode-performance='sudo cpupower frequency-set -g performance'
+alias hyprlock='hyprlock --config ~/.config/hyprlock/hyprlock.conf'
 
 echo; command -v fastfetch >/dev/null && fastfetch;
 

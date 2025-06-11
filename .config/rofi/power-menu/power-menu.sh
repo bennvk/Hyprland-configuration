@@ -1,6 +1,6 @@
 #!/bin/bash
 
-chosen=$(printf "  Éteindre\n  Redémarrer\n  Se déconnecter\n  Arrêt planifié\n  Annuler" | \
+chosen=$(printf "  Éteindre\n  Redémarrer\n  Verouiller\n  Se déconnecter\n  Arrêt planifié\n  Annuler" | \
   rofi -dmenu -theme ~/.config/rofi/power-menu/power-menu1.rasi)
 
 case "$chosen" in
@@ -9,6 +9,9 @@ case "$chosen" in
     ;;
   *Redémarrer*) 
     systemctl reboot 
+    ;;
+  *Verouiller*)
+    hyprlock --config ~/.config/hyprlock/hyprlock.conf
     ;;
   *Se\ déconnecter*) 
     hyprctl dispatch exit 
