@@ -13,7 +13,7 @@ configuration {
 /*****----- Global Properties -----*****/
 @import                          "shared/colors.rasi"
 @import                          "shared/fonts.rasi"
-
+@import                          "shared/icons.rasi"
 * {
     background-color:            @background;
     foreground-color:            @foreground;
