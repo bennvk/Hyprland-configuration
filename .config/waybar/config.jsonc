@@ -67,6 +67,7 @@
 },
 
 "pulseaudio": {
+    "on-click": "pavucontrol",
     "format": "{icon}",
     "format-bluetooth": "{icon}",
     "format-bluetooth-muted": "{icon}",
