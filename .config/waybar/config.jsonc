@@ -6,7 +6,6 @@
   "modules-left": [
     "custom/os_button",
     "hyprland/workspaces",
-    "custom/spacer",
     "custom/musicplayer"
 ],
 
@@ -24,7 +23,7 @@
     "custom/power"
 ],
 
-  // Modules configuration //
+  // Modules configuration /2/
 
 "custom/os_button": {
     "format": "🪐",
@@ -140,11 +139,6 @@
     "format": "",
     "on-click": "bash ~/.config/rofi/power-menu/power-menu.sh",
     "tooltip": false
-},
-
-"custom/spacer": {
-  "format": " |  ",
-  "tooltip": false
 }
 
 }

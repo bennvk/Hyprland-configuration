@@ -1,0 +1,15 @@
+#custom-os_button,
+#workspaces,
+#custom-musicplayer,
+#window,
+#pulseaudio,
+#custom-cpu,
+#custom-gpuNmemory,
+#network,
+#battery,
+#battery.charging, #battery.plugged,
+#battery.critical:not(.charging),
+#clock,
+#custom-power {
+    background-color: #345666;
+}

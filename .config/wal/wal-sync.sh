@@ -17,6 +17,12 @@ cat > ~/.config/kitty/colors.conf <<EOF
 include ~/.cache/wal/colors-kitty.conf
 EOF
 
+##### Waybar #####
+
+bash ~/.config/waybar/colors-wal.sh
+pkill waybar
+waybar
+
 ##### Thunar #####
 
 colors_file="$HOME/.cache/wal/colors"
