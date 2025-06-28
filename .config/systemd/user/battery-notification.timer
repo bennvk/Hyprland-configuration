@@ -2,8 +2,8 @@
 Description=Notification batterie régulière
 
 [Timer]
-OnBootSec=30s
-OnUnitActiveSec=2min
+OnBootSec=5s
+OnUnitActiveSec=5s
 Unit=battery-notification.service
 
 [Install]

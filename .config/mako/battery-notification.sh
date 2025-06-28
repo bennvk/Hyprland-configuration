@@ -1,16 +1,19 @@
 #!/bin/bash
 
-info=$(upower -i /org/freedesktop/UPower/devices/battery_BAT1)
+export DISPLAY=:0
+export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
 
-state=$(echo "$info" | grep "state" | awk '{print $2}')
-percentage=$(echo "$info" | grep "percentage" | awk '{print $2}' | sed 's/%//')
-is_charging=$(echo "$state" | grep -i charging)
+battery_path="/sys/class/power_supply/BAT1"
+status_file="$battery_path/status"
+capacity_file="$battery_path/capacity"
 
-if [ "$percentage" -lt 15 ] && [ -z "$is_charging" ]; then
-    notify-send -u critical "⚠️ Batterie faible" "$percentage% de batterie restante."
+state=$(cat "$status_file")
+percentage=$(cat "$capacity_file")
+
+if [ "$percentage" -lt 15 ] && [ "$state" = "Discharging" ]; then
+    notify-send -i /home/benn/Images/Icons/battery-alert.png "Batterie faible" "$percentage% de batterie restants."
 fi
 
-if [ "$percentage" -ge 99 ] && [ -n "$is_charging" ]; then
-    notify-send -t 3000 "🔌 Batterie pleine"
+if [ "$percentage" -ge 99 ] && [[ "$state" == "Charging" || "$state" == "Full" ]]; then
+    notify-send -i /home/benn/Images/Icons/battery-full.png "Batterie chargée" "100% de la batterie est chargée"
 fi
-

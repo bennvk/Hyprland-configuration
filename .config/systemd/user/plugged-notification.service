@@ -1,0 +1,12 @@
+[Unit]
+Description=Notifier au branchement du chargeur
+
+[Service]
+ExecStart=/home/benn/.config/mako/plugged-notification.sh
+Restart=always
+RestartSec=2
+Environment=DISPLAY=:0
+Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/%U/bus
+
+[Install]
+WantedBy=default.target
