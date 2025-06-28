@@ -1,0 +1,19 @@
+background-color=#0F1E25
+text-color=#dceabf
+border-color=#ffffff
+font=Mononoki 11
+
+border-size=1
+border-radius=6
+padding=10
+margin=10
+anchor=top-right
+
+default-timeout=5000
+max-history=100
+max-visible=5
+icons=true
+max-icon-size=64
+
+width=545
+height=250

@@ -10,6 +10,7 @@ All my configuration files for Hyprland Wayland on EndeavourOS
 - Shell - [Bash](https://wiki.archlinux.org/title/Bash)
 - Terminal - [Kitty](https://wiki.archlinux.org/title/Kitty)
 - Lock Screen - [Hyprlock](https://archlinux.org/packages/extra/x86_64/hyprlock/)
+- Notifications - [Mako](https://github.com/emersion/mako)
 
 ### Themes
 

@@ -62,7 +62,7 @@
 
 "hyprland/window": {
     "format": "{class}",
-    "max-lenght": 10
+    "max-length": 10
 },
 
 "pulseaudio": {
