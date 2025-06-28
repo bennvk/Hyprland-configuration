@@ -17,32 +17,36 @@ case "$chosen" in
     hyprctl dispatch exit 
     ;;
   *Arrêt\ planifié*)
-    input=$(rofi -dmenu -theme ~/.config/rofi/power-menu/power-menu2.rasi -p "Durée (ex: 10m, 5 minutes, 1h)")
+  input=$(rofi -dmenu -theme ~/.config/rofi/power-menu/power-menu2.rasi -p "Durée (ex: 10m, 5 minutes, 1h)")
 
-    [ -z "$input" ] && exit 1
+  [ -z "$input" ] && exit 1
 
-    value=$(echo "$input" | grep -oE '^[0-9]+')
+  value=$(echo "$input" | grep -oE '^[0-9]+')
 
-    unit=$(echo "$input" | grep -oEi '[a-z]+$' | tr '[:upper:]' '[:lower:]')
+  unit=$(echo "$input" | grep -oEi '[a-z]+$' | tr '[:upper:]' '[:lower:]')
 
-    case "$unit" in
-      s|sec|secs|seconde|secondes) label="secondes" ; multiplier=1 ;;
-      m|min|mins|minute|minutes)   label="minutes"  ; multiplier=60 ;;
-      h|hr|heure|heures)           label="heures"   ; multiplier=3600 ;;
+  case "$unit" in
+    s|sec|secs|seconde|secondes) label="secondes" ; multiplier=1 ;;
+    m|min|mins|minute|minutes)   label="minutes"  ; multiplier=60 ;;
+    h|hr|heure|heures)           label="heures"   ; multiplier=3600 ;;
     *)
       exit 1
       ;;
-    esac
+  esac
 
-    human="${value} ${label}"
+  human="${value} ${label}"
 
-    confirmation=$(printf "✅ Valider\n❌ Annuler" | \
-      rofi -dmenu -theme ~/.config/rofi/power-menu/power-menu3.rasi -mesg "⏱️ Durée choisie : $human")
+  confirmation=$(printf "✅ Valider\n❌ Annuler" | \
+    rofi -dmenu -theme ~/.config/rofi/power-menu/power-menu3.rasi -mesg "⏱️ Durée choisie : $human")
 
-    [[ "$confirmation" == *"Annuler"* ]] && exit 0
-    [[ "$confirmation" == *"Valider"* ]] || exit 1
+  [[ "$confirmation" == *"Annuler"* ]] && exit 0
+  [[ "$confirmation" == *"Valider"* ]] || exit 1
 
-    total_seconds=$((value * multiplier))
-    sleep "$total_seconds" && systemctl poweroff
-    ;;
+  total_seconds=$((value * multiplier))
+
+  notify-send -i /home/benn/Images/Icons/shutdown.png -t 5000 "Arrêt planifié" "Le système va s’éteindre dans $human."
+
+  sleep "$total_seconds" && systemctl poweroff
+  ;;
+
 esac

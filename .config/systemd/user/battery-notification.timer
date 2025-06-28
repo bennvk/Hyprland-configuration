@@ -1,0 +1,10 @@
+[Unit]
+Description=Notification batterie régulière
+
+[Timer]
+OnBootSec=30s
+OnUnitActiveSec=2min
+Unit=battery-notification.service
+
+[Install]
+WantedBy=default.target

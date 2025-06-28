@@ -113,8 +113,11 @@ max-visible=5
 icons=true
 max-icon-size=64
 
-width=545
+width=537
 height=250
+
+[app-name="tidal-hifi"]
+invisible=1
 EOF
 
 makoctl reload || { success=false && notify-send -i ~/Images/Icons/wallpaper.png -t 5000 "Mise à jour du fond d'écran ❌" "Erreur : Redémarrage de Mako"; }

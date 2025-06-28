@@ -1,0 +1,6 @@
+[Unit]
+Description=Vérification batterie et notifications
+
+[Service]
+Type=oneshot
+ExecStart=/home/benn/.config/mako/battery-notification.sh

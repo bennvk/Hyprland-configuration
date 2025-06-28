@@ -1,5 +1,5 @@
-background-color=#0F1E25
-text-color=#dceabf
+background-color=#0F1D37
+text-color=#bfcee1
 border-color=#ffffff
 font=Mononoki 11
 
@@ -15,5 +15,8 @@ max-visible=5
 icons=true
 max-icon-size=64
 
-width=545
+width=537
 height=250
+
+[app-name="tidal-hifi"]
+invisible=1
