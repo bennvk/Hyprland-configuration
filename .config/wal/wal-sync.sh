@@ -113,7 +113,7 @@ max-visible=5
 icons=true
 max-icon-size=64
 
-width=537
+width=485
 height=250
 
 [app-name="tidal-hifi"]
