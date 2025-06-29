@@ -27,5 +27,5 @@ All my configuration files for Hyprland Wayland on EndeavourOS
 - File Manager - [Thunar](https://wiki.archlinux.org/title/Thunar)
 - Calculator - [Galculator](https://archlinux.org/packages/extra/x86_64/galculator/)
 - Sreenshot - [Grim](https://archlinux.org/packages/extra/x86_64/grim/) & [Slurp](https://archlinux.org/packages/extra/x86_64/slurp/) & [WL-Clipboard](https://archlinux.org/packages/extra/x86_64/wl-clipboard/)
-- Luminosity - [Brightnessctl](https://archlinux.org/packages/extra/x86_64/brightnessctl/)
+- Luminosity - [Brightnessctl](https://archlinux.org/packages/extra/x86_64/brightnessctl/) & [ddcutil](https://archlinux.org/packages/extra/x86_64/ddcutil/)
 - Image Viewer - [Swayimg](https://archlinux.org/packages/extra/x86_64/swayimg/)
