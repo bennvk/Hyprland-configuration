@@ -13,7 +13,7 @@ upower --monitor | while read -r line; do
 
         if [ "$state" = "charging" ] && [ "$prev_state" != "charging" ]; then
             percentage=$(upower -i /org/freedesktop/UPower/devices/battery_BAT1 | awk '/percentage:/ {gsub("%", ""); print $2}')
-            notify-send -i /home/benn/Images/Icons/battery-charging.png -t 3000 "🔌 Batterie en charge" "$percentage% de batterie chargée"
+            notify-send -i /home/benn/Images/Icons/battery-charging.png -t 3000 "Batterie en charge" "$percentage% de batterie chargée"
         fi
 
         echo "$state" > "$prev_file"

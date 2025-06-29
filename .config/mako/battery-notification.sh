@@ -13,7 +13,3 @@ percentage=$(cat "$capacity_file")
 if [ "$percentage" -lt 15 ] && [ "$state" = "Discharging" ]; then
     notify-send -i /home/benn/Images/Icons/battery-alert.png "Batterie faible" "$percentage% de batterie restants."
 fi
-
-if [ "$percentage" -ge 99 ] && [[ "$state" == "Charging" || "$state" == "Full" ]]; then
-    notify-send -i /home/benn/Images/Icons/battery-full.png "Batterie chargée" "100% de la batterie est chargée"
-fi
