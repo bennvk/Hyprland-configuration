@@ -9,8 +9,8 @@
 ## Sommaire
 
 - [Pré-requis](#Pré-requis)
-- [Stack Utilisateur](#Stack Utilisateur)
-- [Installation des paquets](#Installation des paquets)
+- [Stack Utilisateur](#Stack-Utilisateur)
+- [Installation des paquets](#Installation-des-paquets)
 - [Arborescence](#Arborescence)
 
 ## Pré-requis
