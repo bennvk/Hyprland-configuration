@@ -1,7 +1,5 @@
 # Hyprland Configuration
 
-***
-
 ## Screenshot
 
 <img src="Images/Screenshots/screenshot.png" alt="Screenshot" width="445" />
