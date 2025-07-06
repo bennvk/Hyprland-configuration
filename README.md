@@ -67,6 +67,7 @@ Si certain paquet ne passe pas, essayé de les installer avec l'AUR avec ```yay 
 
 ## Arborescence
 
+```
 📁 home/
 └── 📁 benn/
     ├── 📁 Images/
@@ -91,3 +92,4 @@ Si certain paquet ne passe pas, essayé de les installer avec l'AUR avec ```yay 
     │
     ├── 📄 .bashrc
     └── 📄 .bash_profile
+```
