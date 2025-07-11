@@ -67,6 +67,7 @@ Si certain paquet ne passe pas, essayé de les installer avec l'AUR avec ```yay 
     │
     ├── 📁 .config/
     │   ├── 📁 fastfetch/
+    │   ├── 📁 help/
     │   ├── 📁 gtk-3.0/
     │   ├── 📁 hypr/
     │   ├── 📁 hyprlock/
