@@ -17,6 +17,8 @@ alias powermode-status='cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governo
 alias powermode-powersave='sudo cpupower frequency-set -g powersave'
 alias powermode-performance='sudo cpupower frequency-set -g performance'
 alias hyprlock='hyprlock --config ~/.config/hyprlock/hyprlock.conf'
+alias help-ytdlp='cat ~/.config/help/help_ytdlp.txt'
+alias help-nmcli='cat ~/.config/help/help_nmcli.txt'
 
 echo; command -v fastfetch >/dev/null && fastfetch --separator " - ";
 

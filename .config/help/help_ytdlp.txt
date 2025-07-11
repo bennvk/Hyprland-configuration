@@ -1,0 +1,30 @@
+
+╭─────────────────────────────────────────────╮
+│                                             │
+│                   yt-dlp                    │
+│                                             │
+╰─────────────────────────────────────────────╯
+
+Usage:
+
+  yt-dlp [OPTIONS] [URL]
+
+Options:
+
+  -P, --paths [CHEMIN]                           Choix du chemin de destination du fichier de sortie.
+  -o, --output "[OUTPUT].[EXT]"                  Nom personnalisé au fichier de sortie.
+  -x, --extract-audio                            Extraire l'audio d'un fichier.
+  -F [URL]                                       Donner tous les formats disponibles (vidéos et audio).
+  -f [ID FORMAT VIDÉO]+[ID FORMAT AUDIO]         Choix du format vidéo et/ou audio.
+  --write-subs                                   Télécharger les sous-titres disponibles
+  --audio-format [EXT]                           Choix du format audio du fichier de sortie.
+  --download-sections "[hh:mm:ss]-[hh:mm:ss]"    Séléction d'un extrait.
+
+Commandes courantes:
+
+  yt-dlp -f bestvideo+bestaudio --merge-output-format mp4 "[URL]"
+      → Télécharge une vidéo en .mp4, dans la meilleure qualité à partir d'un URL.
+
+  yt-dlp -x --audio-format mp3 "[URL]"
+      → Télécharge un audio en .mp3 à partir d'un URL.
+

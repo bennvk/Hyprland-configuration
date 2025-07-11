@@ -1,0 +1,38 @@
+
+╭─────────────────────────────────────────────╮
+│                                             │
+│                   nmcli                     │
+│                                             │
+╰─────────────────────────────────────────────╯
+
+Usage:
+
+  nmcli [OPTIONS] [SOUS-COMMANDE] [ARGUMENTS]
+
+Options utiles :
+
+  device wifi list                              Liste les réseaux Wi-Fi disponibles.
+  device wifi connect [SSID] password [MDP]     Connexion à un réseau protégé par mot de passe.
+  device disconnect iface [INTERFACE]           Déconnecte une interface réseau (ex: wlan0).
+  connection delete [NOM]                       Supprime une connexion enregistrée.
+  device wifi connect [SSID]                    Connexion à un réseau ouvert (sans mot de passe).
+  connection show                               Liste les connexions enregistrées.
+  connection up [SSID]                          Active une connexion enregistrée.
+  connection down [SSID]                        Désactive une connexion enregistrée.
+
+
+Commandes courantes :
+
+  nmcli device wifi connect [SSID] password [MDP]
+      → Se connecter à un réseau Wi-Fi protégé par mot de passe.
+
+  nmcli device disconnect iface wlan0
+      → Se déconnecter du Wi-Fi.
+
+  nmcli connection delete [SSID]
+      → Supprimer une connexion enregistrée.
+
+  nmcli device wifi connect [SSID] password [MDP] --ask
+      → Se connecter à un réseau Wi-Fi nécessitant un identifiant ET mot de passe.
+        L’option `--ask` permet d’entrer l’identifiant au clavier.
+
