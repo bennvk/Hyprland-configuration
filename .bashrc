@@ -18,7 +18,7 @@ alias powermode-powersave='sudo cpupower frequency-set -g powersave'
 alias powermode-performance='sudo cpupower frequency-set -g performance'
 alias hyprlock='hyprlock --config ~/.config/hyprlock/hyprlock.conf'
 
-echo; command -v fastfetch >/dev/null && fastfetch;
+echo; command -v fastfetch >/dev/null && fastfetch --separator " - ";
 
 eval "$(starship init bash)"
 
