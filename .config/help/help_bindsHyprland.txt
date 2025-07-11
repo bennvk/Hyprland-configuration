@@ -1,0 +1,45 @@
+
+╭─────────────────────────────────────────────╮
+│                                             │
+│              Hyprland Binds                 │
+│                                             │
+╰─────────────────────────────────────────────╯
+
+Lanceurs :
+
+  SUPER + A               → Ouvre le terminal (kitty)
+  SUPER + Z               → Ouvre le gestionnaire de fichiers (thunar)
+  SUPER + R               → Lance le menu d'applications Rofi
+  SUPER + TAB             → Rofi en mode fenêtres
+  SUPER + SPACE           → Affiche / masque la Waybar personnalisée
+  SUPER + L               → Lance le menu d'alimentation Rofi 
+
+Captures d’écran :
+
+  SUPER + P               → Capture écran complet + copie dans presse-papiers
+  SUPER + CTRL + P        → Capture une sélection (grim + slurp)
+
+Gestion des fenêtres :
+
+  SUPER + E               → Ferme la fenêtre active
+  SUPER + F               → Bascule en mode flottant
+  SUPER + SHIFT + F       → Plein écran
+  SUPER + Q               → Orientation à gauche
+  SUPER + D               → Orientation à droite
+  SUPER + S               → Échange avec la fenêtre principale
+  SUPER + clic gauche     → Déplacer la fenêtre
+  SUPER + clic droit      → Redimensionner la fenêtre
+
+Workspaces :
+
+  SUPER + [1–6]           → Aller au bureau 1–6
+  SUPER + F[1–6]          → Idem avec touches F1–F6
+  SUPER + SHIFT + [1–6]   → Déplace la fenêtre vers le bureau 1–6
+  SUPER + SHIFT + F[1–6]  → Idem avec touches F1–F6
+
+Écran & luminosité :
+
+  SUPER + [              → Diminue la luminosité (Script luminosité intelligent)
+  SUPER + ]              → Augmente la luminosité (Script luminosité intelligent) 
+  XF86MonBrightnessUp    → Luminosité +10%
+  XF86MonBrightnessDown  → Luminosité -10%

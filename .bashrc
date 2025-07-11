@@ -19,6 +19,7 @@ alias powermode-performance='sudo cpupower frequency-set -g performance'
 alias hyprlock='hyprlock --config ~/.config/hyprlock/hyprlock.conf'
 alias help-ytdlp='cat ~/.config/help/help_ytdlp.txt'
 alias help-nmcli='cat ~/.config/help/help_nmcli.txt'
+alias help-bindsHyprland='cat ~/.config/help/help_bindsHyprland.txt'
 
 echo; command -v fastfetch >/dev/null && fastfetch --separator " - ";
 
