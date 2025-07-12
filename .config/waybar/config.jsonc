@@ -104,6 +104,7 @@
 },
 
 "network": {
+    "on-click": "bash ~/.config/rofi/wifi-menu/wifi-menu.sh",
     "format-wifi": "{essid} ",
     "format-ethernet": "Ethernet ",
     "tooltip-format": "Connected to {essid}",
