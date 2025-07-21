@@ -10,7 +10,7 @@ THRESHOLD=1920
 
 if (( mouse_x < THRESHOLD )); then
     MAX=$(brightnessctl m)
-    STEP_BC=$(( MAX / 10 ))
+    STEP_BC=$(( MAX / 20 ))
 
     CURRENT=$(brightnessctl g)
 
@@ -26,12 +26,9 @@ if (( mouse_x < THRESHOLD )); then
     (( NEW < 0 )) && NEW=0
     (( NEW > MAX )) && NEW=$MAX
 
-    echo "🖥️ Écran laptop"
-    echo "🔆 Luminosité : $CURRENT → $NEW"
     brightnessctl set "$NEW"
 
 else
-    # Écran secondaire (ddcutil)
     RAW=$(/usr/bin/ddcutil getvcp 10)
     CURRENT=$(echo "$RAW" | grep -oP 'current value\s*=\s*\K[0-9]+')
 
@@ -52,8 +49,5 @@ else
     (( NEW < 0 )) && NEW=0
     (( NEW > 100 )) && NEW=100
 
-    echo "🖥️ Écran secondaire"
-    echo "🔆 Luminosité : $CURRENT → $NEW"
     ddcutil setvcp 10 "$NEW"
 fi
-
