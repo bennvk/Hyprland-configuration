@@ -23,7 +23,7 @@
     "custom/power"
 ],
 
-  // Modules configuration /2/
+  // Modules configuration //
 
 "custom/os_button": {
     "format": "🪐",
@@ -62,7 +62,7 @@
 
 "hyprland/window": {
     "format": "{class}",
-    "max-length": 10
+    "max-length": 20
 },
 
 "pulseaudio": {
