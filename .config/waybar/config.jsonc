@@ -62,7 +62,8 @@
 
 "hyprland/window": {
     "format": "{class}",
-    "max-length": 20
+    "max-length": 20,
+    "on-click": "rofi -show window"
 },
 
 "pulseaudio": {
