@@ -1,4 +1,5 @@
-// Modules layout //
+
+  // Modules layout //
 
 {
   "style": "~/.config/waybar/style.css",
@@ -108,8 +109,8 @@
     "on-click": "bash ~/.config/rofi/wifi-menu/wifi-menu.sh",
     "format-wifi": "{essid} ",
     "format-ethernet": "Ethernet ",
-    "tooltip-format": "Connected to {essid}",
-    "format-disconnected": "Disconnected ⚠"
+    "tooltip-format": "Connecté à {essid}",
+    "format-disconnected": "Déconnecté ⚠"
 },
 
 "battery": {
@@ -134,7 +135,7 @@
 
 "clock": {
     "format": "{:%R}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
+    "tooltip-format": "<tt><big>{calendar}</big></tt>",
     "format-alt": "{:%d-%m-%Y}"
 },
 

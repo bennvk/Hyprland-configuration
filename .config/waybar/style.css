@@ -69,10 +69,12 @@
 
 #battery.charging, #battery.plugged {
     padding: 8px 18px;
+    color: #028A0F;
 }
 
 #battery.critical:not(.charging) {
     padding: 8px 18px;
+    color: #990F02;
 }
 
 #clock {
