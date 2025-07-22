@@ -3,13 +3,12 @@
 #custom-musicplayer,
 #window,
 #pulseaudio,
-#custom-cpu,
-#custom-gpuNmemory,
+#custom-group-performance,
 #network,
 #battery,
 #battery.charging, #battery.plugged,
 #battery.critical:not(.charging),
 #clock,
 #custom-power {
-    background-color: #35576E;
+    background-color: #487AB5;
 }

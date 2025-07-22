@@ -16,8 +16,7 @@
 
 "modules-right": [
     "pulseaudio",
-    "custom/cpu",
-    "custom/gpuNmemory",
+    "custom/group-performance",
     "network",
     "battery",
     "clock",
@@ -56,7 +55,7 @@
 "custom/musicplayer": {
     "format": "{}",
     "interval": 2,
-    "exec": "~/.config/waybar/musicplayer.sh",
+    "exec": "~/.config/waybar/modules-scripts/musicplayer.sh",
     "return-type": "json",
     "on-click": "playerctl play-pause"
 },
@@ -90,19 +89,12 @@
     }
 },
 
-"custom/cpu": {
-    "exec": "~/.config/waybar/cpu_toggle.sh",
-    "on-click": "~/.config/waybar/cpu_toggle.sh toggle",
-    "interval": 5,
-    "format": "{}",
-    "tooltip": false
-},
-
-"custom/gpuNmemory": {
-    "exec": "~/.config/waybar/gpu_toggle.sh",
-    "on-click": "~/.config/waybar/gpu_toggle.sh toggle",
-    "interval": 5,
-    "tooltip": false
+"custom/group-performance": {
+  "exec": "~/.config/waybar/modules-scripts/group-performance.sh",
+  "on-click": "~/.config/waybar/modules-scripts/group-performance.sh click",
+  "interval": 5,
+  "return-type": "json",
+  "tooltip": false
 },
 
 "network": {
