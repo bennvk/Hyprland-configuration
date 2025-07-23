@@ -11,13 +11,15 @@ cat > ~/.config/waybar/colors-wal.css <<EOF
 #custom-musicplayer,
 #window,
 #pulseaudio,
-#custom-group-performance,
+#custom-cpu,
+#custom-gpuNmemory,
 #network,
 #battery,
 #battery.charging, #battery.plugged,
 #battery.critical:not(.charging),
 #clock,
-#custom-power {
+#custom-power,
+#custom-separator {
     background-color: $color2;
 }
 EOF

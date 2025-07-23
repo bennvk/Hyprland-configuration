@@ -16,10 +16,8 @@
 
 "modules-right": [
     "pulseaudio",
-    "custom/group-performance",
-    "network",
-    "battery",
-    "clock",
+    "group/performance",
+    "group/system-info",
     "custom/power"
 ],
 
@@ -89,12 +87,39 @@
     }
 },
 
-"custom/group-performance": {
-  "exec": "~/.config/waybar/modules-scripts/group-performance.sh",
-  "on-click": "~/.config/waybar/modules-scripts/group-performance.sh click",
-  "interval": 5,
-  "return-type": "json",
-  "tooltip": false
+"group/performance": {
+  "orientation": "horizontal",
+  "modules": [
+    "custom/cpu",
+    "custom/separator",
+    "custom/gpuNmemory"
+  ]
+},
+
+"custom/cpu": {
+    "exec": "~/.config/waybar/modules-scripts/cpu_toggle.sh",
+    "on-click": "~/.config/waybar/modules-scripts/cpu_toggle.sh toggle",
+    "interval": 5,
+    "format": "{}",
+    "tooltip": false
+},
+
+"custom/gpuNmemory": {
+    "exec": "~/.config/waybar/modules-scripts/gpu_toggle.sh",
+    "on-click": "~/.config/waybar/modules-scripts/gpu_toggle.sh toggle",
+    "interval": 5,
+    "tooltip": false
+},
+
+"group/system-info": {
+  "orientation": "horizontal",
+  "modules": [
+    "network",
+    "custom/separator",
+    "battery",
+    "custom/separator",
+    "clock"
+  ]
 },
 
 "network": {
@@ -135,6 +160,11 @@
     "format": "",
     "on-click": "bash ~/.config/rofi/power-menu/power-menu.sh",
     "tooltip": false
+},
+
+"custom/separator": {
+  "format": "|",
+  "tooltip": false
 }
 
 }
