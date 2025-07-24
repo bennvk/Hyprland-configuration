@@ -9,7 +9,7 @@ if [ "$status" = "Playing" ]; then
     text="$icon   $artist - $title"
 elif [ "$status" = "Paused" ]; then
     icon="  "
-    text="$icon Mis en pause"
+    text="$icon Pause"
 else
     exit 0
 fi
