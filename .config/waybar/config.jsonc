@@ -35,9 +35,10 @@
     "warp-on-scroll": false,
     "format": "{icon}",
     "format-icons": {
-      "active": "",
-      "focused": "",
-      "default": ""
+      "active": "",
+      "focused": "",
+      "empty": "",
+      "default": ""
 },
 
     "persistent-workspaces": {
@@ -60,7 +61,6 @@
 
 "hyprland/window": {
     "format": "{class}",
-    "max-length": 20,
     "on-click": "rofi -show window"
 },
 
