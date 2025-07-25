@@ -121,7 +121,7 @@
 .modules-left,
 .modules-center,
 .modules-right {
-  margin: 10px 10px 0 0;
+  margin: 13px 10px 0px 0px;
 }
 
 @import url("colors-wal.css");
