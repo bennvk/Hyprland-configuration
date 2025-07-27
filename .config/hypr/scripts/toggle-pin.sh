@@ -17,9 +17,10 @@ is_pinned=$(echo "$window_info" | jq -r '.pinned')
 
 if [[ "$is_pinned" == "true" ]]; then
     hyprctl dispatch pin activewindow
+    hyprctl dispatch setprop activewindow inactivebordercolor "$TRANSPARENT"
     hyprctl dispatch setprop activewindow activebordercolor "$TRANSPARENT"
 else
     hyprctl dispatch pin activewindow
+    hyprctl dispatch setprop activewindow inactivebordercolor "$WHITE"
     hyprctl dispatch setprop activewindow activebordercolor "$WHITE"
 fi
-
