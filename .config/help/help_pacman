@@ -1,0 +1,57 @@
+╭─────────────────────────────────────────────╮
+│                                             │
+│                  pacman                     │
+│                                             │
+╰─────────────────────────────────────────────╯
+
+Pacman permet de chercher, installer, mettre à jour et supprimer des logiciels ainsi que leurs dépendances, le tout en ligne de commande.
+
+Pour trouver le nom d'un paquet il y a deux options :
+
+- Rechercher avec le navigateur sur le site de Arch, en tapant par exemple "arch Firefox" et récupérer le nom du paquet.
+
+- Utiliser la commande "pacman -Ss [recherche]", cela cherche directement dans les dépôts de paquet.
+
+
+Usage:
+
+  pacman [COMMANDES][OPTIONS] [PAQUET]
+
+Commandes principales:
+
+  -S, --sync [PAQUET]                     Installer un ou plusieurs paquets depuis les dépôts.
+  -R, --remove [PAQUET]                   Supprimer un paquet installé.
+  -Q, --query [PAQUET]                    Interroger l’état ou les infos d’un paquet installé.
+  -h, --help                              Afficher l’aide de pacman.
+
+Options :
+
+  --needed                               Ne pas réinstaller les paquets déjà installés.
+  --noconfirm                            Ne pas demander de confirmation.
+  --overwrite [FICHIERS]                 Forcer l’écrasement de fichiers en conflit.
+
+Commandes courantes :
+
+  pacman -Syu
+      → Met à jour tout le système.
+
+  pacman -S [PAQUET]
+      → Installe un paquet.
+
+  pacman -Rns [PAQUET]
+      → Supprime un paquet et ses dépendances orphelines.
+
+  pacman -Ss [PAQUET]
+      → Recherche un paquet dans les dépôts officiels.
+
+  pacman -Qs [PAQUET]
+      → Recherche un paquet parmi les paquets installés.
+
+  pacman -Qi [PAQUET]
+      → Donne des infos détaillées sur un paquet.
+
+  pacman -Rns $(pacman -Qdtq)
+      → Supprime toutes les dépendances orphelines.
+
+  pacman -Sc / -Scc
+      → Nettoie le cache des paquets (doucement / entièrement).
