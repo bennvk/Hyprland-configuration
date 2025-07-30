@@ -44,10 +44,10 @@
     margin-right: 4px;
 }
 
-#window {
-    padding: 8px 18px;
-    margin-left: 4px;
-    margin-right: 4px;
+#custom-taskbar {
+  font-family: "Cascadia Code Nerd Font", "Symbols Nerd Font", monospace;
+  font-size: 30px;
+  padding-right: 18px;
 }
 
 #pulseaudio {

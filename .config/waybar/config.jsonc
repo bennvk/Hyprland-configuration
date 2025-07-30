@@ -22,7 +22,8 @@
 ],
 
 "modules-center": [
-    "hyprland/window"
+//    "hyprland/window"
+    "custom/taskbar"
 ],
 
 "modules-right": [
@@ -70,9 +71,11 @@
     "on-click": "playerctl play-pause"
 },
 
-"hyprland/window": {
-    "format": "{class}",
-    "on-click": "rofi -show window"
+"custom/taskbar": {
+  "exec": "~/.config/waybar/modules-scripts/taskbar.sh",
+  "interval": 2,
+  "format": "{}",
+  "tooltip": false
 },
 
 "pulseaudio": {

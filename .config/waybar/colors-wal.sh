@@ -10,6 +10,7 @@ cat > ~/.config/waybar/colors-wal.css <<EOF
 #workspaces,
 #custom-musicplayer,
 #window,
+#custom-taskbar,
 #pulseaudio,
 #custom-cpu,
 #custom-gpuNmemory,
