@@ -22,7 +22,6 @@
 ],
 
 "modules-center": [
-//    "hyprland/window"
     "custom/taskbar"
 ],
 
