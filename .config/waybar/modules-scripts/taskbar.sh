@@ -1,6 +1,7 @@
 #!/bin/bash
 
 declare -A icons=(
+  [ ]=""
   [firefox]=""
   [discord]=""
   [tidal-hifi]=""
@@ -17,6 +18,11 @@ declare -A icons=(
 )
 
 classes=$(hyprctl clients -j | jq -r '.[] | select(.mapped == true) | .class' | sort | uniq)
+
+if [[ -z "$classes" ]]; then
+  echo " "
+  exit 0
+fi
 
 output=""
 while IFS= read -r class; do
