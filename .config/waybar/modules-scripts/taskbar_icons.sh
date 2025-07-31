@@ -1,0 +1,15 @@
+declare -A icons=(
+  [firefox]=""
+  [discord]="󰙯"
+  [tidal-hifi]=""
+  [Code]="󰨞"
+  [Bitwarden]=""
+  [obsidian]=""
+  [kitty]=""
+  [vlc]="󰕼"
+  [Proton Mail]=""
+  [chromium]=""
+  [galculator]=""
+  [virt-manager]="󰢔"
+  [thunar]=""
+)

@@ -1,26 +1,10 @@
 #!/bin/bash
 
-declare -A icons=(
-  [ ]=""
-  [firefox]=""
-  [discord]=""
-  [tidal-hifi]=""
-  [Code]="󰨞"
-  [Bitwarden]=""
-  [obsidian]=""
-  [kitty]=""
-  [vlc]="󰕼"
-  [Proton Mail]=""
-  [chromium]=""
-  [galculator]=""
-  [virt-manager]="󰢔"
-  [thunar]=""
-)
+source ~/.config/waybar/modules-scripts/taskbar_icons.sh
 
 classes=$(hyprctl clients -j | jq -r '.[] | select(.mapped == true) | .class' | sort | uniq)
 
 if [[ -z "$classes" ]]; then
-  echo " "
   exit 0
 fi
 
