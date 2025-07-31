@@ -21,6 +21,7 @@ alias help-ytdlp='cat ~/.config/help/help_ytdlp.txt'
 alias help-nmcli='cat ~/.config/help/help_nmcli.txt'
 alias help-bindsHyprland='cat ~/.config/help/help_bindsHyprland.txt'
 alias help-pacman='cat ~/.config/help/help_pacman.txt'
+alias push ='bash ~/.config/hypr/scripts/push-git.sh'
 
 echo; command -v fastfetch >/dev/null && fastfetch --separator " - ";
 
