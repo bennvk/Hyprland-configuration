@@ -12,4 +12,5 @@ declare -A icons=(
   [galculator]=""
   [virt-manager]="󰢔"
   [thunar]=""
+  [blueman-manager]=""
 )
