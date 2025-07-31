@@ -13,4 +13,5 @@ declare -A icons=(
   [virt-manager]="󰢔"
   [thunar]=""
   [blueman-manager]=""
+  [org.pulseaudio.pavucontrol]=""
 )
