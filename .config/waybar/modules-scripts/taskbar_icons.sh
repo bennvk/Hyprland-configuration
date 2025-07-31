@@ -1,5 +1,5 @@
 declare -A icons=(
-  [firefox]=""
+  [firefox]="󰈹"
   [discord]="󰙯"
   [tidal-hifi]=""
   [Code]="󰨞"
