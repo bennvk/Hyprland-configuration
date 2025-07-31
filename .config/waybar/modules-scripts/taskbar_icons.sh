@@ -8,10 +8,11 @@ declare -A icons=(
   [kitty]=""
   [vlc]="󰕼"
   [Proton Mail]=""
-  [chromium]=""
+  [Chromium]=""
   [galculator]=""
   [virt-manager]="󰢔"
   [thunar]=""
   [blueman-manager]=""
   [org.pulseaudio.pavucontrol]=""
+  [nvidia-settings]="󱤓"
 )
