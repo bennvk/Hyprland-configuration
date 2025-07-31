@@ -101,6 +101,9 @@ text-color=$FG
 
 max-icon-size=48
 width=550
+
+[app-name="tidal-hifi"]
+invisible=1
 EOF
 
 makoctl reload
