@@ -80,34 +80,6 @@ if [ -f "$colors_file" ]; then
 EOF
 fi
 
-##### Mako #####
-
-BG=$(sed -n '1p' ~/.cache/wal/colors)
-FG=$(sed -n '8p' ~/.cache/wal/colors)
-
-cat > ~/.config/mako/config <<EOF
-anchor=bottom-center
-outer-margin=0,0,18,0
-padding=25,25
-
-border-size=0
-border-radius=8
-
-default-timeout=5000
-font=Cascadia Code 11
-
-background-color=$BG
-text-color=$FG
-
-max-icon-size=48
-width=550
-
-[app-name="tidal-hifi"]
-invisible=1
-EOF
-
-makoctl reload
-
 ##### Starship prompt #####
 
 bash ~/.config/starship/theme.sh
