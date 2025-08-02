@@ -1,6 +1,6 @@
 
 /*
-                     _                        _         _      
+                       _                        _         _      
   __      ____ _ _   _| |__   __ _ _ __     ___| |_ _   _| | ___ 
   \ \ /\ / / _` | | | | '_ \ / _` | '__|   / __| __| | | | |/ _ \
    \ V  V / (_| | |_| | |_) | (_| | |      \__ \ |_| |_| | |  __/
@@ -11,7 +11,7 @@
 
 
 * {
-    font-family: Cascadia Code, "Font Awesome 5 Free", "Font Awesome 5 Brands", "Symbols Nerd Font", monospace;
+    font-family: Inter, "Font Awesome 5 Free", "Font Awesome 5 Brands", "Symbols Nerd Font", monospace;
     font-size: 12.5px;
     font-weight: 600;
     color: #ffffff;

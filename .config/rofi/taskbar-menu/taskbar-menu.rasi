@@ -1,9 +1,7 @@
 @import                          "../shared/colors.rasi"
 @import                          "shared/main_theme.rasi"
+@import                          "shared/fonts.rasi"
 
-* {
-    font: "Cascadia Code 10";
-}
 
 window {
     location:                   north;
