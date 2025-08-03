@@ -15,4 +15,5 @@ declare -A icons=(
   [blueman-manager]=""
   [org.pulseaudio.pavucontrol]=""
   [nvidia-settings]="󱤓"
+  [org.prismlauncher.PrismLauncher]="󰍳"
 )
