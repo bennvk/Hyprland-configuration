@@ -16,4 +16,5 @@ declare -A icons=(
   [org.pulseaudio.pavucontrol]=""
   [nvidia-settings]="󱤓"
   [org.prismlauncher.PrismLauncher]="󰍳"
+  [Minecraft* 1.21.8]="󰍳"
 )
