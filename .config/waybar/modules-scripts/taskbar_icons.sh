@@ -17,4 +17,5 @@ declare -A icons=(
   [nvidia-settings]="󱤓"
   [org.prismlauncher.PrismLauncher]="󰍳"
   [Minecraft* 1.21.8]="󰍳"
+  [hyprland-share-picker]="󱣴"
 )
