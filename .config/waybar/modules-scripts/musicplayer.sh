@@ -6,12 +6,19 @@ title=$(playerctl metadata title 2>/dev/null)
 
 if [ "$status" = "Playing" ]; then
     icon=""
-    text="$icon   $artist - $title"
+    if [ -z "$artist" ]; then
+        text="$icon   $title"
+        tooltip="$title"
+    else
+        text="$icon   $artist - $title"
+        tooltip="$artist - $title"
+    fi
 elif [ "$status" = "Paused" ]; then
     icon="  "
     text="$icon Pause"
+    tooltip="Lecteur en pause"
 else
     exit 0
 fi
 
-echo "{\"text\": \"$text\", \"tooltip\": \"$artist - $title\"}"
+echo "{\"text\": \"$text\", \"tooltip\": \"$tooltip\"}"
