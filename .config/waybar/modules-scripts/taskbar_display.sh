@@ -14,7 +14,7 @@ while IFS= read -r class; do
   if [ -n "$icon" ]; then
     output+=" $icon"
   else
-    output+=" [$class]"
+    output+=" "
   fi
 done <<< "$classes"
 
