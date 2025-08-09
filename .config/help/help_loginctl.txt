@@ -1,0 +1,43 @@
+╭─────────────────────────────────────────────╮
+│                                             │
+│                  loginctl                   │
+│        Gestion des seats / sessions         │
+│                                             │
+╰─────────────────────────────────────────────╯
+
+Commandes essentielles :
+
+  loginctl list-seats
+      → Affiche tous les seats actifs sur le système.
+
+  loginctl seat-status [SEAT]
+      → Montre les périphériques (écrans, claviers, souris...) attachés à un seat.
+      Ex : loginctl seat-status seat0
+
+  loginctl list-sessions
+      → Liste toutes les sessions utilisateurs en cours.
+
+  loginctl show-session [ID] -a
+      → Détaille les infos d’une session (seat, utilisateur, tty, etc.).
+
+Gestion des périphériques :
+
+  sudo loginctl attach [SEAT] [PÉRIPHÉRIQUE]
+      → Attache un périphérique à un seat.
+      Ex : sudo loginctl attach seat1 /dev/input/event4
+            sudo loginctl attach seat1 /dev/dri/card1
+
+  sudo loginctl release [PÉRIPHÉRIQUE]
+      → Détache un périphérique de son seat actuel.
+      Ex : sudo loginctl release /dev/input/event4
+
+Outils complémentaires :
+
+  ls /dev/input/by-id/
+      → Liste les périphériques d'entrée (clavier, souris, manette).
+
+  ls /dev/dri/
+      → Liste les périphériques graphiques (écrans, GPU).
+
+  sudo evtest /dev/input/eventX
+      → Identifier précisément un périphérique d'entrée en testant ses interactions.
