@@ -11,12 +11,15 @@ C6=$(jq -r '.colors.color6' < "$colors_file")
 C7=$(jq -r '.colors.color7' < "$colors_file")
 
 cat > "$output_file" <<EOF
-format = "  \$username\$directory\$line_break\$character"
+format = "  \$username\$directory\$python\$line_break\$character"
 
 [username]
 style_user = "bold $C4"
 style_root = "bold red"
 show_always = true
+
+[python]
+format = "(\${virtualenv})"
 
 [directory]
 style = "bold $C3"
