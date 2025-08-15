@@ -1,0 +1,64 @@
+
+╭─────────────────────────────────────────────╮
+│                                             │
+│             MySQL / MariaDB - Aide          │
+│                                             │
+╰─────────────────────────────────────────────╯
+
+
+Connexion :
+
+mysql -u root -p
+mysql -u utilisateur -p base
+
+
+Bases de données :
+
+SHOW DATABASES;
+CREATE DATABASE nom_base;
+USE nom_base;
+DROP DATABASE nom_base;
+
+
+Tables :
+
+SHOW TABLES;
+DESCRIBE nom_table;
+CREATE TABLE nom_table (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(100) NOT NULL,
+    prenom VARCHAR(100),
+    statut ENUM('invite','membre','admin')
+);
+DROP TABLE nom_table;
+ALTER TABLE nom_table ADD col INT;
+ALTER TABLE nom_table DROP COLUMN col;
+ALTER TABLE nom_table MODIFY col VARCHAR(50);
+
+
+Requêtes :
+
+SELECT * FROM nom_table;
+SELECT nom, prenom FROM nom_table;
+SELECT * FROM nom_table WHERE id=1;
+INSERT INTO nom_table (nom, prenom) VALUES ('Dupont', 'Jean');
+UPDATE nom_table SET prenom='Pierre' WHERE id=1;
+DELETE FROM nom_table WHERE id=1;
+SELECT * FROM nom_table ORDER BY nom ASC LIMIT 5;
+
+
+Utilisateurs :
+
+CREATE USER 'user'@'localhost' IDENTIFIED BY 'mdp';
+GRANT ALL PRIVILEGES ON base.* TO 'user'@'localhost';
+FLUSH PRIVILEGES;
+DROP USER 'user'@'localhost';
+
+
+Divers :
+
+SHOW GRANTS FOR 'user'@'localhost';
+EXIT;
+STATUS;
+SOURCE script.sql;
+
