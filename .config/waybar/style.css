@@ -38,6 +38,18 @@
     border-color: transparent;
 }
 
+#workspaces button:hover {
+    font-weight: 100;
+    background: inherit;
+    color: inherit;
+    box-shadow: none;
+}
+
+#workspaces button.active:hover {
+    background: transparent;
+    border-color: transparent;
+}
+
 #custom-musicplayer {
     padding: 8px 14px;
     margin-left: 4px;
@@ -45,7 +57,7 @@
 }
 
 #custom-taskbar {
-  font-size: 30px;
+  font-size: 20px;
   padding-right: 18px;
 }
 

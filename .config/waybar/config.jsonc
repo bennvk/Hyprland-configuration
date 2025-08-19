@@ -47,7 +47,6 @@
     "format": "{icon}",
     "format-icons": {
       "active": "",
-      "focused": "",
       "empty": "",
       "default": ""
 },

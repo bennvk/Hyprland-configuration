@@ -12,7 +12,7 @@ output=""
 while IFS= read -r class; do
   icon="${icons[$class]}"
   if [ -n "$icon" ]; then
-    output+=" $icon"
+    output+="   $icon"
   else
     output+=" "
   fi
