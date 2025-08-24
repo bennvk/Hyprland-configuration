@@ -20,4 +20,5 @@ declare -A icons=(
   [org.prismlauncher.PrismLauncher]="󰍳"
   [Minecraft* 1.21.8]="󰍳"
   [hyprland-share-picker]="󱣴"
+  [Signal]="󰭹"
 )
