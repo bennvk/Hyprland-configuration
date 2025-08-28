@@ -66,15 +66,16 @@
     "interval": 2,
     "exec": "~/.config/waybar/modules-scripts/musicplayer.sh",
     "return-type": "json",
-    "on-click": "playerctl play-pause"
+    "on-click": "playerctl play-pause",
+    "tooltip": false
 },
 
 "custom/taskbar": {
-  "exec": "~/.config/waybar/modules-scripts/taskbar_display.sh",
-  "interval": 2,
-  "format": "{}",
-  "on-click": "~/.config/rofi/taskbar-menu/taskbar-menu.sh",
-  "tooltip": false
+    "exec": "~/.config/waybar/modules-scripts/taskbar_display.sh",
+    "interval": 2,
+    "format": "{}",
+    "on-click": "~/.config/rofi/taskbar-menu/taskbar-menu.sh",
+    "tooltip": false
 },
 
 "pulseaudio": {
