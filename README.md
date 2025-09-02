@@ -48,7 +48,7 @@
 
 ## Installation des paquets
 
-Tous les paquets sont disponibles dans **requirements.txt**, soit en installant automatiquement avec ```sudo pacman -S --needed - < requirements.txt``` ou en les installant manuellement.
+L'installation peut être effectuée manuellement en installant tous les paquets nécessaires et en copiant la configuration selon l'arborescence ci-dessous, ou à l'aide du script d'installation (expérimental) qui peut être lancé avec ./install.sh.
 
 Si certain paquet ne passe pas, essayé de les installer avec l'AUR avec ```yay -S "nom du paquet"```
 
