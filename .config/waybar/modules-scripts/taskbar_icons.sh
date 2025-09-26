@@ -22,4 +22,5 @@ declare -A icons=(
   [Minecraft* 1.21.8]="󰍳"
   [hyprland-share-picker]="󱣴"
   [Signal]="󰭹"
+  [rustdesk]="󰢹"
 )
