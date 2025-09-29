@@ -23,4 +23,5 @@ declare -A icons=(
   [hyprland-share-picker]="󱣴"
   [Signal]="󰭹"
   [rustdesk]="󰢹"
+  [org.gnome.Nautilus]=""
 )
