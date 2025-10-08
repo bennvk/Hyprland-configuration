@@ -29,7 +29,7 @@
     "pulseaudio",
     "group/performance",
     "group/system-info",
-    "custom/power"
+    "group/alimentation"
 ],
 
     //  //  // Modules configuration //  //  //
@@ -170,6 +170,21 @@
     "format-alt": "{:%d-%m-%Y}"
 },
 
+"group/alimentation": {
+  "orientation": "horizontal",
+  "modules": [
+    "custom/configuration",
+    "custom/separator",
+    "custom/power"
+  ]
+},
+
+"custom/configuration": {
+    "format": "",
+    "on-click": "bash ~/.config/rofi/configuration-menu/configuration-menu.sh",
+    "tooltip": false
+},
+
 "custom/power": {
     "format": "",
     "on-click": "bash ~/.config/rofi/power-menu/power-menu.sh",
@@ -177,8 +192,8 @@
 },
 
 "custom/separator": {
-  "format": "|",
-  "tooltip": false
+    "format": "|",
+    "tooltip": false
 }
 
 }

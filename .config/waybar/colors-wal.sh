@@ -19,6 +19,7 @@ cat > ~/.config/waybar/colors-wal.css <<EOF
 #battery.charging, #battery.plugged,
 #battery.critical:not(.charging),
 #clock,
+#custom-configuration,
 #custom-power,
 #custom-separator {
     background-color: $color2;

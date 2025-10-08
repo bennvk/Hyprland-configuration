@@ -1,0 +1,49 @@
+@import                          "../shared/colors.rasi"
+@import                          "../shared/fonts.rasi"
+@import                          "shared/main_theme.rasi"
+
+configuration {
+    show-icons: true;
+    icon-theme: "Papirus";
+}
+
+window {
+    location:                   northeast;
+    anchor:                     northeast;
+    x-offset:                   -10px;
+    y-offset:                   10px;
+    width:                      400px;
+    border-radius:              10px;
+    background-color:           @background;
+    border:                     0px;
+    padding:                    0px;
+}
+
+mainbox {
+    padding:                    30px;
+    spacing:                    10px;
+    background-color:           transparent;
+    children:                   [ "inputbar", "listview" ];
+}
+
+inputbar {
+    spacing:                    10px;
+    background-color:           transparent;
+    text-color:                 @foreground;
+    children:                   [ "textbox-prompt-colon", "entry" ];
+}
+textbox-prompt-colon {
+    str:                        "Mot de passe : ";
+    background-color:           inherit;
+    text-color:                 @foreground;
+}
+entry {
+    padding:                    0px 0px;
+    background-color:           inherit;
+    text-color:                 inherit;
+    cursor:                     text;
+    placeholder-color:          inherit;
+}
+listview {
+    lines:                      0;
+}

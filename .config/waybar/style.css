@@ -119,9 +119,17 @@
     margin-right: 4px;
 }
 
-#custom-power {
+#custom-configuration {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     padding: 8px 14px;
     margin-left: 4px;
+}
+
+#custom-power {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 8px 14px;
     margin-right: 4px;
 }
 
