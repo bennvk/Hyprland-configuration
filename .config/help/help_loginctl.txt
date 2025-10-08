@@ -1,3 +1,4 @@
+
 ╭─────────────────────────────────────────────╮
 │                                             │
 │                  loginctl                   │
@@ -41,3 +42,4 @@ Outils complémentaires :
 
   sudo evtest /dev/input/eventX
       → Identifier précisément un périphérique d'entrée en testant ses interactions.
+
