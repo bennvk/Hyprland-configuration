@@ -55,6 +55,7 @@ read -p "Importer la configuration de clavier qwerty ? [O/n]" choix_kb
 case $choix_kb in
     [Oo]) 
         sudo cp Hyprland-Configuration/etc/keyd /etc/keyd
+        sudo pacman -S keyd
         ;;
     [Nn]) 
         ;;
