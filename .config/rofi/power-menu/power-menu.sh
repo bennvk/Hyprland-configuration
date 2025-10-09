@@ -1,5 +1,13 @@
 #!/bin/bash
 
+#
+#     ___                                                            
+#    / _ \_____      _____ _ __           _ __ ___   ___ _ __  _   _ 
+#   / /_)/ _ \ \ /\ / / _ \ '__|  _____  | '_ ` _ \ / _ \ '_ \| | | |
+#  / ___/ (_) \ V  V /  __/ |    |_____| | | | | | |  __/ | | | |_| |
+#  \/    \___/ \_/\_/ \___|_|            |_| |_| |_|\___|_| |_|\__,_|
+#                                                                  
+
 chosen=$(printf "  Éteindre\n  Redémarrer\n  Verrouiller\n  Se déconnecter\n  Arrêt planifié\n  Annuler" | \
   rofi -dmenu -theme ~/.config/rofi/power-menu/power-menu1.rasi)
 

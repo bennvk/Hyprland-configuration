@@ -1,4 +1,14 @@
 #!/bin/bash
+
+#
+#     ___             __ _                       _   _                                                  
+#    / __\___  _ __  / _(_) __ _ _   _ _ __ __ _| |_(_) ___  _ __            _ __ ___   ___ _ __  _   _ 
+#   / /  / _ \| '_ \| |_| |/ _` | | | | '__/ _` | __| |/ _ \| '_ \   _____  | '_ ` _ \ / _ \ '_ \| | | |
+#  / /__| (_) | | | |  _| | (_| | |_| | | | (_| | |_| | (_) | | | | |_____| | | | | | |  __/ | | | |_| |
+#  \____/\___/|_| |_|_| |_|\__, |\__,_|_|  \__,_|\__|_|\___/|_| |_|         |_| |_| |_|\___|_| |_|\__,_|
+#                          |___/                                                                        
+#
+
 set -euo pipefail
 
 if [[ -f "$HOME/.config/rofi/configuration-menu/mode-status.txt" ]]; then
@@ -7,7 +17,7 @@ fi
 
 separator=$"-------------------------------------------"
 
-chosen=$(printf "⚙️  Mode sélectionner : $modestatus\n"$separator"\n⚡  Performance\n⚖️  Équilibré\n🌿  Économie d'énergie\n🪫  Économie d'énergie ++" | \
+chosen=$(printf "Mode sélectionner : $modestatus\n"$separator"\n⚡  Performance\n⚖️  Équilibré\n🌿  Économie d'énergie\n🪫  Économie d'énergie ++" | \
   rofi -dmenu -theme ~/.config/rofi/configuration-menu/configuration-menu1.rasi) || exit 0
 
 update_monitor() {
@@ -24,7 +34,7 @@ update_monitor() {
 }
 
 case "$chosen" in
-  "*Mode sélectionner : $modestatus"*)
+  "Mode sélectionner : $modestatus"*)
     exit 0
     ;;
 
@@ -40,8 +50,6 @@ case "$chosen" in
 
     powerprofilesctl set performance
 
-    nmcli radio wifi on
-
     brightnessctl set 100%
 
     update_monitor "eDP-1" "1920x1080@144" "0x0" "1"
@@ -49,7 +57,6 @@ case "$chosen" in
     hyprctl reload
 
     echo "⚡  Performance" > $HOME/.config/rofi/configuration-menu/mode-status.txt
-
     ;;
 
 
@@ -60,8 +67,6 @@ case "$chosen" in
 
     powerprofilesctl set balanced
 
-    nmcli radio wifi on
-
     brightnessctl set 75%
 
     update_monitor "eDP-1" "1920x1080@144" "0x0" "1"
@@ -69,8 +74,6 @@ case "$chosen" in
     hyprctl reload
 
     echo "⚖️  Équilibré" > $HOME/.config/rofi/configuration-menu/mode-status.txt
-
-
     ;;
 
 
@@ -81,7 +84,7 @@ case "$chosen" in
 
     powerprofilesctl set power-saver
 
-    nmcli radio wifi on
+    nmcli radio wifi off
 
     brightnessctl set 25%
 
@@ -90,7 +93,6 @@ case "$chosen" in
     hyprctl reload
 
     echo "🌿  Économie d'énergie" > $HOME/.config/rofi/configuration-menu/mode-status.txt
-
     ;;
 
 
@@ -110,12 +112,9 @@ case "$chosen" in
     hyprctl reload
 
     echo "🪫  Économie d'énergie ++" > $HOME/.config/rofi/configuration-menu/mode-status.txt
-
     ;;
 esac
 
 echo "$chosen" > $HOME/.config/rofi/configuration-menu/mode-status.txt
 
-password=""
-unset password
 exit 0

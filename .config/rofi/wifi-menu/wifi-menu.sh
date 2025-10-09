@@ -1,5 +1,13 @@
 #!/bin/bash
 
+#
+#     __    __ _  __ _                                      
+#    / / /\ \ (_)/ _(_)          _ __ ___   ___ _ __  _   _ 
+#    \ \/  \/ / | |_| |  _____  | '_ ` _ \ / _ \ '_ \| | | |
+#     \  /\  /| |  _| | |_____| | | | | | |  __/ | | | |_| |
+#      \/  \/ |_|_| |_|         |_| |_| |_|\___|_| |_|\__,_|
+#                                                       
+
 confirm_action() {
   local message="$1"
   local choice=$(printf "✅ Valider\n❌ Annuler" | rofi -theme ~/.config/rofi/wifi-menu/wifi-menu4.rasi -dmenu -p "$message")
