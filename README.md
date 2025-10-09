@@ -23,7 +23,7 @@
 - Window Manager - [Hyprland](https://wiki.hyprland.org/)
 - Fond d'écran - [Swww](https://github.com/LGFae/swww)
 - Bar - [Waybar](https://wiki.archlinux.org/title/Waybar)
-- Menu launcher - [Rofi Wayland](https://github.com/in0ni/rofi-wayland)
+- Menu launcher - [Rofi](https://wiki.archlinux.org/title/Rofi)
 - Shell - [Bash](https://wiki.archlinux.org/title/Bash)
 - Terminal - [Kitty](https://wiki.archlinux.org/title/Kitty)
 - Écran de verouillage [Hyprlock](https://archlinux.org/packages/extra/x86_64/hyprlock/)
@@ -40,11 +40,11 @@
 
 - Éditeur de texte [Nvim](https://neovim.io/)
 - Archive - [Zip](https://man.archlinux.org/man/zip.1.e)
-- Gestionnaire de fichiers - [Thunar](https://wiki.archlinux.org/title/Thunar)
+- Gestionnaire de fichiers - [Nautilus](https://archlinux.org/packages/extra/x86_64/nautilus/)
 - Calculatrice - [Galculator](https://archlinux.org/packages/extra/x86_64/galculator/)
 - Screenshot - [Grim](https://archlinux.org/packages/extra/x86_64/grim/) & [Slurp](https://archlinux.org/packages/extra/x86_64/slurp/) & [WL-Clipboard](https://archlinux.org/packages/extra/x86_64/wl-clipboard/)
 - Luminosité - [Brightnessctl](https://archlinux.org/packages/extra/x86_64/brightnessctl/) & [ddcutil](https://archlinux.org/packages/extra/x86_64/ddcutil/)
-- Image - [Swayimg](https://archlinux.org/packages/extra/x86_64/swayimg/)
+- Image - [Imv](https://archlinux.org/packages/extra/x86_64/imv/)
 
 ## Installation des paquets
 
@@ -68,7 +68,6 @@ Si certain paquet ne passe pas, essayé de les installer avec l'AUR avec ```yay 
     ├── 📁 .config/
     │   ├── 📁 fastfetch/
     │   ├── 📁 help/
-    │   ├── 📁 gtk-3.0/
     │   ├── 📁 hypr/
     │   ├── 📁 hyprlock/
     │   ├── 📁 kitty/
