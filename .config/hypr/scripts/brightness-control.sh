@@ -10,7 +10,7 @@ THRESHOLD=1920
 
 if (( mouse_x < THRESHOLD )); then
     MAX=$(brightnessctl m)
-    STEP_BC=$(( MAX / 20 ))
+    STEP_BC=$(( MAX / 30 ))
 
     CURRENT=$(brightnessctl g)
 

@@ -140,7 +140,8 @@
     "on-click": "bash ~/.config/rofi/wifi-menu/wifi-menu.sh",
     "format-wifi": "{essid} ",
     "format-ethernet": "Ethernet ",
-    "tooltip-format": "Connecté à {essid}",
+    "tooltip-format-wifi": "Connecté à {essid}",
+    "tooltip-format-ethernet": "Connecté à Ethernet",
     "format-disconnected": "Déconnecté ⚠"
 },
 

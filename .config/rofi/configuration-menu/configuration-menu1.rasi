@@ -13,7 +13,7 @@ configuration {
 window {
     location:                    northeast;
     anchor:                      northeast;
-    width:                       400px;
+    width:                       500px;
     x-offset:                    -10px;
     y-offset:                    10px;
     margin:                      0px;
@@ -43,7 +43,7 @@ mainbox {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       4;
+    lines:                       6;
     layout:                      vertical;
     spacing:                     2px;
     fixed-height:                true;
