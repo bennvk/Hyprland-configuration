@@ -12,7 +12,7 @@ echo ">>> Installation des paquets et dépendances <<<"
 sudo pacman -S --needed \
   hyprland swww waybar rofi bash kitty hyprlock \
   python-pywal starship ttf-cascadia-code ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-common papirus-icon-theme fastfetch \
-  neovim zip thunar galculator grim slurp wl-clipboard brightnessctl ddcutil swayimg
+  neovim zip nautilus galculator grim slurp wl-clipboard brightnessctl ddcutil imv pavucontrol
 
 yay -S --needed python-pywalfox ttf-font-awesome-5
 pywalfox install
@@ -23,7 +23,6 @@ echo ">>> Copie de la configuration <<<"
 cp Hyprland-Configuration/.bashrc $HOME/.bashrc
 cp Hyprland-Configuration/.bash_profile $HOME/.bash_profile
 cp Hyprland-Configuration/.config/fastfetch $configdir/fastfetch
-cp Hyprland-Configuration/.config/gtk-3.0 $configdir/gtk-3.0
 cp Hyprland-Configuration/.config/help $configdir/help
 cp Hyprland-Configuration/.config/hypr $configdir/hypr
 cp Hyprland-Configuration/.config/hyprlock $configdir/hyprlock
@@ -51,11 +50,11 @@ esac
 
 sleep 1
 
-read -p "Importer la configuration de clavier qwerty ? [O/n]" choix_bk
+read -p "Importer la configuration de clavier qwerty ? [O/n]" choix_kb
 
 case $choix_kb in
     [Oo]) 
-        sudo p Hyprland-Configuration/etc/keyd /etc/keyd
+        sudo cp Hyprland-Configuration/etc/keyd /etc/keyd
         ;;
     [Nn]) 
         ;;
