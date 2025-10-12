@@ -3,8 +3,7 @@
 repo="https://github.com/bennvk/Hyprland-configuration.git"
 configdir=$HOME/.config
 
-echo ">>> Clonage du dépôt <<<"
-git clone $repo
+echo ">>> Script d'installation de la configuration <<<"
 
 sleep 1
 
