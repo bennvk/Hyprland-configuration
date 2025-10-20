@@ -8,7 +8,7 @@ sleep 1
 
 echo ">>> Installation des paquets et dépendances <<<"
 sudo pacman -S --needed \
-hyprland swww waybar rofi kitty hyprlock nvidia nvidia-utils nvidia-settings lib32-nvidia-utils vulkan vulkan-tools vulkan-icd-loader lib32-vulkan-icd-loader gamemode python-pywal starship ttf-cascadia-code papirus-icon-theme fastfetch neovim zip nautilus galculator grim slurp wl-clipboard brightnessctl ddcutil imv pavucontrol
+hyprland swww waybar rofi kitty hyprlock nvidia nvidia-utils nvidia-settings lib32-nvidia-utils vulkan vulkan-tools vulkan-icd-loader lib32-vulkan-icd-loader gamemode lib32-gamemode python-pywal starship ttf-cascadia-code papirus-icon-theme fastfetch neovim zip nautilus galculator grim slurp wl-clipboard brightnessctl ddcutil imv pavucontrol
 
 yay -S --needed python-pywalfox ttf-font-awesome-5
 pywalfox install
