@@ -8,8 +8,6 @@
 
 </div>
 
-## Screenshot
-
 <img src="Images/Screenshots/screenshot.png" alt="Screenshot" width="650" />
 
 ## Sommaire
