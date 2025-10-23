@@ -7,16 +7,15 @@ echo ">>> Script d'installation de la configuration <<<"
 sleep 1
 
 echo ">>> Installation des paquets et dépendances <<<"
-sudo pacman -S --needed \
-hyprland swww waybar rofi kitty hyprlock nvidia nvidia-utils nvidia-settings lib32-nvidia-utils vulkan vulkan-tools vulkan-icd-loader lib32-vulkan-icd-loader gamemode lib32-gamemode python-pywal starship ttf-cascadia-code papirus-icon-theme firefox fastfetch neovim zip nautilus galculator grim slurp wl-clipboard brightnessctl ddcutil imv pavucontrol
 
-yay -S --needed \
-librewolf-bin python-pywalfox-librewolf ttf-font-awesome-5
+./install_packages.sh || { echo "Erreur lors de l'installation des paquets."; exit 1; }
+
 pywalfox install
 
 sleep 1
 
 echo ">>> Copie de la configuration <<<"
+
 cp -r .bashrc "$HOME/.bashrc"
 cp -r .bash_profile "$HOME/.bash_profile"
 cp -r .config/fastfetch "$configdir/fastfetch"
