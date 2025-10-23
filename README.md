@@ -1,5 +1,13 @@
 # Hyprland Configuration
 
+<div align="center">
+
+![Last Commit](https://img.shields.io/github/last-commit/bennvk/Hyprland-Configuration?style=for-the-badge&label=LAST%20COMMIT&logo=git&logoColor=white&labelColor=1f2430&color=8bd5f7)
+![Commits](https://img.shields.io/github/commit-activity/y/bennvk/Hyprland-Configuration?style=for-the-badge&label=COMMITS&logo=git&logoColor=white&labelColor=1f2430&color=f5a97f)
+![Repo Size](https://img.shields.io/github/repo-size/bennvk/Hyprland-Configuration?style=for-the-badge&label=REPO%20SIZE&logo=github&logoColor=white&labelColor=1f2430&color=a6da95)
+
+</div>
+
 ## Screenshot
 
 <img src="Images/Screenshots/screenshot.png" alt="Screenshot" width="650" />
