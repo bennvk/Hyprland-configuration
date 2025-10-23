@@ -54,9 +54,20 @@
 
 ## Installation des paquets
 
-L'installation peut être effectuée manuellement en installant tous les paquets nécessaires et en copiant la configuration selon l'arborescence ci-dessous, ou à l'aide du script d'installation (expérimental) qui peut être lancé avec ./install.sh.
+###### Installation manuelle
 
-Si certain paquet ne passe pas, essayé de les installer avec l'AUR avec ```yay -S "nom du paquet"```
+L'installation peut être effectuée manuellement en installant tous les paquets nécessaires présents dans `install_packages.sh` puis en copiant les fichiers de configuration selon l'arborescence ci-dessous.  
+Cela permet de ne pas exécuter directement les scripts et de choisir finement ce que vous installez (en cas d'un GPU AMD par exemple).
+
+###### Script d'installation (expérimental)
+
+Vous pouvez lancer automatiquement l’installation complète en exécutant le script principal :  
+
+```bash
+chmod +x install_packages.sh
+chmod +x install_config.sh
+./install_config.sh
+```
 
 ## Arborescence
 
