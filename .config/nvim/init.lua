@@ -113,13 +113,3 @@ vim.api.nvim_create_autocmd("VimEnter", {
     end
   end,
 })
-
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "markdown",
-  callback = function()
-    -- Lancer MarkdownPreview avec <leader>p (par défaut \p)
-    vim.keymap.set("n", "<leader>o", ":MarkdownPreview<CR>", { silent = true, buffer = true })
-    vim.keymap.set("n", "<leader>p", ":MarkdownPreviewStop<CR>", { silent = true, buffer = true })
-  end,
-})
-
