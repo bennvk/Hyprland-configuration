@@ -41,4 +41,5 @@ echo ">>> Installation des paquets AUR <<<"
 yay -S --needed --noconfirm \
   librewolf-bin \
   python-pywalfox-librewolf \
-  ttf-font-awesome-5
+  ttf-font-awesome-5 \
+  vscodium
