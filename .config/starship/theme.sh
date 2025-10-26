@@ -1,7 +1,6 @@
 #!/bin/bash
 
 colors_file="$HOME/.cache/wal/colors.json"
-output_file="$HOME/.config/starship.toml"
 
 C2=$(jq -r '.colors.color2' < "$colors_file")
 C3=$(jq -r '.colors.color3' < "$colors_file")
@@ -10,7 +9,7 @@ C5=$(jq -r '.colors.color5' < "$colors_file")
 C6=$(jq -r '.colors.color6' < "$colors_file")
 C7=$(jq -r '.colors.color7' < "$colors_file")
 
-cat > "$output_file" <<EOF
+cat > "$HOME/.config/starship.toml" <<EOF
 format = "  \$username\$directory\$python\$line_break\$character"
 
 [username]
