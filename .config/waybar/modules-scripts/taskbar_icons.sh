@@ -7,6 +7,7 @@ declare -A icons=(
   [tidal-hifi]="󰝚"
   [Code]="󰨞"
   [Bitwarden]="󰞀"
+  [steam]="󰓓"
   [obsidian]=""
   [kitty]=""
   [vlc]="󰕼"
