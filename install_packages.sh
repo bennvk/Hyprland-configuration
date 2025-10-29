@@ -34,8 +34,14 @@ sudo pacman -S --needed --noconfirm \
   brightnessctl \
   ddcutil \
   imv \
+  cpupower \
   pavucontrol \
-  ufw
+  ufw \
+  inter-font \
+  jq \
+  ttf-cascadia-code \
+  ttf-nerd-fonts-symbols \
+  xdg-desktop-portal-hyprland
 
 echo ">>> Installation des paquets AUR <<<"
 
@@ -43,4 +49,5 @@ yay -S --needed --noconfirm \
   librewolf-bin \
   python-pywalfox-librewolf \
   ttf-font-awesome-5 \
-  vscodium-bin
+  vscodium-bin \
+  proton-ge-custom-bin
