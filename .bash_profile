@@ -7,4 +7,7 @@ if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec Hyprland
+if [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+    echo "Lancement de Hyprland..."
+    exec Hyprland
+fi
