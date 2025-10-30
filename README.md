@@ -61,7 +61,7 @@ Cela permet de ne pas exécuter directement les scripts et de choisir finement c
 
 ###### Script d'installation (expérimental)
 
-Vous pouvez lancer automatiquement l’installation complète en exécutant le script principal :  
+Il est recommandée de faire l'installation manuellement mais vous pouvez lancer automatiquement l’installation complète en exécutant le script principal :  
 
 ```bash
 chmod +x install_packages.sh
