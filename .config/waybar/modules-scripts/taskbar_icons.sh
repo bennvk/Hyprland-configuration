@@ -15,8 +15,8 @@ declare -A icons=(
   [Chromium]=""
   [galculator]=""
   [virt-manager]="󰢔"
-  [thunar]=""
-  [Thunar]=""
+  [thunar]="󰈔"
+  [Thunar]="󰈔"
   [blueman-manager]=""
   [org.pulseaudio.pavucontrol]=""
   [nvidia-settings]="󱤓"
@@ -25,5 +25,5 @@ declare -A icons=(
   [hyprland-share-picker]="󱣴"
   [Signal]="󰭹"
   [rustdesk]="󰢹"
-  [org.gnome.Nautilus]=""
+  [org.gnome.Nautilus]="󰈔"
 )
