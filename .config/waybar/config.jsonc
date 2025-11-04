@@ -35,7 +35,7 @@
     //  //  // Modules configuration //  //  //
 
 "custom/os_button": {
-    "format": "🪐",
+    "format": "",
     "on-click": "~/.config/rofi/wallpaper-menu/wallpaper-menu.sh",
     "tooltip": false
 },
