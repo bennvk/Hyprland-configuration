@@ -27,4 +27,5 @@ declare -A icons=(
   [rustdesk]="󰢹"
   [org.gnome.Nautilus]="󰈔"
   [codium]=""
+  [steam_app_526870]="󰊗"
 )
