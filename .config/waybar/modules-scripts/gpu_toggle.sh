@@ -14,7 +14,7 @@ fi
 
 if [[ "$STATE" == "temp" ]]; then
     TEMP=$(nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits)
-    echo "GPU ${TEMP}°C "
+    echo "GPU ${TEMP}°C "
 else
     USED=$(nvidia-smi --query-gpu=memory.used --format=csv,noheader,nounits | awk '{print $1}')
     TOTAL=$(nvidia-smi --query-gpu=memory.total --format=csv,noheader,nounits | awk '{print $1}')

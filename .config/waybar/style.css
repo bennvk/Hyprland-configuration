@@ -91,6 +91,15 @@
     margin-left: 4px;
 }
 
+#network.disconnected {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-left: 18px;
+    padding-right: 8px;
+    margin-left: 4px;
+    color: #990F02;
+}
+
 #battery {
     padding-left: 8px;
     border-radius: 0;
@@ -111,6 +120,13 @@
     color: #990F02;
 }
 
+#battery.full {
+    padding-left: 8px;
+    border-radius: 0;
+    padding-right: 8px;    
+    color: #FBE106;
+}
+
 #clock {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -120,7 +136,7 @@
 }
 
 #custom-power {
-    padding: 8px 14px;
+    padding: 8px 16px;
     margin-right: 4px;
 }
 
