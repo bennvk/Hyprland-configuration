@@ -26,4 +26,5 @@ declare -A icons=(
   [Signal]="󰭹"
   [rustdesk]="󰢹"
   [org.gnome.Nautilus]="󰈔"
+  [codium]=""
 )
