@@ -24,5 +24,5 @@ else
     total_ram=$(free -m | awk '/^Mem:/ {printf "%.2f", $2/1024}')
     percent_ram=$(free | awk '/^Mem:/ {printf "%d", $3/$2 * 100}')
 
-    echo "RAM ${percent_ram}%  "
+    echo "RAM ${percent_ram}%  "
 fi
