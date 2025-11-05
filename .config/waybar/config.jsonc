@@ -74,7 +74,6 @@
     "exec": "~/.config/waybar/modules-scripts/taskbar_display.sh",
     "interval": 2,
     "format": "{}",
-    "on-click": "~/.config/rofi/taskbar-menu/taskbar-menu.sh",
     "tooltip": false
 },
 
