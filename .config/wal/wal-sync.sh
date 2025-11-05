@@ -33,7 +33,7 @@ ln -sf "$target" "$HOME/.config/hyprlock/wp_hyprlock"
 
 ##### Rofi #####
 
-ln -sf ~/.cache/wal/colors-rofi-dark.rasi ~/.config/rofi/colors.rasi
+ln -sf ~/.cache/wal/colors-rofi-dark.rasi ~/.config/rofi/shared/colors.rasi
 
 ##### Firefox (Pywalfox) #####
 

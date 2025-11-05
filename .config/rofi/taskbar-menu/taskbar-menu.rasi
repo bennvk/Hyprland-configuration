@@ -2,7 +2,6 @@
 @import                          "shared/main_theme.rasi"
 @import                          "shared/fonts.rasi"
 
-
 window {
     location:                   north;
     anchor:                     north;
