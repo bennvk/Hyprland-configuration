@@ -1,11 +1,7 @@
-@import                          "../shared/colors.rasi"
-@import                          "../shared/fonts.rasi"
+@import                          "shared/colors.rasi"
+@import                          "shared/fonts.rasi"
 @import                          "shared/main_theme.rasi"
-
-configuration {
-    show-icons: true;
-    icon-theme: "Papirus";
-}
+@import                          "shared/icons.rasi"
 
 window {
     location:                   northwest;
