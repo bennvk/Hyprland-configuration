@@ -112,7 +112,7 @@
 "custom/cpu": {
     "exec": "~/.config/waybar/modules-scripts/cpu_toggle.sh",
     "on-click": "~/.config/waybar/modules-scripts/cpu_toggle.sh toggle",
-    "interval": 5,
+    "interval": 3,
     "format": "{}",
     "tooltip": false
 },
@@ -120,7 +120,7 @@
 "custom/gpuNmemory": {
     "exec": "~/.config/waybar/modules-scripts/gpu_toggle.sh",
     "on-click": "~/.config/waybar/modules-scripts/gpu_toggle.sh toggle",
-    "interval": 5,
+    "interval": 3,
     "tooltip": false
 },
 
