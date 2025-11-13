@@ -63,6 +63,7 @@
 
 "custom/musicplayer": {
     "format": "{}",
+    "max-length": 50,
     "interval": 2,
     "exec": "~/.config/waybar/modules-scripts/musicplayer.sh",
     "return-type": "json",
@@ -139,8 +140,8 @@
     "on-click": "bash ~/.config/rofi/wifi-menu/wifi-menu.sh",
     "format-wifi": "{essid} ",
     "format-ethernet": "Ethernet  ",
-    "tooltip-format-wifi": "Connecté à {essid}",
-    "tooltip-format-ethernet": "Connecté à Ethernet",
+    "tooltip-format-wifi": "{essid} - {ipaddr} /{cidr}",
+    "tooltip-format-ethernet": "Ethernet - {ipaddr} /{cidr}",
     "format-disconnected": "Déconnecté ⚠"
 },
 
@@ -150,11 +151,14 @@
     "warning": 30,
     "critical": 15
 },
+    "tooltip": true,
+    "tooltip-format-full": false,
+    "tooltip-format": "Batterie vide dans {time}",
+    "tooltip-format-charging": "Batterie chargée dans {time}",
     "format": "{capacity}% {icon}",
     "format-full": "{capacity}% 󱐋",
     "format-charging": "{capacity}% ",
     "format-plugged": "{capacity}% ",
-    "format-alt": "{time}",
     "format-icons": [
       "",
       "",
