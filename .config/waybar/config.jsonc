@@ -80,23 +80,22 @@
 
 "pulseaudio": {
     "on-click": "pavucontrol",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "tooltip-format": "Volume : {volume}%",
     "format": "{icon}",
     "format-bluetooth": "{icon}",
     "format-bluetooth-muted": "{icon}",
-    "format-muted": "",
     "format-source": "",
-    "format-source-muted": "",
+    "format-source-muted": "󰝟",
     "format-icons": {
-      "headphone": "",
+      "headphone": "󰋋",
       "hands-free": "",
       "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
       "default": [
-        "",
-        "",
-        ""
+        "󰕿",
+        "󰖀",
+        "󰕾"
       ]
     }
 },

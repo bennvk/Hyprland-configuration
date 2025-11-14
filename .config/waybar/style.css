@@ -63,8 +63,7 @@
 
 #pulseaudio {
     padding: 8px 18px;
-    margin-right: 4px;
-    margin-left: 4px;
+    font-size: 18px;
 }
 
 #custom-cpu {
@@ -142,6 +141,10 @@
 
 #custom-separator {
     border-radius: 0;
+}
+
+tooltip {
+    border: none;
 }
 
 .modules-left,

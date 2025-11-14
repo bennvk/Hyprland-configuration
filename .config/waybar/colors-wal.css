@@ -13,6 +13,11 @@
 #clock,
 #custom-configuration,
 #custom-power,
-#custom-separator {
-    background-color: #CFA652;
+#custom-separator,
+#pulseaudio-slider {
+    background-color: #9C2F18;
+}
+
+tooltip {
+    background: #9C2F18;
 }

@@ -21,7 +21,12 @@ cat > ~/.config/waybar/colors-wal.css <<EOF
 #clock,
 #custom-configuration,
 #custom-power,
-#custom-separator {
+#custom-separator,
+#pulseaudio-slider {
     background-color: $color2;
+}
+
+tooltip {
+    background: $color2;
 }
 EOF
