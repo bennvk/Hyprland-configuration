@@ -29,4 +29,5 @@ declare -A icons=(
   [codium]=""
   [steam_app_526870]="󰊗"
   [Windscribe]="󰦝"
+  [Spotify]="󰓇"
 )
