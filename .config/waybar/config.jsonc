@@ -82,7 +82,7 @@
     "on-click": "pavucontrol",
     "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
     "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
-    "tooltip-format": "Volume : {volume}%",
+    "tooltip-format": "{desc}  -  {volume}%",
     "format": "{icon}",
     "format-bluetooth": "{icon}",
     "format-bluetooth-muted": "{icon}",
@@ -136,11 +136,11 @@
 },
 
 "network": {
-    "on-click": "bash ~/.config/rofi/wifi-menu/wifi-menu.sh",
+    "on-click": "~/.config/rofi/wifi-menu/wifi-menu.sh",
     "format-wifi": "{essid} ",
     "format-ethernet": "Ethernet  ",
-    "tooltip-format-wifi": "{essid} - {ipaddr} /{cidr}",
-    "tooltip-format-ethernet": "Ethernet - {ipaddr} /{cidr}",
+    "tooltip-format-wifi": "{essid}  -  {ipaddr} /{cidr}",
+    "tooltip-format-ethernet": "Ethernet  -  {ipaddr} /{cidr}",
     "format-disconnected": "Déconnecté ⚠"
 },
 
@@ -175,7 +175,7 @@
 
 "custom/power": {
     "format": "",
-    "on-click": "bash ~/.config/rofi/power-menu/power-menu.sh",
+    "on-click": "~/.config/rofi/power-menu/power-menu.sh",
     "tooltip": false
 },
 
