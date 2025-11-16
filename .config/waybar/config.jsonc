@@ -151,7 +151,7 @@
     "critical": 15
 },
     "tooltip": true,
-    "tooltip-format-full": false,
+    "tooltip-format-full": "Batterie chargée",
     "tooltip-format": "Batterie vide dans {time}",
     "tooltip-format-charging": "Batterie chargée dans {time}",
     "format": "{capacity}% {icon}",
