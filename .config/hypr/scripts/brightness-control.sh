@@ -10,7 +10,7 @@ THRESHOLD=1920
 
 if (( mouse_x < THRESHOLD )); then
     MAX=$(brightnessctl m)
-    STEP_BC=$(( MAX / 30 ))
+    STEP_BC=$(( MAX / 20 ))
 
     CURRENT=$(brightnessctl g)
 
@@ -26,7 +26,13 @@ if (( mouse_x < THRESHOLD )); then
     (( NEW < 0 )) && NEW=0
     (( NEW > MAX )) && NEW=$MAX
 
-    brightnessctl set "$NEW"
+    PERCENT=$(( NEW * 100 / MAX ))
+
+    brightnessctl set "$NEW" | \
+        notify-send \
+        -i $HOME/.config/mako/icons/brightness.png  \
+        "$PERCENT"% \
+        -e -h string:x-canonical-private-synchronous:osd
 
 else
     RAW=$(/usr/bin/ddcutil getvcp 10)
@@ -49,5 +55,8 @@ else
     (( NEW < 0 )) && NEW=0
     (( NEW > 100 )) && NEW=100
 
-    ddcutil setvcp 10 "$NEW"
+    ddcutil setvcp 10 "$NEW" | \
+        notify-send -i $HOME/.config/mako/icons/brightness.png \
+        "$NEW"% \
+        -e -h string:x-canonical-private-synchronous:osd
 fi

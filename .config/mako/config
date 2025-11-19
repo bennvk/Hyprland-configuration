@@ -1,0 +1,14 @@
+anchor=bottom-center
+outer-margin=200
+default-timeout=3000
+
+background-color=#ffffff
+text-color=#000000
+font=Inter 12
+text-alignment=center
+max-icon-size=32
+
+width=150
+padding=15,0,15,20
+border-radius=10
+border-size=0
