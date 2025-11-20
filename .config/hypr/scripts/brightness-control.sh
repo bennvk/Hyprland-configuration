@@ -65,7 +65,10 @@ else
     (( NEW < 0 )) && NEW=0
     (( NEW > 100 )) && NEW=100
 
-    if (( NEW <= 25 )); then
+
+    if (( NEW == 0 )); then
+        ICON="$HOME/.config/mako/icons/brightness-zero.png"
+    elif (( NEW <= 25 )); then
         ICON="$HOME/.config/mako/icons/brightness-low.png"
     elif (( NEW <= 50 )); then
         ICON="$HOME/.config/mako/icons/brightness-medium.png"
