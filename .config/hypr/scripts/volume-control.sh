@@ -24,4 +24,6 @@ else
     ICON="$HOME/.config/mako/icons/volume-gain.png"
 fi
 
-notify-send -i "$ICON" "$VOLUME%" -e -h string:x-canonical-private-synchronous:osd
+notify-send -i "$ICON" "$VOLUME%" \
+-a osd-panel \
+-e -h string:x-canonical-private-synchronous:osd

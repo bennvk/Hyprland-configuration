@@ -41,6 +41,7 @@ if (( mouse_x < THRESHOLD )); then
 
     brightnessctl set "$NEW" | \
         notify-send -i "$ICON" "$PERCENT%" \
+        -a osd-panel \
         -e -h string:x-canonical-private-synchronous:osd
 
 else
@@ -76,5 +77,6 @@ else
 
     ddcutil setvcp 10 "$NEW" | \
         notify-send -i "$ICON" "$NEW%" \
+        -a osd-panel \
         -e -h string:x-canonical-private-synchronous:osd
 fi
