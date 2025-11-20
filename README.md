@@ -95,6 +95,7 @@ chmod +x install_config.sh
         │   ├── 📁 hypr/
         │   ├── 📁 hyprlock/
         │   ├── 📁 kitty/
+        │   ├── 📁 mako/
         │   ├── 📁 nvim/
         │   ├── 📁 rofi/
         │   ├── 📁 starship/
