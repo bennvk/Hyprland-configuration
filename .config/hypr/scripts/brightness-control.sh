@@ -11,7 +11,6 @@ THRESHOLD=1920
 if (( mouse_x < THRESHOLD )); then
     MAX=$(brightnessctl m)
     STEP_BC=$(( MAX / 20 ))
-
     CURRENT=$(brightnessctl g)
 
     if [[ "$ACTION" == "up" ]]; then
@@ -28,10 +27,20 @@ if (( mouse_x < THRESHOLD )); then
 
     PERCENT=$(( NEW * 100 / MAX ))
 
+    if (( PERCENT == 0 )); then
+        ICON="$HOME/.config/mako/icons/brightness-zero.png"
+    elif (( PERCENT <= 25 )); then
+        ICON="$HOME/.config/mako/icons/brightness-low.png"
+    elif (( PERCENT <= 50 )); then
+        ICON="$HOME/.config/mako/icons/brightness-medium.png"
+    elif (( PERCENT <= 75 )); then
+        ICON="$HOME/.config/mako/icons/brightness-high.png"
+    else
+        ICON="$HOME/.config/mako/icons/brightness-max.png"
+    fi
+
     brightnessctl set "$NEW" | \
-        notify-send \
-        -i $HOME/.config/mako/icons/brightness.png  \
-        "$PERCENT"% \
+        notify-send -i "$ICON" "$PERCENT%" \
         -e -h string:x-canonical-private-synchronous:osd
 
 else
@@ -55,8 +64,17 @@ else
     (( NEW < 0 )) && NEW=0
     (( NEW > 100 )) && NEW=100
 
+    if (( NEW <= 25 )); then
+        ICON="$HOME/.config/mako/icons/brightness-low.png"
+    elif (( NEW <= 50 )); then
+        ICON="$HOME/.config/mako/icons/brightness-medium.png"
+    elif (( NEW <= 75 )); then
+        ICON="$HOME/.config/mako/icons/brightness-high.png"
+    else
+        ICON="$HOME/.config/mako/icons/brightness-max.png"
+    fi
+
     ddcutil setvcp 10 "$NEW" | \
-        notify-send -i $HOME/.config/mako/icons/brightness.png \
-        "$NEW"% \
+        notify-send -i "$ICON" "$NEW%" \
         -e -h string:x-canonical-private-synchronous:osd
 fi

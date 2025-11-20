@@ -12,4 +12,16 @@ fi
 
 VOLUME=$(pactl get-sink-volume @DEFAULT_SINK@ | grep -oP '\d+%' | head -n1 | tr -d '%')
 
-notify-send -i ~/.config/mako/icons/volume.png "$VOLUME%" -e -h string:x-canonical-private-synchronous:osd
+if [[ "$VOLUME" -eq 0 ]]; then
+    ICON="$HOME/.config/mako/icons/volume-mute.png"
+elif [[ "$VOLUME" -le 30 ]]; then
+    ICON="$HOME/.config/mako/icons/volume-low.png"
+elif [[ "$VOLUME" -le 70 ]]; then
+    ICON="$HOME/.config/mako/icons/volume-medium.png"
+elif [[ "$VOLUME" -le 100 ]]; then
+    ICON="$HOME/.config/mako/icons/volume-high.png"
+else
+    ICON="$HOME/.config/mako/icons/volume-gain.png"
+fi
+
+notify-send -i "$ICON" "$VOLUME%" -e -h string:x-canonical-private-synchronous:osd
