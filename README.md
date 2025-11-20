@@ -32,6 +32,7 @@
 - Menu launcher - [Rofi](https://wiki.archlinux.org/title/Rofi)
 - Shell - [Bash](https://wiki.archlinux.org/title/Bash)
 - Terminal - [Kitty](https://wiki.archlinux.org/title/Kitty)
+- Notification - [Mako](https://github.com/emersion/mako)
 - Écran de verouillage [Hyprlock](https://archlinux.org/packages/extra/x86_64/hyprlock/)
 
 ###### Thèmes
