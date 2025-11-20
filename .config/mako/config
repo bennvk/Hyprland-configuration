@@ -8,7 +8,7 @@ font=Inter 12
 text-alignment=center
 max-icon-size=32
 
-border-radius=10
+border-radius=25
 border-size=0
 
 [app-name="discord"]
