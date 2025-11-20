@@ -28,6 +28,7 @@ declare -A icons=(
   [org.gnome.Nautilus]="󰈔"
   [codium]=""
   [steam_app_526870]="󰊗"
+  [steam_app_413150]="󰊗"
   [Windscribe]="󰦝"
   [Spotify]="󰓇"
 )
