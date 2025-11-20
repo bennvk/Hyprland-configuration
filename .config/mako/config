@@ -12,3 +12,6 @@ width=150
 padding=15,0,15,20
 border-radius=10
 border-size=0
+
+[app-name="discord"]
+invisible=1
