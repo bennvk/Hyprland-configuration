@@ -35,6 +35,14 @@ ln -sf "$target" "$HOME/.config/hyprlock/wp_hyprlock"
 
 ln -sf ~/.cache/wal/colors-rofi-dark.rasi ~/.config/rofi/shared/colors.rasi
 
+##### Mako #####
+
+if [[ -f "$HOME/.cache/wal/colors.sh" ]]; then
+    source "$HOME/.cache/wal/colors.sh"
+    echo "background-color=$color2" > "$HOME/.config/mako/colors-mako"
+    makoctl reload
+fi
+
 ##### Firefox (Pywalfox) #####
 
 pywalfox update
