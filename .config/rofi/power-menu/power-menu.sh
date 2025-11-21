@@ -52,7 +52,7 @@ case "$chosen" in
 
   total_seconds=$((value * multiplier))
 
-  notify-send -i /home/benn/Images/Icons/shutdown.png -t 5000 "Arrêt planifié" "Le système va s’éteindre dans $human."
+  notify-send "Arrêt planifié" "Le système va s’éteindre dans $human."
 
   sleep "$total_seconds" && systemctl poweroff
   ;;

@@ -2,6 +2,8 @@ include=/home/benn/.config/mako/colors-mako
 
 default-timeout=3000
 anchor=bottom-center
+height=350
+padding=18,22
 
 text-color=#ffffff
 font=Inter 12

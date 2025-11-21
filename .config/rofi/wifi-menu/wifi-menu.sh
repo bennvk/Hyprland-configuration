@@ -71,10 +71,12 @@ network_menu() {
             "Connecter")
                 PASSWORD=$(echo "" | rofi -dmenu -password -p "Mot de passe pour $SSID" -theme $HOME/.config/rofi/wifi-menu/wifi-menu-password.rasi)
                 if [[ -n "$PASSWORD" ]]; then
-                    nmcli device wifi connect "$SSID" ifname "$IFACE" password "$PASSWORD"
+                    nmcli device wifi connect "$SSID" ifname "$IFACE" password "$PASSWORD" &&  notify-send "Wifi" "Connection à $SSID ajouter"
                 fi
                 ;;
-            "Oublier") nmcli connection delete "$SSID" ;;
+            "Oublier") 
+                nmcli connection delete "$SSID" && notify-send "Wifi" "Connection à $SSID oublier"
+                ;;
         esac
     fi
 }
@@ -103,9 +105,9 @@ main_menu() {
     case "$MENU" in
         "$HEADER3")
             if [ "$WIFI_STATE" = "enabled" ]; then
-                nmcli radio wifi off
+                nmcli radio wifi off && notify-send "Wifi désactivé"
             else
-                nmcli radio wifi on
+                nmcli radio wifi on && notify-send "Wifi activé"
             fi
             ;;
         "$HEADER2") show_connections ;;
