@@ -25,6 +25,7 @@ sudo pacman -S --needed --noconfirm \
   papirus-icon-theme \
   fastfetch \
   neovim \
+  mako \
   zip \
   nautilus \
   galculator \
