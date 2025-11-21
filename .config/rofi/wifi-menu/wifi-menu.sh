@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #
 #     __    __ _  __ _                                      
@@ -6,124 +6,112 @@
 #    \ \/  \/ / | |_| |  _____  | '_ ` _ \ / _ \ '_ \| | | |
 #     \  /\  /| |  _| | |_____| | | | | | |  __/ | | | |_| |
 #      \/  \/ |_|_| |_|         |_| |_| |_|\___|_| |_|\__,_|
-#                                                       
+#   
 
-confirm_action() {
-  local message="$1"
-  local choice=$(printf "✅ Valider\n❌ Annuler" | rofi -theme ~/.config/rofi/wifi-menu/wifi-menu4.rasi -dmenu -p "$message")
-  [[ "$choice" == "✅ Valider" ]]
+IFACE="wlan0"
+ROFI_CMD="rofi -dmenu -i -p WiFi"
+
+current_ssid() {
+    nmcli -t -f ACTIVE,SSID dev wifi | awk -F: '$1=="yes"{print $2}'
+}
+
+list_networks() {
+    nmcli -t -f SSID,SIGNAL device wifi list ifname "$IFACE" \
+        | awk -F: 'NF && $1!="" {print $1 ":" $2}' \
+        | sort -t: -k2 -nr \
+        | cut -d: -f1
 }
 
 get_connection_status() {
-  local status_parts=()
+    local status_parts=()
+    local iface_wifi ssid
 
-  local iface_wifi ssid
-  iface_wifi=$(nmcli -t -f DEVICE,TYPE,STATE device | grep ":wifi:connected" | cut -d: -f1)
-  if [[ -n "$iface_wifi" ]]; then
-    ssid=$(nmcli -t -f GENERAL.CONNECTION device show "$iface_wifi" | cut -d: -f2-)
-  fi
-
-  while IFS=: read -r iface type state _; do
-    if [[ "$state" == "connected" ]]; then
-      case "$type" in
-        ethernet)
-          status_parts+=("\"Ethernet\"")
-          ;;
-        wifi)
-          if [[ -n "$ssid" ]]; then
-            status_parts+=("\"$ssid\"")
-          else
-            status_parts+=("\"Wi-Fi\"")
-          fi
-          ;;
-      esac
+    iface_wifi=$(nmcli -t -f DEVICE,TYPE,STATE device | grep ":wifi:connected" | cut -d: -f1)
+    if [[ -n "$iface_wifi" ]]; then
+        ssid=$(nmcli -t -f GENERAL.CONNECTION device show "$iface_wifi" | cut -d: -f2-)
     fi
-  done < <(nmcli -t -f DEVICE,TYPE,STATE device)
 
-  if [ ${#status_parts[@]} -eq 0 ]; then
-    echo "📶 Statut de connexion : Aucune"
-  else
-    IFS=$'\n' sorted=($(sort <<<"${status_parts[*]}"))
-    unset IFS
-    echo "📶 Statut de connexion : $(IFS=, ; echo "${sorted[*]}")"
-  fi
+    while IFS=: read -r iface type state _; do
+        if [[ "$state" == "connected" ]]; then
+            case "$type" in
+                ethernet) status_parts+=("\"Ethernet\"") ;;
+                wifi)
+                    if [[ -n "$ssid" ]]; then
+                        status_parts+=("\"$ssid\"")
+                    else
+                        status_parts+=("\"Wi-Fi\"")
+                    fi
+                    ;;
+            esac
+        fi
+    done < <(nmcli -t -f DEVICE,TYPE,STATE device)
+
+    if [ ${#status_parts[@]} -eq 0 ]; then
+        echo "📶 Statut de connexion : Aucune"
+    else
+        IFS=$'\n' sorted=($(sort <<<"${status_parts[*]}"))
+        unset IFS
+        echo "📶 Statut de connexion : $(IFS=, ; echo "${sorted[*]}")"
+    fi
 }
 
-select_network() {
-  local status_line=$(get_connection_status)
-  local connections_label="📋 Voir les connexions établies"
-  local separator="────────────────────────────────────────────────"
+network_menu() {
+    SSID="$1"
+    CONNECTED_SSID=$(current_ssid)
 
-  local wifi_list=$(nmcli -f SSID,SIGNAL device wifi list | \
-    awk 'NR>1 && $1 != "--" {print $0}' | \
-    sort -k2 -nr | \
-    awk '!seen[$1]++ {print $1}')
-
-  printf "%s\n%s\n%s\n%s\n" "$status_line" "$connections_label" "$separator" "$wifi_list" | \
-    rofi -theme ~/.config/rofi/wifi-menu/wifi-menu1.rasi -dmenu -p "Wifi"
+    if [[ "$SSID" == "$CONNECTED_SSID" ]]; then
+        ACTION=$(printf "Déconnecter\nOublier\nRetour" | rofi -dmenu -i -p "Gestion $SSID" -theme $HOME/.config/rofi/wifi-menu/wifi-menu-manage.rasi)
+        case "$ACTION" in
+            "Déconnecter") nmcli connection down "$SSID" ;;
+            "Oublier") nmcli connection delete "$SSID" ;;
+        esac
+    else
+        ACTION=$(printf "Connecter\nOublier\nRetour" | rofi -dmenu -i -p "Gestion $SSID" -theme $HOME/.config/rofi/wifi-menu/wifi-menu-manage.rasi)
+        case "$ACTION" in
+            "Connecter")
+                PASSWORD=$(echo "" | rofi -dmenu -password -p "Mot de passe pour $SSID" -theme $HOME/.config/rofi/wifi-menu/wifi-menu-password.rasi)
+                if [[ -n "$PASSWORD" ]]; then
+                    nmcli device wifi connect "$SSID" ifname "$IFACE" password "$PASSWORD"
+                fi
+                ;;
+            "Oublier") nmcli connection delete "$SSID" ;;
+        esac
+    fi
 }
 
+show_connections() {
+    SELECTED=$(nmcli -t -f NAME connection show | \
+        rofi -dmenu -i -theme $HOME/.config/rofi/wifi-menu/wifi-menu-manage.rasi)
 
-select_action() {
-  local ssid="$1"
-  printf "Se connecter\nSe déconnecter\nEnregistrer le réseau\nSupprimer le réseau" | \
-    rofi -theme ~/.config/rofi/wifi-menu/wifi-menu2.rasi -dmenu -p "$ssid"
+    [ -n "$SELECTED" ] && network_menu "$SELECTED"
 }
 
-process_action() {
-  local ssid="$1"
-  local action="$2"
+main_menu() {
+    NETWORKS=$(list_networks)
+    STATUS=$(get_connection_status)
+    WIFI_STATE=$(nmcli radio wifi)
+    SEPARATOR="──────────────"
 
-  case "$action" in
-    "Se connecter")
-      if confirm_action "Se connecter au réseau '$ssid' ?"; then
-        nmcli connection up "$ssid"
-      fi
-      ;;
-    "Se déconnecter")
-      if confirm_action "Se déconnecter de '$ssid' ?"; then
-        nmcli connection down "$ssid"
-      fi
-      ;;
-    "Enregistrer le réseau")
-      password=$(rofi -theme ~/.config/rofi/wifi-menu/wifi-menu3.rasi -dmenu -password -p "Mot de passe")
-      if [ -n "$password" ] && confirm_action "Enregistrer et se connecter à '$ssid' ?"; then
-        nmcli device wifi connect "$ssid" password "$password"
-      fi
-      ;;
-    "Supprimer le réseau")
-      if confirm_action "Supprimer la connexion '$ssid' ?"; then
-        nmcli connection delete "$ssid"
-      fi
-      ;;
-  esac
+    HEADER1="$STATUS"
+    HEADER2="📋 Voir les connexions"
+    HEADER3="⚙️ Wi-Fi: $WIFI_STATE"
+
+    MENU=$(printf "%s\n%s\n%s\n%s\n%s" \
+        "$HEADER1" "$HEADER2" "$HEADER3" "$SEPARATOR" "$NETWORKS" | \
+        rofi -dmenu -i -p WiFi -theme $HOME/.config/rofi/wifi-menu/wifi-menu-main.rasi)
+
+    case "$MENU" in
+        "$HEADER3")
+            if [ "$WIFI_STATE" = "enabled" ]; then
+                nmcli radio wifi off
+            else
+                nmcli radio wifi on
+            fi
+            ;;
+        "$HEADER2") show_connections ;;
+        "$HEADER1"|"$SEPARATOR") : ;;
+        *) [ -n "$MENU" ] && network_menu "$MENU" ;;
+    esac
 }
 
-main() {
-  ssid=$(select_network) || exit
-  [ -z "$ssid" ] && exit
-
-  case "$ssid" in
-  "📋 Voir les connexions établies")
-    nmcli -t -f NAME,TYPE,STATE connection show | \
-      awk -F: '{printf "%-30s : %s\n", $1, $3}' | \
-      rofi -theme ~/.config/rofi/wifi-menu/wifi-menu5.rasi -dmenu -no-custom
-    exit
-    ;;
-    📶*)
-      exit
-      ;;
-    "────────────────────────────────────────────────")
-      exit
-      ;;
-  esac
-
-
-  action=$(select_action "$ssid") || exit
-  [ -z "$action" ] && exit
-
-  process_action "$ssid" "$action"
-}
-
-main
-
+main_menu
