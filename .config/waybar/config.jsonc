@@ -141,7 +141,8 @@
     "format-ethernet": "Ethernet  ",
     "tooltip-format-wifi": "{essid}  -  {ipaddr} /{cidr}",
     "tooltip-format-ethernet": "Ethernet  -  {ipaddr} /{cidr}",
-    "format-disconnected": "Déconnecté ⚠"
+    "format-disconnected": "Déconnecté ⚠",
+    "format-disabled": "Déconnecté ⚠"
 },
 
 "battery": {

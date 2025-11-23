@@ -99,6 +99,15 @@
     color: #990F02;
 }
 
+#network.disabled {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-left: 18px;
+    padding-right: 8px;
+    margin-left: 4px;
+    color: #990F02;
+}
+
 #battery {
     padding-left: 8px;
     border-radius: 0;
