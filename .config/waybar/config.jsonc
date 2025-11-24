@@ -68,6 +68,8 @@
     "exec": "~/.config/waybar/modules-scripts/musicplayer.sh",
     "return-type": "json",
     "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
     "tooltip": false
 },
 
