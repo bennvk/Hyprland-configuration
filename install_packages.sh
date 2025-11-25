@@ -34,7 +34,7 @@ sudo pacman -S --needed --noconfirm \
   wl-clipboard \
   brightnessctl \
   ddcutil \
-  imv \
+  swayimg \
   cpupower \
   pavucontrol \
   ufw \
