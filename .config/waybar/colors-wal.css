@@ -1,23 +1,29 @@
-#custom-os_button,
 #workspaces,
-#custom-musicplayer,
 #window,
 #custom-taskbar,
-#pulseaudio,
 #custom-cpu,
-#custom-gpuNmemory,
 #network,
-#battery,
-#battery.charging, #battery.plugged,
-#battery.critical:not(.charging),
-#clock,
 #custom-configuration,
-#custom-power,
+#custom-power {
+    background: linear-gradient(90deg, #CFA652, #a58441);
+}
+
+#custom-os_button,
+#custom-musicplayer,
+#pulseaudio,
+#custom-gpuNmemory,
+#clock {
+    background: linear-gradient(90deg, #a58441, #CFA652);
+}
+
 #custom-separator,
-#pulseaudio-slider {
-    background-color: #C2BDAF;
+#battery,
+#battery.charging,
+#battery.plugged,
+#battery.critical:not(.charging) {
+    background: #a58441;
 }
 
 tooltip {
-    background: #C2BDAF;
+    background: linear-gradient(135deg, #CFA652, #a58441);
 }
