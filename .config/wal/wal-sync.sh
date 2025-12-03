@@ -39,7 +39,8 @@ ln -sf ~/.cache/wal/colors-rofi-dark.rasi ~/.config/rofi/shared/colors.rasi
 
 if [[ -f "$HOME/.cache/wal/colors.sh" ]]; then
     source "$HOME/.cache/wal/colors.sh"
-    echo "background-color=$color2" > "$HOME/.config/mako/colors-mako"
+    echo "border-color=$color1" > "$HOME/.config/mako/colors-mako"
+    echo "background-color=$color2" >> "$HOME/.config/mako/colors-mako"
     makoctl reload
 fi
 

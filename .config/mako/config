@@ -11,7 +11,7 @@ text-alignment=center
 max-icon-size=32
 
 border-radius=25
-border-size=0
+border-size=2
 
 [app-name="discord"]
 invisible=1
