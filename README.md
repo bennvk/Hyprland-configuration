@@ -67,13 +67,18 @@ Cela permet de ne pas exécuter directement les scripts et de choisir finement c
 ├── 📁 boot/
 │   └── 📁 grub/
 │       └── 📁 themes/
+│           ├── 📁 Celeste/
+│           ├── 📁 hollow-grub/
+│           ├── 📁 Stardew-Valley/
 │           └── 📁 whitesur/
-│               └── [...]
+│
 ├── 📁 etc/
+│   ├── 📁 default/
+│   │   └── [...]
 │   ├── 📁 keyd/
-│   │    └── [...]
+│   │   └── [...]
 │   └── 📁 wireplumber/
-│        └── [...]
+│       └── [...]
 │ 
 └── 📁 home/
     └── 📁 benn/
