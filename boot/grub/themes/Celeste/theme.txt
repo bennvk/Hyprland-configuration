@@ -1,0 +1,48 @@
+# CelesteGRUB by Suilven/Locked101
+# Designed for 1080p
+
+# Global Property
+title-text: ""
+desktop-image: "bg1.png"
+desktop-color: "#242424"
+terminal-font: "Terminus Regular 14"
+terminal-box: "terminal_box_*.png"
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
+
+# Show the boot menu
++ boot_menu {
+  left = 48
+  top = 150
+  item_font = "Renogare Regular 20"
+  item_color = "#45403c"
+  selected_item_color = "#45403c"
+  icon_width = 64
+  icon_height = 64
+  item_icon_space = 6
+  item_height = 180
+  item_spacing = 120
+  selected_item_pixmap_style = "cardselect_*.png"
+  item_pixmap_style = "cardsitem_*.png"
+}
+
++ image {
+  top = 120
+  left = 70%
+  file = "postcard.png"
+}
+
+# Automatic boot countdown
++ label {
+  top = 940
+  left = 48
+  width = 34%
+  align = "center"
+  id = "__timeout__"
+  text = "Automatic boot in %d seconds"
+  color = "#45403c"
+  font = "Renogare Regular 20"
+}

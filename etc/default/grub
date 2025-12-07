@@ -1,0 +1,17 @@
+# GRUB boot loader configuration
+
+GRUB_DEFAULT='0'
+GRUB_TIMEOUT='10'
+GRUB_THEME="/boot/grub/themes/whitesur/theme.txt"
+
+GRUB_DISTRIBUTOR='EndeavourOS'
+GRUB_CMDLINE_LINUX_DEFAULT='nowatchdog nvme_load=YES loglevel=3'
+GRUB_CMDLINE_LINUX=""
+GRUB_PRELOAD_MODULES="part_gpt part_msdos"
+GRUB_TIMEOUT_STYLE=menu
+GRUB_TERMINAL_INPUT=console
+GRUB_GFXMODE=1920x1080,auto
+GRUB_GFXPAYLOAD_LINUX=keep
+GRUB_DISABLE_RECOVERY='true'
+GRUB_DISABLE_SUBMENU='false'
+GRUB_EARLY_INITRD_LINUX_STOCK=''

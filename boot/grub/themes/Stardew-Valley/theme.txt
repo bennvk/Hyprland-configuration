@@ -1,0 +1,68 @@
+# GRUB2 gfxmenu Linux theme
+# Designed for any resolution
+
+# Global Property
+title-text: ""
+desktop-image: "background.png"
+desktop-color: "#f0f0f0"
+terminal-font: "xiangsu-32"
+terminal-box: "terminal_box_*.png"
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
+
+# Show the boot menu
++ boot_menu {
+  left = 36%
+  top = 50%
+  width = 28%
+  height = 40%
+  item_font = "xiangsu-32"
+  item_color = "#ce5252"
+  selected_item_color = "#ee7474"
+  icon_width = 32
+  icon_height = 32
+  item_icon_space = 32
+  item_height = 50
+  item_padding = 32
+  item_spacing = 32
+  item_pixmap_style = "boot_menu/item_*.png"
+  selected_item_pixmap_style = "boot_menu/select_*.png"
+}
+
++ image {
+  top = 50%-60
+  left = 50%-310
+  file = "info.png"
+}
+
++ image {
+  top = 10%
+  left = 50%-375
+  file = "logo.png"
+}
+
++ label {
+  top = 90%
+  left = 38%
+  width = 24%
+  align = "center"
+  id = "__timeout__"
+  text = "Booting in %d seconds"
+  text_color = "#333333"
+  font = "heiti-32"
+}
+
+
++ progress_bar{
+  id = "__timeout__"
+  top = 93%
+  left = 32%
+  width = 692
+  height = 16
+  bar_style = "progress_bar/frame_*.png"
+  highlight_style = "progress_bar/hl_*.png"
+  highlight_overlay = false
+}
