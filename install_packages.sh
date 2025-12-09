@@ -24,6 +24,7 @@ sudo pacman -S --needed --noconfirm \
   ttf-cascadia-code \
   papirus-icon-theme \
   fastfetch \
+  keyd \
   neovim \
   mako \
   zip \
