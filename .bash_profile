@@ -9,5 +9,5 @@ fi
 
 if [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then
     echo "Lancement de Hyprland..."
-    exec Hyprland
+    exec start-hyprland
 fi
