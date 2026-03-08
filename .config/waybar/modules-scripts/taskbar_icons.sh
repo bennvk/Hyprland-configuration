@@ -31,4 +31,5 @@ declare -A icons=(
   [steam_app_413150]="󰊗"
   [Windscribe]="󰦝"
   [Spotify]="󰓇"
+  [parsecd]="󱎓"
 )
