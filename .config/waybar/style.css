@@ -38,13 +38,6 @@
     border-color: transparent;
 }
 
-#workspaces button:hover {
-    font-weight: 100;
-    background: inherit;
-    color: inherit;
-    box-shadow: none;
-}
-
 #workspaces button.active:hover {
     background: transparent;
     border-color: transparent;
