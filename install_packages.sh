@@ -24,7 +24,6 @@ sudo pacman -S --needed --noconfirm \
   ttf-cascadia-code \
   papirus-icon-theme \
   fastfetch \
-  keyd \
   neovim \
   mako \
   zip \
@@ -43,13 +42,14 @@ sudo pacman -S --needed --noconfirm \
   jq \
   ttf-cascadia-code \
   ttf-nerd-fonts-symbols \
-  xdg-desktop-portal-hyprland
+  xdg-desktop-portal-hyprland \
+  xdg-desktop-portal-gtk
 
 echo ">>> Installation des paquets AUR <<<"
 
 yay -S --needed --noconfirm \
   librewolf-bin \
-  python-pywalfox-librewolf \
+  python-pywalfox \
   ttf-font-awesome-5 \
   vscodium-bin \
   proton-ge-custom-bin
