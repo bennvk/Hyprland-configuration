@@ -17,8 +17,15 @@
     border-radius: 18px;
 }
 
+.modules-left,
+.modules-center,
+.modules-right {
+  margin: 12px 10px 0px 0px;
+}
+
 window#waybar {
     background-color: transparent;
+    margin: 13px 10px 0px 0px;
 }
 
 #custom-os_button {
@@ -49,7 +56,7 @@ window#waybar {
 }
 
 #workspaces button.empty {
-    color: #aaaaaa;
+    color: #bbbbbb;
 }
 
 #custom-musicplayer {
@@ -58,9 +65,16 @@ window#waybar {
     margin-right: 4px;
 }
 
-#custom-taskbar {
-    font-size: 20px;
-    padding-right: 18px;
+#taskbar {
+    padding: 0px 8px;
+}
+
+#taskbar button {
+    padding: 0px 5px;
+}
+
+#taskbar button:hover, #taskbar.empty {
+    background: transparent;
 }
 
 #pulseaudio {
@@ -108,56 +122,40 @@ window#waybar {
     margin-right: 4px;
 }
 
-#network {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    padding-left: 18px;
-    padding-right: 8px;
-    margin-left: 4px;
-}
-
-#network.disconnected {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    padding-left: 18px;
-    padding-right: 8px;
-    margin-left: 4px;
-    color: #990F02;
-}
-
+#network, 
+#network.disconnected, 
 #network.disabled {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     padding-left: 18px;
     padding-right: 8px;
     margin-left: 4px;
+}
+
+#network.disconnected,
+#network.disabled {
     color: #990F02;
 }
 
-#battery {
+#battery,
+#battery.charging, 
+#battery.plugged,
+#battery.critical:not(.charging),
+#battery.full {
     padding-left: 8px;
     border-radius: 0;
     padding-right: 8px;
 }
 
 #battery.charging, #battery.plugged {
-    padding-left: 8px;
-    border-radius: 0;
-    padding-right: 8px;
     color: #0a9418;
 }
 
-#battery.critical:not(.charging) {
-    padding-left: 8px;
-    border-radius: 0;
-    padding-right: 8px;    
+#battery.critical:not(.charging) {   
     color: #990F02;
 }
 
-#battery.full {
-    padding-left: 8px;
-    border-radius: 0;
-    padding-right: 8px;    
+#battery.full {   
     color: #FBE106;
 }
 
@@ -180,12 +178,6 @@ window#waybar {
 
 tooltip {
     border: none;
-}
-
-.modules-left,
-.modules-center,
-.modules-right {
-  margin: 13px 10px 0px 0px;
 }
 
 @import url("colors-wal.css");

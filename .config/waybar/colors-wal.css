@@ -1,14 +1,14 @@
 #workspaces button.active {
-    color: #817E78;
+    color: #52749C;
 }
 #workspaces,
 #window,
-#custom-taskbar,
+#taskbar,
 #custom-cpu,
 #network,
 #custom-configuration,
 #custom-power {
-    background: linear-gradient(90deg, #817E78, #676460);
+    background: linear-gradient(90deg, #52749C, #415c7c);
 }
 
 #custom-os_button,
@@ -17,7 +17,7 @@
 #pulseaudio-slider,
 #custom-gpuNmemory,
 #clock {
-    background: linear-gradient(90deg, #676460, #817E78);
+    background: linear-gradient(90deg, #415c7c, #52749C);
 }
 
 #custom-separator,
@@ -25,9 +25,9 @@
 #battery.charging,
 #battery.plugged,
 #battery.critical:not(.charging) {
-    background: #676460;
+    background: #415c7c;
 }
 
 tooltip {
-    background: linear-gradient(135deg, #817E78, #676460);
+    background: linear-gradient(135deg, #52749C, #415c7c);
 }

@@ -24,7 +24,7 @@ cat > ~/.config/waybar/colors-wal.css <<EOF
 }
 #workspaces,
 #window,
-#custom-taskbar,
+#taskbar,
 #custom-cpu,
 #network,
 #custom-configuration,

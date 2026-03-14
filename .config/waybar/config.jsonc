@@ -22,7 +22,7 @@
 ],
 
 "modules-center": [
-    "custom/taskbar"
+    "wlr/taskbar"
 ],
 
 "modules-right": [
@@ -41,10 +41,8 @@
 },
 
 "hyprland/workspaces": {
-    "warp-on-scroll": false,
     "on-scroll-up": "hyprctl dispatch workspace e-1",
     "on-scroll-down": "hyprctl dispatch workspace e+1",
-    "format": "{}",
 
     "persistent-workspaces": {
       "eDP-1": ["1","2","3"],
@@ -53,7 +51,6 @@
 },
 
 "custom/musicplayer": {
-    "format": "{}",
     "max-length": 50,
     "interval": 2,
     "exec": "~/.config/waybar/modules-scripts/musicplayer.sh",
@@ -64,11 +61,16 @@
     "tooltip": false
 },
 
-"custom/taskbar": {
-    "exec": "~/.config/waybar/modules-scripts/taskbar_display.sh",
-    "interval": 2,
-    "format": "{}",
-    "tooltip": false
+"wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 24,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+       "Baba Is You",
+       "steam_app_1263240"
+    ]
 },
 
 "group/volume": {
