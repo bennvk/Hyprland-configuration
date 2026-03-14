@@ -11,12 +11,14 @@
 
 
 * {
-    font-family: Inter, Symbols Nerd Font, monospace;
+    font-family: Inter, Symbols Nerd Font;
     font-size: 12.5px;
     font-weight: 600;
-    color: #ffffff;
-    background-color: transparent;
     border-radius: 18px;
+}
+
+window#waybar {
+    background-color: transparent;
 }
 
 #custom-os_button {
@@ -33,14 +35,21 @@
 }
 
 #workspaces button {
-    padding: 0px 4px;
-    font-weight: 100;
-    border-color: transparent;
+    padding: 0px 5px;
+    margin: 0px 2px;
+    transition: all 0.3s ease-in-out;
+    background: transparent;
 }
 
-#workspaces button.active:hover {
-    background: transparent;
-    border-color: transparent;
+#workspaces button.active {
+    padding: 0px 8px;
+    background: #ffffff;
+    border-radius: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.empty {
+    color: #aaaaaa;
 }
 
 #custom-musicplayer {
@@ -57,6 +66,30 @@
 #pulseaudio {
     padding: 8px 18px;
     font-size: 18px;
+    transition: all 0.5s ease-in-out;
+}
+
+#pulseaudio-slider {
+    min-height: 5px;
+    margin-left: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+#pulseaudio-slider slider {   
+    background: transparent;
+    box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+    min-height: 5px;
+    min-width: 80px;
+    margin: 0px 8px;
+    border-radius: 5px;
+    background: transparent;
+}
+
+#pulseaudio-slider highlight {
+    background: #ffffff;
 }
 
 #custom-cpu {

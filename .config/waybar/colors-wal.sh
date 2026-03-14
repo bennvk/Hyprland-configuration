@@ -19,6 +19,9 @@ gradient() {
 color2_gradient=$(gradient $color2)
 
 cat > ~/.config/waybar/colors-wal.css <<EOF
+#workspaces button.active {
+    color: $color2;
+}
 #workspaces,
 #window,
 #custom-taskbar,
@@ -32,6 +35,7 @@ cat > ~/.config/waybar/colors-wal.css <<EOF
 #custom-os_button,
 #custom-musicplayer,
 #pulseaudio,
+#pulseaudio-slider,
 #custom-gpuNmemory,
 #clock {
     background: linear-gradient(90deg, $color2_gradient, $color2);
