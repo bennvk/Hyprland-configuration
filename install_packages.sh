@@ -42,6 +42,7 @@ sudo pacman -S --needed --noconfirm \
   jq \
   ttf-cascadia-code \
   ttf-nerd-fonts-symbols \
+  adw-gtk-theme \
   xdg-desktop-portal-hyprland \
   xdg-desktop-portal-gtk
 
