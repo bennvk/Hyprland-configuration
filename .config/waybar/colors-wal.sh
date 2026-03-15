@@ -19,7 +19,7 @@ gradient() {
 color2_gradient=$(gradient $color2)
 
 cat > ~/.config/waybar/colors-wal.css <<EOF
-#workspaces button.active {
+#workspaces button.visible {
     color: $color2;
 }
 #workspaces,
