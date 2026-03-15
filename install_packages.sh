@@ -21,7 +21,6 @@ sudo pacman -S --needed --noconfirm \
   lib32-gamemode \
   python-pywal \
   starship \
-  ttf-cascadia-code \
   papirus-icon-theme \
   fastfetch \
   neovim \
@@ -42,6 +41,7 @@ sudo pacman -S --needed --noconfirm \
   jq \
   ttf-cascadia-code \
   ttf-nerd-fonts-symbols \
+  inter-font \
   adw-gtk-theme \
   xdg-desktop-portal-hyprland \
   xdg-desktop-portal-gtk
