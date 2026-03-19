@@ -14,7 +14,6 @@
 
 {
   "style": "~/.config/waybar/style.css",
-  "spacing": 4,
   "modules-left": [
     "custom/os_button",
     "hyprland/workspaces",
