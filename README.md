@@ -47,7 +47,7 @@
 
 - Éditeur de texte [Nvim](https://neovim.io/)
 - Archive - [Zip](https://man.archlinux.org/man/zip.1.e)
-- Gestionnaire de fichiers - [Nautilus](https://archlinux.org/packages/extra/x86_64/nautilus/)
+- Gestionnaire de fichiers - [Yazi](https://github.com/sxyazi/yazi)
 - Calculatrice - [Galculator](https://archlinux.org/packages/extra/x86_64/galculator/)
 - Screenshot - [Grim](https://archlinux.org/packages/extra/x86_64/grim/) & [Slurp](https://archlinux.org/packages/extra/x86_64/slurp/) & [WL-Clipboard](https://archlinux.org/packages/extra/x86_64/wl-clipboard/)
 - Luminosité - [Brightnessctl](https://archlinux.org/packages/extra/x86_64/brightnessctl/) & [ddcutil](https://archlinux.org/packages/extra/x86_64/ddcutil/)
@@ -101,7 +101,8 @@ Cela permet de ne pas exécuter directement les scripts et de choisir finement c
         │   ├── 📁 rofi/
         │   ├── 📁 starship/
         │   ├── 📁 wal/
-        │   └── 📁 waybar/
+        │   ├── 📁 waybar/
+        │   └── 📁 yazi/
         │
         ├── 📄 .bashrc
         └── 📄 .bash_profile
