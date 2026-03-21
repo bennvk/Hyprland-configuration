@@ -1,4 +1,7 @@
--- ~/.config/yazi/init.lua
+require("full-border"):setup {
+	  type = ui.Border.ROUNDED
+}
+
 function Linemode:size_and_mtime()
     local time = math.floor(self._file.cha.mtime or 0)
     if time == 0 then
