@@ -3,7 +3,7 @@
 rules = [
 	{ url = "**/.git/", fg = "#A640FF" },
 	{ url = "**/.config/", fg = "#FFF700" },
-    { url = "**/Documents/", fg = "#71EACA" },
+  { url = "**/Documents/", fg = "#71EACA" },
 	{ url = "**/Downloads/", fg = "#7ED689" },
 	{ url = "**/Github/", fg = "#A640FF" },
 	{ url = "**/Images/", fg = "#FFC140" },

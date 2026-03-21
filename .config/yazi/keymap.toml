@@ -1,6 +1,6 @@
 [mgr]
 
-[[mgr.prepend_keymap]]
-on = ["<S-h>"]
-run = "hidden toggle"
-desc = "Toggle hidden files"
+prepend_keymap = [
+  { on = ["<S-h>"], run = "hidden toggle" },
+  { on = ["<Enter>"], run = "enter" },
+]
