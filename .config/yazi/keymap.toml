@@ -3,4 +3,5 @@
 prepend_keymap = [
   { on = ["<S-h>"], run = "hidden toggle" },
   { on = ["<Enter>"], run = "enter" },
+  { on = ["<!>"], run = "shell --orphan kitty" },
 ]
