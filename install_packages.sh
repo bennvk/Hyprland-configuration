@@ -26,7 +26,8 @@ sudo pacman -S --needed --noconfirm \
   neovim \
   mako \
   zip \
-  nautilus \
+  yazi \
+  resvg \
   galculator \
   grim \
   slurp \
