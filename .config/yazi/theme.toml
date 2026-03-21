@@ -1,5 +1,4 @@
 [filetype]
-
 rules = [
 	{ url = "**/.git/", fg = "#A640FF" },
 	{ url = "**/.config/", fg = "#FFF700" },
@@ -41,7 +40,6 @@ rules = [
 ]
 
 [icon]
-
 prepend_conds = [
 	{ if = "dir", text = "", fg = "#00AEFF" },
 ]
