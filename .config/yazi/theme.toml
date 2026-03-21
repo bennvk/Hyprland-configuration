@@ -1,0 +1,87 @@
+[filetype]
+
+rules = [
+	{ url = "**/.git/", fg = "#A640FF" },
+	{ url = "**/.config/", fg = "#FFF700" },
+  { url = "**/Documents/", fg = "#71EACA" },
+	{ url = "**/Downloads/", fg = "#7ED689" },
+	{ url = "**/Github/", fg = "#A640FF" },
+	{ url = "**/Images/", fg = "#FFC140" },
+
+	{ url = "*/", fg = "#00AEFF" },
+
+	{ url = "*.AppImage", fg = "#ffaf00" },
+	{ url = "*.bin", fg = "#aaaaaa" },
+	{ url = "*.conf", fg = "#FFF700" },
+	{ url = "*.toml", fg = "#6d8086" },
+	{ url = "*.css", fg = "#42a5f5" },
+	{ url = "*.csv", fg = "#89e051" },
+	{ url = "*.db", fg = "#f4a460" },
+	{ url = "*.deb", fg = "#a80030" },
+	{ url = "*.desktop", fg = "#48b9c7" },
+	{ url = "*.html", fg = "#e34c26" },
+	{ url = "*.img", fg = "#d0d0d0" },
+	{ url = "*.iso", fg = "#ffcc66" },
+	{ url = "*.jpeg", fg = "#c882e7" },
+	{ url = "*.jpg", fg = "#c882e7" },
+	{ url = "*.png", fg = "#c882e7" },
+	{ url = "*.json", fg = "#cbcb41" },
+	{ url = "*.jsonc", fg = "#cbcb41" },
+	{ url = "*.lua", fg = "#51a0cf" },
+	{ url = "*.md", fg = "#00afff" },
+	{ url = "*.txt", fg = "#00afff" },
+	{ url = "*.mp3", fg = "#00FFFF" },
+	{ url = "*.mp4", fg = "#FFE600" },
+	{ url = "*.pdf", fg = "#ff0000" },
+	{ url = "*.rar", fg = "#ffaf00" },
+	{ url = "*.tar", fg = "#ffaf00" },
+	{ url = "*.gz", fg = "#ffaf00" },
+	{ url = "*.zip", fg = "#ffaf00" },
+	{ url = "*.sh", fg = "#4caf50" },
+]
+
+[icon]
+
+prepend_conds = [
+	{ if = "dir", text = "", fg = "#00AEFF" },
+]
+
+dirs = [
+	{ name = ".git", text = "", fg = "#A640FF" },
+	{ name = ".config", text = "", fg = "#FFF700" },
+	{ name = "Documents", text = "󰈙", fg = "#71EACA" },
+	{ name = "Downloads", text = "󰇚", fg = "#7ED689" },
+	{ name = "Github", text = "", fg = "#A640FF" },
+	{ name = "Images", text = "", fg = "#FFC140" },
+]
+
+exts = [
+	{ name = "AppImage", text = "", fg = "#ffaf00" },
+	{ name = "bin", text = "", fg = "#aaaaaa" },
+	{ name = "conf", text = "", fg = "#FFF700" },
+	{ name = "css", text = "", fg = "#42a5f5" },
+	{ name = "csv", text = "", fg = "#89e051" },
+	{ name = "db", text = "", fg = "#f4a460" },
+	{ name = "deb", text = "", fg = "#a80030" },
+	{ name = "desktop", text = "", fg = "#48b9c7" },
+	{ name = "html", text = "󰌝", fg = "#e34c26" },
+	{ name = "img", text = "", fg = "#d0d0d0" },
+	{ name = "iso", text = "󰗮", fg = "#ffcc66" },
+	{ name = "jpeg", text = "󰋩", fg = "#c882e7" },
+	{ name = "jpg", text = "󰋩", fg = "#c882e7" },
+	{ name = "json", text = "", fg = "#cbcb41" },
+	{ name = "jsonc", text = "", fg = "#cbcb41" },
+	{ name = "lua", text = "", fg = "#51a0cf" },
+	{ name = "md", text = "", fg = "#00afff" },
+	{ name = "mp3", text = "󰎇", fg = "#00FFFF" },
+	{ name = "mp4", text = "", fg = "#FFE600" },
+	{ name = "pdf", text = "", fg = "#ff0000" },
+	{ name = "png", text = "󰋩", fg = "#c882e7" },
+	{ name = "rar", text = "", fg = "#ffaf00" },
+	{ name = "sh", text = "", fg = "#4caf50" },
+	{ name = "tar", text = "", fg = "#ffaf00" },
+	{ name = "gz", text = "", fg = "#ffaf00" },
+	{ name = "toml", text = "", fg = "#6d8086" },
+	{ name = "txt", text = "󰦨", fg = "#00afff" },
+	{ name = "zip", text = "", fg = "#ffaf00" },
+]
