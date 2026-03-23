@@ -51,7 +51,7 @@
 - Calculatrice - [Galculator](https://archlinux.org/packages/extra/x86_64/galculator/)
 - Screenshot - [Grim](https://archlinux.org/packages/extra/x86_64/grim/) & [Slurp](https://archlinux.org/packages/extra/x86_64/slurp/) & [WL-Clipboard](https://archlinux.org/packages/extra/x86_64/wl-clipboard/)
 - Luminosité - [Brightnessctl](https://archlinux.org/packages/extra/x86_64/brightnessctl/) & [ddcutil](https://archlinux.org/packages/extra/x86_64/ddcutil/)
-- Image - [Imv](https://archlinux.org/packages/extra/x86_64/imv/)
+- Image - [SwayImg](https://archlinux.org/packages/extra/x86_64/swayimg/)
 
 ## Installation des paquets
 
