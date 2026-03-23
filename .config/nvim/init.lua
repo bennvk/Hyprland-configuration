@@ -10,6 +10,80 @@ vim.g.mapleader = " "
 vim.cmd("syntax enable")
 vim.cmd("filetype plugin indent on")
 
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+      { out, "WarningMsg" },
+      { "\nPress any key to exit..." },
+    }, true, {})
+    vim.fn.getchar()
+    os.exit(1)
+  end
+end
+vim.opt.rtp:prepend(lazypath)
+
+require("lazy").setup({
+  spec = {
+    {
+      "iamcco/markdown-preview.nvim",
+      cmd = { "MarkdownPreview", "MarkdownPreviewStop", "MarkdownPreviewToggle" },
+      build = function()
+        vim.fn.system("cd " .. vim.fn.stdpath("data") .. "/lazy/markdown-preview.nvim/app && npm install")
+      end,
+      init = function()
+        vim.g.mkdp_filetypes = { "markdown" }
+        vim.g.mkdp_auto_close = 1
+        vim.g.mkdp_browser = ""
+      end,
+      ft = { "markdown" },
+    },
+
+    {
+      "MeanderingProgrammer/render-markdown.nvim",
+      ft = { "markdown" },
+      opts = {
+        heading = { enabled = true },
+        code = { enabled = true },
+        bullet = { enabled = true },
+      },
+    },
+
+    {
+      "williamboman/mason.nvim",
+      build = ":MasonUpdate",
+      config = function()
+        require("mason").setup()
+      end,
+    },
+    {
+      "williamboman/mason-lspconfig.nvim",
+      dependencies = { "williamboman/mason.nvim" },
+      config = function()
+        require("mason-lspconfig").setup({
+          ensure_installed = { "marksman" },
+          automatic_installation = true,
+        })
+        vim.lsp.enable("marksman")
+      end,
+    },
+  },
+  checker = {
+    enabled = true,
+    notify = false,
+  },
+  change_detection = {
+    enabled = true,
+    notify = false,
+  },
+})
+
+vim.keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>",       { desc = "Markdown Preview" })
+vim.keymap.set("n", "<leader>ms", ":MarkdownPreviewStop<CR>",   { desc = "Markdown Preview Stop" })
+
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
     require("themes.pywal").setup()
