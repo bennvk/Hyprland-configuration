@@ -100,6 +100,7 @@ Cela permet de ne pas exécuter directement les scripts et de choisir finement c
         │   ├── 📁 nvim/
         │   ├── 📁 rofi/
         │   ├── 📁 starship/
+        │   ├── 📁 VSCodium/
         │   ├── 📁 wal/
         │   ├── 📁 waybar/
         │   └── 📁 yazi/
