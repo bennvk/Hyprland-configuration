@@ -40,7 +40,7 @@ selected_name=$(printf "%s" "$selected_line" | cut -d $'\x00' -f1)
 selected=$(printf "%s\n" "$choices" | grep "/$selected_name$")
 
 if [ -n "$selected" ]; then
-    swww img "$selected" \
+    awww img "$selected" \
     --outputs "$monitors" \
     --transition-type grow \
     --transition-pos 0.5,0.5 \
