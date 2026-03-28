@@ -44,7 +44,7 @@ if [ -n "$selected" ]; then
     --outputs "$monitors" \
     --transition-type grow \
     --transition-pos 0.25,0.5 \
-    --transition-duration 2.5 \
+    --transition-duration 2 \
     --transition-fps 60
     bash -ic "~/.config/wal/wal-sync.sh '$selected'" >/dev/null 2>&1 &
 fi
