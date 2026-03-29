@@ -9,5 +9,6 @@
     "window.menuBarVisibility": "hidden",
     "breadcrumbs.enabled": false,
     "editor.padding.bottom": 15,
-    "editor.padding.top": 15
+    "editor.padding.top": 15,
+    "editor.fontFamily": "Cascadia Code"
 }
