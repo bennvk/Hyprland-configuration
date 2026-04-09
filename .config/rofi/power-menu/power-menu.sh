@@ -8,7 +8,7 @@
 #  \/    \___/ \_/\_/ \___|_|            |_| |_| |_|\___|_| |_|\__,_|
 #                                                                  
 
-chosen=$(printf "  Éteindre\n  Redémarrer\n  Verrouiller\n  Se déconnecter\n  Arrêt planifié\n  Annuler" | \
+chosen=$(printf "🛑  Éteindre\n🔄  Redémarrer\n🔒  Verrouiller\n🔋  Mode de consommation\n🕔  Arrêt planifié\n❌  Annuler" | \
   rofi -dmenu -theme ~/.config/rofi/power-menu/power-menu1.rasi)
 
 case "$chosen" in
@@ -21,11 +21,11 @@ case "$chosen" in
   *Verrouiller*)
     hyprlock --config ~/.config/hyprlock/hyprlock.conf
     ;;
-  *Se\ déconnecter*) 
-    hyprctl dispatch exit 
+  *Mode\ de\ consommation*) 
+    ~/.config/rofi/power-menu/power-profiles.sh
     ;;
   *Arrêt\ planifié*)
-  input=$(rofi -dmenu -theme ~/.config/rofi/power-menu/power-menu2.rasi -p "Durée (ex: 10m, 5 minutes, 1h)")
+    input=$(rofi -dmenu -theme ~/.config/rofi/power-menu/power-menu2.rasi)
 
   [ -z "$input" ] && exit 1
 

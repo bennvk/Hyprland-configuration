@@ -1,5 +1,5 @@
-#workspaces button.active {
-    color: #60A0A2;
+#workspaces button.visible {
+    color: #F76808;
 }
 #workspaces,
 #window,
@@ -8,7 +8,7 @@
 #network,
 #custom-configuration,
 #custom-power {
-    background: linear-gradient(90deg, #60A0A2, #4c8081);
+    background: linear-gradient(90deg, #F76808, #c55306);
 }
 
 #custom-os_button,
@@ -17,7 +17,7 @@
 #pulseaudio-slider,
 #custom-gpuNmemory,
 #clock {
-    background: linear-gradient(90deg, #4c8081, #60A0A2);
+    background: linear-gradient(90deg, #c55306, #F76808);
 }
 
 #custom-separator,
@@ -25,9 +25,9 @@
 #battery.charging,
 #battery.plugged,
 #battery.critical:not(.charging) {
-    background: #4c8081;
+    background: #c55306;
 }
 
 tooltip {
-    background: linear-gradient(135deg, #60A0A2, #4c8081);
+    background: linear-gradient(135deg, #F76808, #c55306);
 }
