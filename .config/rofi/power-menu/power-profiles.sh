@@ -32,7 +32,6 @@ case "$mode" in
       keyword decoration:dim_inactive 0;
       keyword general:gaps_in 0;
       keyword general:gaps_out 0;
-      keyword general:border_size 1"
     notify-send "Mode de consommation" "Tous les effets sont désactivés"
     ;;
 
