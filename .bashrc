@@ -18,17 +18,19 @@ alias powermode-performance='sudo cpupower frequency-set -g performance'
 
 alias hyprlock='hyprlock --config ~/.config/hyprlock/hyprlock.conf'
 
-alias help-ytdlp='cat ~/.config/help/help_ytdlp.txt'
-alias help-nmcli='cat ~/.config/help/help_nmcli.txt'
-alias help-bindsHyprland='cat ~/.config/help/help_bindsHyprland.txt'
-alias help-pacman='cat ~/.config/help/help_pacman.txt'
-alias help-loginctl='cat ~/.config/help/help_loginctl.txt'
-alias help-mysql='cat ~/.config/help/help_mysql.txt'
-
 echo
 if command -v fastfetch >/dev/null; then
     fastfetch --separator " - "
 fi
+
+function yazi() {
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+  command yazi "$@" --cwd-file="$tmp"
+  if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+    builtin cd -- "$cwd"
+  fi
+  rm -f -- "$tmp"
+}
 
 eval "$(starship init bash)"
 
