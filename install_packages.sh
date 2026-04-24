@@ -14,6 +14,7 @@ sudo pacman -S --needed --noconfirm \
   nvidia-settings \
   lib32-nvidia-utils \
   vulkan \
+  cliphist \
   vulkan-tools \
   vulkan-icd-loader \
   lib32-vulkan-icd-loader \
