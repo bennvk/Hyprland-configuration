@@ -1,99 +1,22 @@
 vim.opt.number = true
+vim.opt.clipboard = "unnamedplus"
 vim.o.mouse = "a"
 vim.o.expandtab = true
 vim.o.shiftwidth = 2
 vim.o.tabstop = 2
 vim.o.softtabstop = 2
-
 vim.g.mapleader = " "
-
 vim.cmd("syntax enable")
 vim.cmd("filetype plugin indent on")
-
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-  if vim.v.shell_error ~= 0 then
-    vim.api.nvim_echo({
-      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-      { out, "WarningMsg" },
-      { "\nPress any key to exit..." },
-    }, true, {})
-    vim.fn.getchar()
-    os.exit(1)
-  end
-end
-vim.opt.rtp:prepend(lazypath)
-
-require("lazy").setup({
-  spec = {
-    {
-      "iamcco/markdown-preview.nvim",
-      cmd = { "MarkdownPreview", "MarkdownPreviewStop", "MarkdownPreviewToggle" },
-      build = function()
-        vim.fn.system("cd " .. vim.fn.stdpath("data") .. "/lazy/markdown-preview.nvim/app && npm install")
-      end,
-      init = function()
-        vim.g.mkdp_filetypes = { "markdown" }
-        vim.g.mkdp_auto_close = 1
-        vim.g.mkdp_browser = ""
-      end,
-      ft = { "markdown" },
-    },
-
-    {
-      "MeanderingProgrammer/render-markdown.nvim",
-      ft = { "markdown" },
-      opts = {
-        heading = { enabled = true },
-        code = { enabled = true },
-        bullet = { enabled = true },
-      },
-    },
-
-    {
-      "williamboman/mason.nvim",
-      build = ":MasonUpdate",
-      config = function()
-        require("mason").setup()
-      end,
-    },
-    {
-      "williamboman/mason-lspconfig.nvim",
-      dependencies = { "williamboman/mason.nvim" },
-      config = function()
-        require("mason-lspconfig").setup({
-          ensure_installed = { "marksman" },
-          automatic_installation = true,
-        })
-        vim.lsp.enable("marksman")
-      end,
-    },
-  },
-  checker = {
-    enabled = true,
-    notify = false,
-  },
-  change_detection = {
-    enabled = true,
-    notify = false,
-  },
-})
-
-vim.keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>",       { desc = "Markdown Preview" })
-vim.keymap.set("n", "<leader>ms", ":MarkdownPreviewStop<CR>",   { desc = "Markdown Preview Stop" })
 
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
     require("themes.pywal").setup()
-
     if vim.fn.argc() == 0 then
       vim.defer_fn(function()
         vim.cmd("enew")
         vim.wo.number = false
         vim.cmd("normal! i")
-
         local content_width = 32
         local function pad_center(str, width)
           local total_padding = width - vim.fn.strdisplaywidth(str)
@@ -101,7 +24,6 @@ vim.api.nvim_create_autocmd("VimEnter", {
           local right = total_padding - left
           return string.rep(" ", left) .. str .. string.rep(" ", right)
         end
-
         local content = {
           "╭" .. string.rep("─", content_width) .. "╮",
           "│" .. pad_center("👋 Bienvenue benn", content_width) .. "│",
@@ -114,29 +36,22 @@ vim.api.nvim_create_autocmd("VimEnter", {
           "",
           " Tape une touche pour continuer...",
         }
-
         local top_padding = 4
         local left_padding = 15
-
         local function pad_left(line)
           return string.rep(" ", left_padding) .. line
         end
-
         local padded = {}
         for _, line in ipairs(content) do
           table.insert(padded, pad_left(line))
         end
-
         for _ = 1, top_padding do
           table.insert(padded, 1, "")
         end
-
         vim.api.nvim_buf_set_lines(0, 0, -1, false, padded)
         vim.cmd("stopinsert")
-
         local opts = { buffer = true, silent = true }
         vim.keymap.set("n", "n", ":enew<CR>", opts)
-
         vim.keymap.set("n", "r", function()
           local last = vim.fn.expand("#")
           if last == "" then
@@ -145,9 +60,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
             vim.cmd("edit #")
           end
         end, opts)
-
         vim.keymap.set("n", "q", ":q!<CR>", opts)
-
         vim.keymap.set("n", "f", function()
           vim.cmd("enew")
           vim.bo.buftype = "nofile"
@@ -157,18 +70,14 @@ vim.api.nvim_create_autocmd("VimEnter", {
           vim.wo.number = true
           vim.wo.relativenumber = false
           vim.opt.wrap = false
-
           local oldfiles = vim.v.oldfiles
           local max_files = 10
           local list = {}
-
           for i = 1, math.min(max_files, #oldfiles) do
             table.insert(list, string.format("%2d: %s", i, oldfiles[i]))
           end
-
           vim.api.nvim_buf_set_lines(0, 0, -1, false, list)
           vim.bo.modifiable = false
-
           vim.api.nvim_buf_set_keymap(0, "n", "<CR>", "", {
             noremap = true,
             silent = true,
