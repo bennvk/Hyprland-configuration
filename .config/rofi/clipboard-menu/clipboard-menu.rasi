@@ -11,7 +11,7 @@ window {
     location:                   south;
     anchor:                     south;
     y-offset:                   -75px;
-    width:                      550px;
+    width:                      450px;
     border-radius:              10px;
     background-color:           @background;
     border:                     0px;
@@ -26,7 +26,7 @@ mainbox {
 }
 
 listview {
-    lines:                      5;
+    lines:                      7;
     layout:                     vertical;
     fixed-height:               true;
     background-color:           transparent;

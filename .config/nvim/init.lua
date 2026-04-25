@@ -9,6 +9,9 @@ vim.g.mapleader = " "
 vim.cmd("syntax enable")
 vim.cmd("filetype plugin indent on")
 
+vim.keymap.set({'n', 'v'}, 'd', '"_d')
+vim.keymap.set('n', 'dd', '"_dd')
+
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
     require("themes.pywal").setup()
