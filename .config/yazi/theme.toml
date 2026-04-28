@@ -1,3 +1,5 @@
+### FILES TYPES ###
+
 [filetype]
 rules = [
 	{ url = "**/.git/", fg = "#5853DC" },
@@ -7,12 +9,13 @@ rules = [
 	{ url = "**/Github/", fg = "#5853DC" },
 	{ url = "**/Images/", fg = "#FFC140" },
 	{ url = "**/Obsidian/", fg = "#A640FF" },
-	{ url = "**/hypr/", fg = "#40DAEE" },
-	{ url = "**/hyprlock/", fg = "#40DAEE" },
-	{ url = "**/kitty/", fg = "#B9720E" },
-	{ url = "**/yazi/", fg = "#E8D600" },
-	{ url = "**/rofi/", fg = "#B2B9A5" },
-	{ url = "**/Electron/", fg = "#5E9CC3" },
+  { url = "**/hypr/", fg = "#40DAEE" },
+  { url = "**/hyprlock/", fg = "#40DAEE" },
+  { url = "**/kitty/", fg = "#B9720E" },
+  { url = "**/yazi/", fg = "#E8D600" },
+  { url = "**/rofi/", fg = "#B2B9A5" },
+  { url = "**/Electron/", fg = "#5E9CC3" },
+  { url = "**/nvim/", fg = "#159809" },
 
 	{ url = "*/", fg = "#00AEFF" },
 
@@ -48,6 +51,8 @@ rules = [
 	{ url = "*.sh", fg = "#4caf50" },
 ]
 
+### ICONS ###
+
 [icon]
 prepend_conds = [
 	{ if = "dir", text = "", fg = "#00AEFF" },
@@ -69,6 +74,7 @@ dirs = [
 	{ name = "rofi", text = "󰍜", fg = "#B2B9A5" },
 	{ name = "Electron", text = "󱀤", fg = "#5E9CC3" },
 	{ name = "electron", text = "󱀤", fg = "#5E9CC3" },
+	{ name = "nvim", text = "", fg = "#159809" },
 ]
 
 exts = [
