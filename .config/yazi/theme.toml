@@ -16,6 +16,10 @@ rules = [
   { url = "**/rofi/", fg = "#B2B9A5" },
   { url = "**/Electron/", fg = "#5E9CC3" },
   { url = "**/nvim/", fg = "#159809" },
+  { url = "**/VSCode/", fg = "#2D70C2" },
+  { url = "**/VSCodium/", fg = "#2D70C2" },
+  { url = "**/Bitwarden/", fg = "#2D70C2" },
+  { url = "**/Discord/", fg = "#7388D9" },
 
 	{ url = "*/", fg = "#00AEFF" },
 
@@ -75,6 +79,11 @@ dirs = [
 	{ name = "Electron", text = "󱀤", fg = "#5E9CC3" },
 	{ name = "electron", text = "󱀤", fg = "#5E9CC3" },
 	{ name = "nvim", text = "", fg = "#159809" },
+	{ name = "VSCode", text = "", fg = "#2D70C2" },
+	{ name = "VSCodium", text = "", fg = "#2D70C2" },
+	{ name = "Bitwarden", text = "", fg = "#2D70C2" },
+	{ name = "Discord", text = "󰙯", fg = "#7388D9" },
+	{ name = "discord", text = "󰙯", fg = "#7388D9" },
 ]
 
 exts = [
