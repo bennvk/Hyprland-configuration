@@ -32,6 +32,7 @@ function yazi() {
   rm -f -- "$tmp"
 }
 
+export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 eval "$(starship init bash)"
 
 [ -f "$HOME/.cache/wal/colors.sh" ] && source "$HOME/.cache/wal/colors.sh"

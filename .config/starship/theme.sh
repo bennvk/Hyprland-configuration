@@ -9,7 +9,7 @@ C5=$(jq -r '.colors.color5' < "$colors_file")
 C6=$(jq -r '.colors.color6' < "$colors_file")
 C7=$(jq -r '.colors.color7' < "$colors_file")
 
-cat > "$HOME/.config/starship.toml" <<EOF
+cat > "$HOME/.config/starship/starship.toml" <<EOF
 format = "  \$username\$directory\$python\$line_break\$character"
 
 [username]

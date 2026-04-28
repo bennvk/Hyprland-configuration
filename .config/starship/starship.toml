@@ -1,0 +1,18 @@
+format = "  $username$directory$python$line_break$character"
+
+[username]
+style_user = "bold #6089B4"
+style_root = "bold red"
+show_always = true
+
+[python]
+format = "(${virtualenv})"
+
+[directory]
+style = "bold #307EC1"
+truncate_to_repo = false
+truncation_length = 3
+
+[character]
+success_symbol = "[  ❯](bold #bfcee1)"
+error_symbol = "[  ❯](bold #bfcee1)"
