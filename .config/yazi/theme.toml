@@ -1,11 +1,18 @@
 [filetype]
 rules = [
-	{ url = "**/.git/", fg = "#A640FF" },
+	{ url = "**/.git/", fg = "#5853DC" },
 	{ url = "**/.config/", fg = "#FFF700" },
-  { url = "**/Documents/", fg = "#71EACA" },
+	{ url = "**/Documents/", fg = "#71EACA" },
 	{ url = "**/Downloads/", fg = "#7ED689" },
-	{ url = "**/Github/", fg = "#A640FF" },
+	{ url = "**/Github/", fg = "#5853DC" },
 	{ url = "**/Images/", fg = "#FFC140" },
+	{ url = "**/Obsidian/", fg = "#A640FF" },
+  { url = "**/hypr/", fg = "#40DAEE" },
+  { url = "**/hyprlock/", fg = "#40DAEE" },
+  { url = "**/kitty/", fg = "#B9720E" },
+  { url = "**/yazi/", fg = "#E8D600" },
+  { url = "**/rofi/", fg = "#B2B9A5" },
+  { url = "**/Electron/", fg = "#5E9CC3" },
 
 	{ url = "*/", fg = "#00AEFF" },
 
@@ -24,6 +31,7 @@ rules = [
 	{ url = "*.jpeg", fg = "#c882e7" },
 	{ url = "*.jpg", fg = "#c882e7" },
 	{ url = "*.png", fg = "#c882e7" },
+	{ url = "*.heic", fg = "#c882e7" },
 	{ url = "*.json", fg = "#cbcb41" },
 	{ url = "*.jsonc", fg = "#cbcb41" },
 	{ url = "*.lua", fg = "#51a0cf" },
@@ -31,6 +39,7 @@ rules = [
 	{ url = "*.txt", fg = "#00afff" },
 	{ url = "*.mp3", fg = "#00FFFF" },
 	{ url = "*.mp4", fg = "#FFE600" },
+	{ url = "*.mov", fg = "#FFE600" },
 	{ url = "*.pdf", fg = "#ff0000" },
 	{ url = "*.rar", fg = "#ffaf00" },
 	{ url = "*.tar", fg = "#ffaf00" },
@@ -45,12 +54,21 @@ prepend_conds = [
 ]
 
 dirs = [
-	{ name = ".git", text = "", fg = "#A640FF" },
+	{ name = ".git", text = "", fg = "#5853DC" },
 	{ name = ".config", text = "", fg = "#FFF700" },
 	{ name = "Documents", text = "󰈙", fg = "#71EACA" },
 	{ name = "Downloads", text = "󰇚", fg = "#7ED689" },
-	{ name = "Github", text = "", fg = "#A640FF" },
+	{ name = "Github", text = "", fg = "#5853DC" },
 	{ name = "Images", text = "", fg = "#FFC140" },
+	{ name = "Obsidian", text = "", fg = "#A640FF" },
+	{ name = "obsidian", text = "", fg = "#A640FF" },
+	{ name = "hypr", text = "", fg = "#40DAEE" },
+	{ name = "hyprlock", text = "", fg = "#40DAEE" },
+	{ name = "kitty", text = "󰄛", fg = "#B9720E" },
+	{ name = "yazi", text = "󰇥", fg = "#E8D600" },
+	{ name = "rofi", text = "󰍜", fg = "#B2B9A5" },
+	{ name = "Electron", text = "󱀤", fg = "#5E9CC3" },
+	{ name = "electron", text = "󱀤", fg = "#5E9CC3" },
 ]
 
 exts = [
@@ -67,12 +85,14 @@ exts = [
 	{ name = "iso", text = "󰗮", fg = "#ffcc66" },
 	{ name = "jpeg", text = "󰋩", fg = "#c882e7" },
 	{ name = "jpg", text = "󰋩", fg = "#c882e7" },
+	{ name = "heic", text = "󰋩", fg = "#c882e7" },
 	{ name = "json", text = "", fg = "#cbcb41" },
 	{ name = "jsonc", text = "", fg = "#cbcb41" },
 	{ name = "lua", text = "", fg = "#51a0cf" },
 	{ name = "md", text = "", fg = "#00afff" },
 	{ name = "mp3", text = "󰎇", fg = "#00FFFF" },
 	{ name = "mp4", text = "", fg = "#FFE600" },
+	{ name = "mov", text = "", fg = "#FFE600" },
 	{ name = "pdf", text = "", fg = "#ff0000" },
 	{ name = "png", text = "󰋩", fg = "#c882e7" },
 	{ name = "rar", text = "", fg = "#ffaf00" },
