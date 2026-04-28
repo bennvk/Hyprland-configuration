@@ -20,6 +20,7 @@ rules = [
   { url = "**/VSCodium/", fg = "#2D70C2" },
   { url = "**/Bitwarden/", fg = "#2D70C2" },
   { url = "**/Discord/", fg = "#7388D9" },
+  { url = "**/Starship/", fg = "#DD0A78" },
 
 	{ url = "*/", fg = "#00AEFF" },
 
@@ -84,6 +85,7 @@ dirs = [
 	{ name = "Bitwarden", text = "", fg = "#2D70C2" },
 	{ name = "Discord", text = "󰙯", fg = "#7388D9" },
 	{ name = "discord", text = "󰙯", fg = "#7388D9" },
+	{ name = "starship", text = "󰫢", fg = "#DD0A78" },
 ]
 
 exts = [
