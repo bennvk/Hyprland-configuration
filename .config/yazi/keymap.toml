@@ -1,14 +1,14 @@
 [mgr]
 prepend_keymap = [
   { on = ["<!>"], run = "shell --orphan kitty" },
-  { on = ["<q>"], run = "close" },
-  { on = ["<Enter>"], run = """shell --block --confirm'
+  { on = ["<q>"],     run = "close" },
+  { on = ["<Enter>"], run = """shell --block --confirm '
     case "$0" in
       *.sh)  bash "$0" ;;
       *.py)  python "$0" ;;
       *.js)  node "$0" ;;
       *.lua) lua "$0" ;;
-      *)     nvim "$0" ;;
+      *)     yazi --open ;;
     esac
   '""", desc = "Run or open file" },
 ]
