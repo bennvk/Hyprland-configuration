@@ -21,6 +21,9 @@ rules = [
   { url = "**/Bitwarden/", fg = "#2D70C2" },
   { url = "**/Discord/", fg = "#7388D9" },
   { url = "**/Starship/", fg = "#DD0A78" },
+  { url = "**/docker-compose.yml", fg = "#1597ce" },
+  { url = "**/Dockerfile", fg = "#1597ce" },
+
 
 	{ url = "*/", fg = "#00AEFF" },
 
