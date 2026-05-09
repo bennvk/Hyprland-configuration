@@ -1,7 +1,3 @@
-require("full-border"):setup {
-	  type = ui.Border.ROUNDED
-}
-
 -- Linemode
 
 function Linemode:size_and_mtime()
