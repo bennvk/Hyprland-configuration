@@ -1,0 +1,53 @@
+
+--   _             _           __     __           _
+--  | | ___   ___ | | __    /\ \ \   / _| ___  ___| |
+--  | |/ _ \ / _ \| |/ /   /  \/ /  | |_ / _ \/ _ \ |
+--  | | (_) | (_) |   <   / /\  /   |  _|  __/  __/ |
+--  |_|\___/ \___/|_|\_\  \_\ \/    |_|  \___|\___|_|
+--
+
+hl.config {
+
+    general = {
+        gaps_in          = 7,
+        gaps_out         = 13,
+        border_size      = 0,
+        resize_on_border = true,
+        allow_tearing    = false,
+        layout           = "master",
+    },
+
+    decoration = {
+        rounding         = 8,
+        rounding_power   = 5,
+        active_opacity   = 0.90,
+        inactive_opacity = 0.85,
+
+        shadow = {
+            enabled      = true,
+            range        = 40,
+            color        = "rgba(00000099)",
+            render_power = 4,
+        },
+
+        blur = {
+            enabled   = true,
+            size      = 5,
+            passes    = 3,
+            vibrancy  = 0.1696,
+        },
+    },
+
+    master = {
+        new_status  = "master",
+        mfact       = 0.60,
+        orientation = "right",
+        new_on_top  = true,
+    },
+
+    misc = {
+        force_default_wallpaper  = false,
+        disable_hyprland_logo    = true,
+        disable_splash_rendering = true,
+    },
+}

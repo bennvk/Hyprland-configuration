@@ -1,0 +1,10 @@
+require("modules-lua/functions")
+
+require("modules-lua/animations")
+require("modules-lua/autostart")
+require("modules-lua/binds")
+require("modules-lua/environment")
+require("modules-lua/input")
+require("modules-lua/lookNfeel")
+require("modules-lua/monitors")
+require("modules-lua/windowsNworkspaces")
