@@ -6,15 +6,14 @@
 --    \_/\_/ |_|_| |_|\__,_|\___/ \_/\_/ |___/    \_\ \/        \_/\_/ \___/|_|  |_|\_\___/ .__/ \__,_|\___\___||___/
 --                                                                                      |_|                        
 
---local func = require("modules-lua/functions") 
+-- Workspaces
 
--- Workspaces 
-
---func.assign_workspaces() 
---  hl.on("monitor.added", function(_) func.assign_workspaces() 
---end) 
---  hl.on("monitor.removed", function(_) func.assign_workspaces() 
---end) 
+hl.workspace_rule({workspace = "1", monitor = "eDP-1", default = true})
+hl.workspace_rule({workspace = "2", monitor = "eDP-1"})
+hl.workspace_rule({workspace = "3", monitor = "eDP-1"})
+hl.workspace_rule({workspace = "4", monitor = "DP-1", default = true})
+hl.workspace_rule({workspace = "5", monitor = "DP-1"})
+hl.workspace_rule({workspace = "6", monitor = "DP-1"})
 
 -- Windows 
 
