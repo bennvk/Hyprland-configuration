@@ -28,7 +28,7 @@ hl.bind("SUPER + ESCAPE", hl.dsp.window.set_prop({ prop = "opaque", value = "tog
 -- Clipboard
 hl.bind("SUPER + SHIFT + C", hl.dsp.exec_cmd("cliphist wipe && \
     notify-send 'Presse papier' 'Le presse papier à bien était vidé' || \
-    notify-send '⚠️ Erreur ⚠️' 'L'ordinateur n'a pas pu être éteint'"))
+    notify-send '⚠️ Erreur ⚠️' 'Le presse n'a pas pu être vidé'"))
 hl.bind("SUPER + C", hl.dsp.exec_cmd("~/.config/rofi/clipboard-menu/clipboard-menu.sh delete"))
 hl.bind("SUPER + V", hl.dsp.exec_cmd("~/.config/rofi/clipboard-menu/clipboard-menu.sh paste"))
 
