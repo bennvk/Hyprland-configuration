@@ -66,11 +66,7 @@
     "icon-size": 24,
     "tooltip-format": "{title}",
     "on-click": "activate",
-    "on-click-right": "close",
-    "ignore-list": [
-       "Baba Is You",
-       "steam_app_1263240"
-    ]
+    "on-click-right": "close"
 },
 
 "group/volume": {
