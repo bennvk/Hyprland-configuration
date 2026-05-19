@@ -13,10 +13,10 @@ chosen=$(printf "🛑  Éteindre\n🔄  Redémarrer\n🔒  Verrouiller\n🔋  Mo
 
 case "$chosen" in
   *Éteindre*) 
-    systemctl poweroff 
+    systemctl poweroff || notify-send "⚠️ Erreur ⚠️" "L'ordinateur n'a pas pu être éteint" 
     ;;
   *Redémarrer*) 
-    systemctl reboot 
+    systemctl reboot || notify-send "⚠️ Erreur ⚠️" "L'ordinateur n'a pas pu être redémarrer" 
     ;;
   *Verrouiller*)
     hyprlock --config ~/.config/hyprlock/hyprlock.conf
