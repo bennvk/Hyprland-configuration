@@ -10,23 +10,66 @@
 
 
 {
+  "logo": {
+    "source": "endeavouros",
+    "padding": {
+      "top": 0,
+      "bottom": 0,
+      "left": 2,
+      "right": 3
+    }
+  },
   "modules": [
-    "os",
-    "host",
-    "kernel",
-    "uptime",
-    "packages",
-    "shell",
-    "de",
-    "wm",
-    "terminal",
-    "cpu",
-    "gpu",
-    "memory",
-    "disk",
-    "localip",
-    "battery",
-    "poweradapter",
-    "break"
+    {
+      "type": "os",
+      "key": " OS"
+    },
+    {
+      "type": "kernel",
+      "key": " Kernel"
+    },
+    {
+      "type": "host",
+      "key": " Host"
+    },
+    {
+      "type": "wm",
+      "key": " WM"
+    },
+    {
+      "type": "terminal",
+      "key": " Terminal"
+    },
+    {
+      "type": "shell",
+      "key": " Shell"
+    },
+    "break",
+    {
+      "type": "cpu",
+      "key": " CPU",
+      "format": "{name} {freq-max}"
+    },
+    {
+      "type": "gpu",
+      "key": "󰢮 GPU"
+    },
+    {
+      "type": "memory",
+      "key": "󰘚 Memory"
+    },
+    "break",
+    {
+      "type": "disk",
+      "key": "󰋊 Disk"
+    },
+    {
+      "type": "battery",
+      "key": "󰄌 Battery"
+    },
+    {
+      "type": "uptime",
+      "key": "󰥔 Uptime"
+    }
   ]
 }
