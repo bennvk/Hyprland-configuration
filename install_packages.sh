@@ -13,8 +13,6 @@ sudo pacman -S --needed --noconfirm \
   nvidia-utils \
   nvidia-settings \
   lib32-nvidia-utils \
-  nvidia-open-dkms \
-  egl-wayland \
   vulkan \
   vulkan-tools \
   vulkan-icd-loader \
