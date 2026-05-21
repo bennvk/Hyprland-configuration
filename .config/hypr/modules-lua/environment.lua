@@ -6,7 +6,6 @@
 --   \___|_| |_|\_/ |_|_|  \___/|_| |_|_| |_| |_|\___|_| |_|\__|
 --                                                            
 
-hl.env("EDITOR", "nvim")
 hl.env("MOZ_ENABLE_WAYLAND", "1")
 
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")

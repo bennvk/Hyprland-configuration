@@ -19,6 +19,9 @@
       "right": 3
     }
   },
+  "display": {
+    "separator": " - "
+  },
   "modules": [
     {
       "type": "os",
