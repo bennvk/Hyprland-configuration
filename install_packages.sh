@@ -53,6 +53,6 @@ echo ">>> Installation des paquets AUR <<<"
 yay -S --needed --noconfirm \
   librewolf-bin \
   python-pywalfox \
-  ttf-font-awesome-5 \
+  dracula-gtk-theme \
   vscodium-bin \
   proton-ge-custom-bin
