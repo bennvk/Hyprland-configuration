@@ -6,7 +6,12 @@
 --   \___|_| |_|\_/ |_|_|  \___/|_| |_|_| |_| |_|\___|_| |_|\__|
 --                                                            
 
+hl.env("TERMINAL", "kitty")
+hl.env("BROWSER",  "librewolf")
+hl.env("EDITOR",   "nvim")
+
 hl.env("MOZ_ENABLE_WAYLAND", "1")
+hl.env("GTK_THEME", "Dracula")
 
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 hl.env("__GL_GSYNC_ALLOWED", "1")
