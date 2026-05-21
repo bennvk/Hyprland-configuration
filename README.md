@@ -40,7 +40,7 @@
 - Palette fond d'écran - [Pywal](https://archlinux.org/packages/extra/any/python-pywal/)
 - Firefox palette - [Pywalfox](https://github.com/Frewacom/pywalfox)
 - Prompt Shell - [Starship](https://starship.rs/)
-- Icones - [Font Awesome](https://archlinux.org/packages/extra/any/ttf-font-awesome/) & [Papirus](https://archlinux.org/packages/extra/any/papirus-icon-theme/)
+- Icones - [Papirus](https://archlinux.org/packages/extra/any/papirus-icon-theme/) & [Nerd Font Icons](https://archlinux.org/packages/extra/any/ttf-nerd-fonts-symbols/)
 - Informations système - [Fastfetch](https://archlinux.org/packages/extra/x86_64/fastfetch/)
 
 ###### Outils
