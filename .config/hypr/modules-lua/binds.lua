@@ -21,6 +21,7 @@ hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("bash ~/.config/waybar/modules-scripts/
 hl.bind("SUPER + F", function()
     hl.dispatch(hl.dsp.window.float({ action = "toggle", window = activewindow }))
     hl.dispatch(hl.dsp.window.resize({ x = "1500", y = "900", relative = false, window = activewindow }))
+    hl.dispatch(hl.dsp.window.center({ window = activewindow }))
 end)
 hl.bind("SUPER + SHIFT + F", hl.dsp.window.fullscreen())
 hl.bind("SUPER + ESCAPE", hl.dsp.window.set_prop({ prop = "opaque", value = "toggle" }))
