@@ -12,6 +12,10 @@ hl.env("EDITOR",   "nvim")
 
 hl.env("GTK_THEME", "Dracula")
 hl.env("MOZ_ENABLE_WAYLAND", "1")
+hl.env("HYPRCURSOR_THEME", "Bibata-Modern-Classic")
+hl.env("HYPRCURSOR_SIZE", "22")
+hl.env("XCURSOR_THEME", "Bibata-Modern-Classic")
+hl.env("XCURSOR_SIZE", "22")
 
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 hl.env("__GL_GSYNC_ALLOWED", "1")
