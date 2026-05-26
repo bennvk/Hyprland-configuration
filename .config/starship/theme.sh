@@ -31,7 +31,8 @@ stashed = "󰏗 "
 conflicted = "⚠\${count} "
 
 [python]
-format = "(\${virtualenv})"
+format = "([with]($style)\${virtualenv})"
+style = "bold $C3"
 
 [directory]
 style = "bold $C3"
