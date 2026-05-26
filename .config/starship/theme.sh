@@ -10,12 +10,25 @@ C6=$(jq -r '.colors.color6' < "$colors_file")
 C7=$(jq -r '.colors.color7' < "$colors_file")
 
 cat > "$HOME/.config/starship/starship.toml" <<EOF
-format = "  \$username\$directory\$python\$line_break\$character"
+format = "  \$username\$directory\$git_status\$python\$line_break\$character"
 
 [username]
 style_user = "bold $C4"
 style_root = "bold red"
 show_always = true
+
+[git_status]
+format = '([with ]($style)[\$all_status\$ahead_behind](bold $C3) )'
+style = "bold $C3"
+ahead = "⇡\${count}"
+behind = "⇣\${count}"
+diverged = "⇕⇡\${ahead_count}⇣\${behind_count}"
+modified = "✎\${count} "
+untracked = "?\${count} "
+staged = "+\${count} "
+deleted = "✕\${count} "
+stashed = "󰏗 "
+conflicted = "⚠\${count} "
 
 [python]
 format = "(\${virtualenv})"
@@ -27,5 +40,5 @@ truncation_length = 3
 
 [character]
 success_symbol = "[  ❯](bold $C7)"
-error_symbol = "[  ❯](bold $C7)"
+error_symbol = "[  ❯](bold $C2)"
 EOF
