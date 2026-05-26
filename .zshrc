@@ -24,14 +24,19 @@ autoload -Uz compinit && compinit
 zinit light hlissner/zsh-autopair
 zinit light Aloxaf/fzf-tab
 zstyle ':completion:*' verbose no
-zstyle ':fzf-tab:*' fzf-flags '--height=7' '--no-info'
-eval "$(fzf --zsh)"
+zstyle ':fzf-tab:*' fzf-flags '--height=12' '--no-info'
 
 alias vi="nvim"
 alias ~="cd ~/"
 alias ..="cd .."
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;5D' backward-word
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
+bindkey '^W' backward-kill-word
 
 function yazi() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
@@ -44,5 +49,6 @@ function yazi() {
 
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 eval "$(starship init zsh)"
+eval "$(fzf --zsh)"
 
 echo && fastfetch
