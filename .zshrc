@@ -21,10 +21,10 @@ autoload -Uz _zinit
 zstyle :compinstall filename '/home/benn/.zshrc'
 autoload -Uz compinit && compinit
 
+zinit light hlissner/zsh-autopair
 zinit light Aloxaf/fzf-tab
 zstyle ':completion:*' verbose no
 zstyle ':fzf-tab:*' fzf-flags '--height=7' '--no-info'
-
 eval "$(fzf --zsh)"
 
 function yazi() {
