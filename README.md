@@ -75,8 +75,6 @@ Cela permet de ne pas exécuter directement les scripts et de choisir finement c
 ├── 📁 etc/
 │   ├── 📁 default/
 │   │   └── [...]
-│   ├── 📁 keyd/
-│   │   └── [...]
 │   └── 📁 wireplumber/
 │       └── [...]
 │ 
