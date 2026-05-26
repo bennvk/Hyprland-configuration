@@ -1,5 +1,4 @@
 vim.opt.number = true
-vim.opt.number = true
 vim.opt.clipboard = "unnamedplus"
 vim.o.mouse = "a"
 vim.o.expandtab = true
