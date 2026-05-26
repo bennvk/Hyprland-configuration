@@ -21,6 +21,9 @@ autoload -Uz _zinit
 zstyle :compinstall filename '/home/benn/.zshrc'
 autoload -Uz compinit && compinit
 
+autoload -Uz edit-command-line
+zle -N edit-command-line
+
 zinit light hlissner/zsh-autopair
 zinit light Aloxaf/fzf-tab
 zstyle ':completion:*' verbose no
@@ -37,6 +40,7 @@ bindkey '^[[1;5D' backward-word
 bindkey '^A' beginning-of-line
 bindkey '^E' end-of-line
 bindkey '^H' backward-kill-word
+bindkey '^E' edit-command-line
 
 function yazi() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
