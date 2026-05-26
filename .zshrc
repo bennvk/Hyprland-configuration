@@ -27,6 +27,12 @@ zstyle ':completion:*' verbose no
 zstyle ':fzf-tab:*' fzf-flags '--height=7' '--no-info'
 eval "$(fzf --zsh)"
 
+alias vi="nvim"
+alias ~="cd ~/"
+alias ..="cd .."
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
 function yazi() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
   command yazi "$@" --cwd-file="$tmp"
