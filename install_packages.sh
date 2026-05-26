@@ -41,12 +41,9 @@ sudo pacman -S --needed --noconfirm \
   cpupower \
   pavucontrol \
   ufw \
-  inter-font \
   jq \
   ttf-cascadia-code \
   ttf-nerd-fonts-symbols \
-  inter-font \
-  adw-gtk-theme \
   xdg-desktop-portal-hyprland \
   xdg-desktop-portal-gtk
 
