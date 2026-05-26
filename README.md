@@ -30,7 +30,7 @@
 - Fond d'écran - [Swww](https://github.com/LGFae/swww)
 - Bar - [Waybar](https://wiki.archlinux.org/title/Waybar)
 - Menu launcher - [Rofi](https://wiki.archlinux.org/title/Rofi)
-- Shell - [Bash](https://wiki.archlinux.org/title/Bash)
+- Shell - [Zsh](https://archlinux.org/packages/extra/x86_64/zsh/)
 - Terminal - [Kitty](https://wiki.archlinux.org/title/Kitty)
 - Notification - [Mako](https://github.com/emersion/mako)
 - Écran de verouillage [Hyprlock](https://archlinux.org/packages/extra/x86_64/hyprlock/)
@@ -103,6 +103,6 @@ Cela permet de ne pas exécuter directement les scripts et de choisir finement c
         │   ├── 📁 waybar/
         │   └── 📁 yazi/
         │
-        ├── 📄 .bashrc
-        └── 📄 .bash_profile
+        ├── 📄 .rshrc
+        └── 📄 .zprofile
 ```

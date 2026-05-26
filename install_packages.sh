@@ -8,6 +8,8 @@ sudo pacman -S --needed --noconfirm \
   waybar \
   rofi \
   kitty \
+  zsh \
+  zsh-completions \
   hyprlock \
   nvidia \
   nvidia-utils \
