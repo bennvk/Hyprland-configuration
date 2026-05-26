@@ -41,4 +41,5 @@ truncation_length = 3
 
 [character]
 success_symbol = "[  ❯](bold $C7)"
+error_symbol = "[  ❯](bold $C7)"
 EOF
