@@ -36,7 +36,7 @@ bindkey '^[[1;5C' forward-word
 bindkey '^[[1;5D' backward-word
 bindkey '^A' beginning-of-line
 bindkey '^E' end-of-line
-bindkey '^W' backward-kill-word
+bindkey '^H' backward-kill-word
 
 function yazi() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
