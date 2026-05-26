@@ -42,6 +42,7 @@ sudo pacman -S --needed --noconfirm \
   pavucontrol \
   ufw \
   jq \
+  inter-font \
   ttf-cascadia-code \
   ttf-nerd-fonts-symbols \
   xdg-desktop-portal-hyprland \
