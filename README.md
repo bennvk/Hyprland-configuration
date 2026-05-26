@@ -90,6 +90,7 @@ Cela permet de ne pas exécuter directement les scripts et de choisir finement c
         │
         ├── 📁 .config/
         │   ├── 📁 fastfetch/
+        │   ├── 📁 fontconfig/
         │   ├── 📁 help/
         │   ├── 📁 hypr/
         │   ├── 📁 hyprlock/
