@@ -103,6 +103,6 @@ Cela permet de ne pas exécuter directement les scripts et de choisir finement c
         │   ├── 📁 waybar/
         │   └── 📁 yazi/
         │
-        ├── 📄 .rshrc
+        ├── 📄 .zshrc
         └── 📄 .zprofile
 ```
