@@ -14,7 +14,13 @@ vim.cmd("filetype plugin indent on")
 
 vim.keymap.set({'n', 'v'}, 'd', '"_d')
 vim.keymap.set('n', 'dd', '"_dd')
+vim.api.nvim_create_user_command("W", "SudaWrite", {})
+vim.api.nvim_create_user_command("Wq", function()
+  vim.cmd("SudaWrite")
+  vim.cmd("q")
+end, {})
 
+-- Lazyvim install
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -24,15 +30,19 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
-
 vim.opt.rtp:prepend(lazypath)
+vim.opt.rtp:append(vim.fn.stdpath("data") .. "/site")
+
+-- Plugins source
 require("lazy").setup({
   {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
+  { import = "plugins" },
 })
 
+-- Themes sources
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
     require("themes.pywal").setup()
