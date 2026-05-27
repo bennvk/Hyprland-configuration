@@ -1,6 +1,5 @@
 vim.opt.number = true
 vim.opt.clipboard = "unnamedplus"
-vim.opt.statusline = "  %f %r %=%l:%c | %p%%  "
 
 vim.o.mouse = "a"
 vim.o.expandtab = true
@@ -25,10 +24,18 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
+
 vim.opt.rtp:prepend(lazypath)
+require("lazy").setup({
+  {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+})
 
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
     require("themes.pywal").setup()
+    require("themes.lualine").setup()
   end,
 })
