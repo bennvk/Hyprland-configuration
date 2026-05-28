@@ -11,11 +11,9 @@ sudo pacman -S --needed --noconfirm \
   zsh \
   zsh-completions \
   hyprlock \
-  nvidia \
   nvidia-utils \
   nvidia-settings \
   lib32-nvidia-utils \
-  vulkan \
   vulkan-tools \
   vulkan-icd-loader \
   lib32-vulkan-icd-loader \
