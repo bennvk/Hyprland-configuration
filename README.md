@@ -57,11 +57,11 @@
 
 ###### Installation
 
-L'installation peut être effectuée manuellement en installant tous les paquets nécessaires puis en copiant les fichiers de configuration selon l'arborescence ci-dessous. 
+L'**installation** peut être effectuée **manuellement** en installant tous les paquets nécessaires puis en copiant les fichiers de configuration selon l'arborescence ci-dessous. 
 Cela permet de ne pas exécuter directement les scripts et de choisir finement ce que vous installez (en cas d'un GPU AMD par exemple).
 
-Un script d'installation complet est actuellement en version « bêta » et permet une installation entièrement automatique. 
-Lancez le script install.sh pour commencer l'installation. 
+Un **script d'installation** est actuellement en version « bêta » et permet une installation entièrement automatique. 
+Lancez le script `install.sh` pour commencer l'installation. 
 En cas de bugs, de problèmes en tout genre ou simplement si vous avez besoin d'aide sur Hyprland, n'hésitez pas à créer une issue.
 
 ## Arborescence
