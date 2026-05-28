@@ -71,4 +71,4 @@ yay -S \
   vscodium-bin \
   proton-ge-custom-bin
 
-echo "=== Installation de la session Hyprland terminé=== Installation de la session Hyprland terminéee"
+echo "=== Installation de la session Hyprland terminée ==="
