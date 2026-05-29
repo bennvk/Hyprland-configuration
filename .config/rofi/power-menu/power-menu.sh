@@ -8,23 +8,23 @@
 #  \/    \___/ \_/\_/ \___|_|            |_| |_| |_|\___|_| |_|\__,_|
 #                                                                  
 
-chosen=$(printf "🛑  Éteindre\n🔄  Redémarrer\n🔒  Verrouiller\n🔋  Mode de consommation\n🕔  Arrêt planifié\n❌  Annuler" | \
+chosen=$(printf "\n󰜉\n\n󰂀\n󰥔" | \
   rofi -dmenu -theme ~/.config/rofi/power-menu/power-menu1.rasi)
 
 case "$chosen" in
-  *Éteindre*) 
+  ) 
     systemctl poweroff || notify-send "⚠️ Erreur ⚠️" "L'ordinateur n'a pas pu être éteint" 
     ;;
-  *Redémarrer*) 
+  󰜉) 
     systemctl reboot || notify-send "⚠️ Erreur ⚠️" "L'ordinateur n'a pas pu être redémarrer" 
     ;;
-  *Verrouiller*)
+  )
     hyprlock --config ~/.config/hyprlock/hyprlock.conf
     ;;
-  *Mode\ de\ consommation*) 
+  󰂀) 
     ~/.config/rofi/power-menu/power-profiles.sh
     ;;
-  *Arrêt\ planifié*)
+  󰥔)
     input=$(rofi -dmenu -theme ~/.config/rofi/power-menu/power-menu2.rasi)
 
   [ -z "$input" ] && exit 1

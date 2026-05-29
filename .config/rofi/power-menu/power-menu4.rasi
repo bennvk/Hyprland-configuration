@@ -18,6 +18,8 @@ window {
     width:                       100px;
     x-offset:                    -10px;
     y-offset:                    10px;
+
+    /* properties for all widgets */
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
@@ -109,7 +111,7 @@ error-message {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       5;
+    lines:                       3;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
