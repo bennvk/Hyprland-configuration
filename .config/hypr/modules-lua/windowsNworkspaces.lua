@@ -26,11 +26,12 @@ hl.window_rule({
 hl.window_rule({ 
   match = { class = "swayimg" }, 
   float = true, 
-  size = {1000, 550} 
+  size = {1000, 550}
 })
 
 hl.window_rule({ 
   match = { class = "xdg-desktop-portal-gtk" }, 
   float = true, 
-  size = {1250, 800} 
+  size = {1250, 800},
+  center = true
 })
