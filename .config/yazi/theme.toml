@@ -24,7 +24,7 @@ rules = [
   { url = "**/docker-compose.yml", fg = "#1597ce" },
   { url = "**/Dockerfile/", fg = "#1597ce" },
   { url = "**/fontconfig/", fg = "#FFB700" },
-
+  { url = "**/Programmation/", fg = "#C54259" },
 
 	{ url = "*/", fg = "#00AEFF" },
 
@@ -91,6 +91,7 @@ dirs = [
 	{ name = "discord", text = "󰙯", fg = "#7388D9" },
 	{ name = "starship", text = "󰫢", fg = "#DD0A78" },
 	{ name = "fontconfig", text = "", fg = "#FFB700" },
+	{ name = "Programmation", text = "", fg = "#C54259" },
 ]
 
 exts = [
