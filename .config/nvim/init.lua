@@ -14,6 +14,10 @@ vim.cmd("filetype plugin indent on")
 
 vim.keymap.set({'n', 'v'}, 'd', '"_d')
 vim.keymap.set('n', 'dd', '"_dd')
+vim.keymap.set('v', 'p', '"_dP')
+vim.keymap.set('v', 'P', '"_dP')
+vim.keymap.set({'n', 'v'}, 'c', '"_c')
+
 vim.api.nvim_create_user_command("W", "SudaWrite", {})
 vim.api.nvim_create_user_command("Wq", function()
   vim.cmd("SudaWrite")
