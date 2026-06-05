@@ -4,8 +4,14 @@ set -euo pipefail
 
 scriptpwd="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 
+echo "=== Création des répertoires personnels ==="
+
+mkdir -p "$HOME/Documents"
+mkdir -p "$HOME/Downloads"
+mkdir -p "$HOME/Github"
 mkdir -p "$HOME/Images/Screenshots"
 mkdir -p "$HOME/Images/Wallpapers"
+ln -sfn "$HOME/.local/share/Trash" "$HOME/Trash"
 
 echo "=== Installation des paquets pacman ==="
 
