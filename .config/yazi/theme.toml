@@ -127,4 +127,5 @@ exts = [
 	{ name = "toml", text = "", fg = "#6d8086" },
 	{ name = "txt", text = "󰦨", fg = "#00afff" },
 	{ name = "zip", text = "", fg = "#ffaf00" },
+	{ name = "trashinfo", text = "", fg = "#E0D8D6" },
 ]
