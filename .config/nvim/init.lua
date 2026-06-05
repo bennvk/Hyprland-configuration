@@ -12,6 +12,8 @@ vim.g.mapleader = " "
 vim.cmd("syntax enable")
 vim.cmd("filetype plugin indent on")
 
+vim.keymap.set({'n', 'v'}, '<C-Down>', '}')
+vim.keymap.set({'n', 'v'}, '<C-Up>', '{')
 vim.keymap.set({'n', 'v'}, 'd', '"_d')
 vim.keymap.set('n', 'dd', '"_dd')
 vim.keymap.set('v', 'p', '"_dP')
