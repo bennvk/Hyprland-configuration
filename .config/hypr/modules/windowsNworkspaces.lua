@@ -35,3 +35,10 @@ hl.window_rule({
   size = {1250, 800},
   center = true
 })
+
+hl.window_rule({ 
+  match = { class = "localsend" }, 
+  float = true, 
+  size = {1250, 800},
+  center = true
+})
