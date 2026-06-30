@@ -26,6 +26,7 @@ rules = [
 	{ url = "**/fontconfig/", fg = "#FFB700" },
 	{ url = "**/Programmation/", fg = "#C54259" },
 	{ url = "**/Trash/", fg = "#E0D8D6" },
+	{ url = "**/MegaSync/", fg = "#BC0304" },
 
 	{ url = "*/", fg = "#00AEFF" },
 
@@ -95,6 +96,7 @@ dirs = [
 	{ name = "fontconfig", text = "", fg = "#FFB700" },
 	{ name = "Programmation", text = "", fg = "#C54259" },
 	{ name = "Trash", text = "", fg = "#E0D8D6" },
+	{ name = "MegaSync", text = "", fg = "#BC0304" },
 ]
 
 exts = [
