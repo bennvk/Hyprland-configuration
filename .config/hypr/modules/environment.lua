@@ -29,3 +29,5 @@ hl.env("HYPRLAND_CONFIG", "/home/benn/.config/hypr/hyprland.lua")
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("XDG_SESSION_TYPE", "wayland")
 hl.env("XDG_SESSION_DESKTOP", "Hyprland")
+
+hl.env("SSH_AUTH_SOCK", "/home/benn/.bitwarden-ssh-agent.sock")
