@@ -18,12 +18,12 @@ view_image = [
   { run = 'swayimg "$@"',   orphan = true, desc = "Swayimg" },
 ]
 view_document = [
-  { run = 'librewolf "$@"', orphan = true, desc = "Librewolf" },
+  { run = 'firefox "$@"', orphan = true, desc = "Librewolf" },
 ]
 editandview_html = [
   { run = 'nvim "$@"',      block = true,  desc = "Neovim" },
   { run = 'codium "$@"',    orphan = true, desc = "VSCodium" },
-  { run = 'librewolf "$@"', orphan = true, desc = "Librewolf" },
+  { run = 'firefox "$@"', orphan = true, desc = "Librewolf" },
 ]
 
 [open]
