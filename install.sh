@@ -16,7 +16,7 @@ ln -sfn "$HOME/.local/share/Trash" "$HOME/Trash"
 echo "=== Installation des paquets pacman ==="
 
 sudo pacman -S \
-  hyprland awww waybar \
+  hyprland awww waybar firefox \
   rofi kitty zsh zsh-completions \
   hyprlock nvidia-utils nvidia-settings \
   lib32-nvidia-utils vulkan-tools \
@@ -35,11 +35,11 @@ sudo pacman -S \
 echo "=== Installation des paquets AUR ==="
 
 yay -S \
-  librewolf-bin \
   python-pywalfox \
   dracula-gtk-theme \
   vscodium-bin \
-  proton-ge-custom-bin
+  proton-ge-custom-bin \
+  bibata-cursor-theme-bin
 
 echo "=== Copie des fichiers de configurations ==="
 
