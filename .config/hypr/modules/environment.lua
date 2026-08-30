@@ -7,7 +7,7 @@
 --                                                            
 
 hl.env("TERMINAL", "kitty")
-hl.env("BROWSER",  "librewolf")
+hl.env("BROWSER",  "firefox")
 hl.env("EDITOR",   "nvim")
 
 hl.env("GTK_THEME", "Dracula")
