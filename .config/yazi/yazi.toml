@@ -11,12 +11,16 @@ edit = [
   { run = "$EDITOR %s",  block = true,  desc = "Neovim" },
   { run = "codium %s",   orphan = true, desc = "VSCodium" },
 ]
+extract = [
+  { run = '7z x "%s" -y', desc = "7-Zip", block = false }
+]
 view_image = [
   { run = "swayimg %s",  orphan = true, desc = "Swayimg" },
 ]
 view_document = [
-  { run = '$BROWSER "%s"', orphan = true, desc = "Firefox" },
+  { run = '$BROWSER %s', orphan = true, desc = "Firefox" },
 ]
+
 [open]
 rules = [
   { url = "*.pdf",      use = "view_document" },
@@ -35,6 +39,12 @@ rules = [
   { url = "*.heic",     use = "view_image" },
   { url = "*.webp",     use = "view_image" },
   { url = "*.svg",      use = "view_image" },
+  { url = "*.zip",      use = "extract" },
+  { url = "*.7z",       use = "extract" },
+  { url = "*.rar",      use = "extract" },
+  { url = "*.tar",      use = "extract" },
+  { url = "*.gz",       use = "extract" },
+  { url = "*.xz",       use = "extract" },
   { url = "*.txt",      use = "edit" },
   { url = "*.md",       use = "edit" },
   { url = "*.markdown", use = "edit" },
