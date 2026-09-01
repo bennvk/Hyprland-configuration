@@ -25,7 +25,7 @@ sudo pacman -S \
   starship papirus-icon-theme fastfetch \
   neovim mako zip yazi resvg galculator \
   grim slurp wl-clipboard cliphist \
-  brightnessctl ddcutil swayimg \
+  brightnessctl ddcutil swayimg 7zip \
   cpupower pavucontrol ufw jq \
   inter-font ttf-cascadia-code \
   ttf-nerd-fonts-symbols \
