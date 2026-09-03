@@ -23,7 +23,7 @@ sudo pacman -S \
   vulkan-icd-loader lib32-vulkan-icd-loader \
   gamemode lib32-gamemode python-pywal \
   starship papirus-icon-theme fastfetch \
-  neovim mako zip yazi resvg galculator \
+  neovim mako yazi resvg galculator \
   grim slurp wl-clipboard cliphist \
   brightnessctl ddcutil swayimg 7zip \
   cpupower pavucontrol ufw jq \
