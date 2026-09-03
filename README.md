@@ -45,7 +45,7 @@
 ###### Outils
 
 - Éditeur de texte [Nvim](https://neovim.io/)
-- Archive - [Zip](https://man.archlinux.org/man/zip.1.e)
+- Archive - [7Zip](https://archlinux.org/packages/extra/x86_64/7zip/)
 - Gestionnaire de fichiers - [Yazi](https://github.com/sxyazi/yazi)
 - Calculatrice - [Galculator](https://archlinux.org/packages/extra/x86_64/galculator/)
 - Screenshot - [Grim](https://archlinux.org/packages/extra/x86_64/grim/) & [Slurp](https://archlinux.org/packages/extra/x86_64/slurp/) & [WL-Clipboard](https://archlinux.org/packages/extra/x86_64/wl-clipboard/)
