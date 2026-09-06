@@ -16,8 +16,8 @@ ln -sfn "$HOME/.local/share/Trash" "$HOME/Trash"
 echo "=== Installation des paquets pacman ==="
 
 sudo pacman -S \
-  hyprland awww waybar firefox \
-  rofi kitty zsh zsh-completions \
+  hyprland awww firefox rofi \
+  kitty zsh zsh-completions \
   hyprlock nvidia-utils nvidia-settings \
   lib32-nvidia-utils vulkan-tools \
   vulkan-icd-loader lib32-vulkan-icd-loader \
@@ -35,6 +35,7 @@ sudo pacman -S \
 echo "=== Installation des paquets AUR ==="
 
 yay -S \
+  waybar-git \
   python-pywalfox \
   dracula-gtk-theme \
   vscodium-bin \
