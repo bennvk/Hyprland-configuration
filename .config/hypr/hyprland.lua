@@ -1,5 +1,3 @@
-require("modules/functions")
-
 require("modules/animations")
 require("modules/autostart")
 require("modules/binds")
